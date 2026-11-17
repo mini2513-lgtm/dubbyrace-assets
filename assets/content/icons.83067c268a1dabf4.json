@@ -1,0 +1,912 @@
+{
+  "props/carrot": {
+    "png": "assets/farm/icons/props/carrot.png",
+    "webp": "assets/farm/icons/props/carrot.webp",
+    "png128": "assets/farm/icons/props/carrot.128.png",
+    "webp128": "assets/farm/icons/props/carrot.128.webp",
+    "name_ko": "당근"
+  },
+  "props/carrots-ready": {
+    "png": "assets/farm/icons/props/carrots-ready.png",
+    "webp": "assets/farm/icons/props/carrots-ready.webp",
+    "png128": "assets/farm/icons/props/carrots-ready.128.png",
+    "webp128": "assets/farm/icons/props/carrots-ready.128.webp",
+    "name_ko": "다 자란 당근"
+  },
+  "props/hay-bale": {
+    "png": "assets/farm/icons/props/hay-bale.png",
+    "webp": "assets/farm/icons/props/hay-bale.webp",
+    "png128": "assets/farm/icons/props/hay-bale.128.png",
+    "webp128": "assets/farm/icons/props/hay-bale.128.webp",
+    "name_ko": "건초 더미"
+  },
+  "props/shovel": {
+    "png": "assets/farm/icons/props/shovel.png",
+    "webp": "assets/farm/icons/props/shovel.webp",
+    "png128": "assets/farm/icons/props/shovel.128.png",
+    "webp128": "assets/farm/icons/props/shovel.128.webp",
+    "name_ko": "삽"
+  },
+  "props/watering-can": {
+    "png": "assets/farm/icons/props/watering-can.png",
+    "webp": "assets/farm/icons/props/watering-can.webp",
+    "png128": "assets/farm/icons/props/watering-can.128.png",
+    "webp128": "assets/farm/icons/props/watering-can.128.webp",
+    "name_ko": "물뿌리개"
+  },
+  "props/horse-hat": {
+    "png": "assets/farm/icons/props/horse-hat.png",
+    "webp": "assets/farm/icons/props/horse-hat.webp",
+    "png128": "assets/farm/icons/props/horse-hat.128.png",
+    "webp128": "assets/farm/icons/props/horse-hat.128.webp",
+    "name_ko": "말 모자"
+  },
+  "props/apple-crate": {
+    "png": "assets/farm/icons/props/apple-crate.png",
+    "webp": "assets/farm/icons/props/apple-crate.webp",
+    "png128": "assets/farm/icons/props/apple-crate.128.png",
+    "webp128": "assets/farm/icons/props/apple-crate.128.webp",
+    "name_ko": "사과 상자"
+  },
+  "props/rosette": {
+    "png": "assets/farm/icons/props/rosette.png",
+    "webp": "assets/farm/icons/props/rosette.webp",
+    "png128": "assets/farm/icons/props/rosette.128.png",
+    "webp128": "assets/farm/icons/props/rosette.128.webp",
+    "name_ko": "꽃 리본"
+  },
+  "props/mailbox": {
+    "png": "assets/farm/icons/props/mailbox.png",
+    "webp": "assets/farm/icons/props/mailbox.webp",
+    "png128": "assets/farm/icons/props/mailbox.128.png",
+    "webp128": "assets/farm/icons/props/mailbox.128.webp",
+    "name_ko": "우편함"
+  },
+  "props/saddle-blue": {
+    "png": "assets/farm/icons/props/saddle-blue.png",
+    "webp": "assets/farm/icons/props/saddle-blue.webp",
+    "png128": "assets/farm/icons/props/saddle-blue.128.png",
+    "webp128": "assets/farm/icons/props/saddle-blue.128.webp",
+    "name_ko": "파란 안장"
+  },
+  "props/carrot-basket": {
+    "png": "assets/farm/icons/props/carrot-basket.png",
+    "webp": "assets/farm/icons/props/carrot-basket.webp",
+    "png128": "assets/farm/icons/props/carrot-basket.128.png",
+    "webp128": "assets/farm/icons/props/carrot-basket.128.webp",
+    "name_ko": "당근 바구니"
+  },
+  "props/carrot-cake": {
+    "png": "assets/farm/icons/props/carrot-cake.png",
+    "webp": "assets/farm/icons/props/carrot-cake.webp",
+    "png128": "assets/farm/icons/props/carrot-cake.128.png",
+    "webp128": "assets/farm/icons/props/carrot-cake.128.webp",
+    "name_ko": "당근 케이크"
+  },
+  "props/carrots-growing": {
+    "png": "assets/farm/icons/props/carrots-growing.png",
+    "webp": "assets/farm/icons/props/carrots-growing.webp",
+    "png128": "assets/farm/icons/props/carrots-growing.128.png",
+    "webp128": "assets/farm/icons/props/carrots-growing.128.webp",
+    "name_ko": "자라는 당근"
+  },
+  "props/feed-trough": {
+    "png": "assets/farm/icons/props/feed-trough.png",
+    "webp": "assets/farm/icons/props/feed-trough.webp",
+    "png128": "assets/farm/icons/props/feed-trough.128.png",
+    "webp128": "assets/farm/icons/props/feed-trough.128.webp",
+    "name_ko": "먹이통"
+  },
+  "props/first-aid-kit": {
+    "png": "assets/farm/icons/props/first-aid-kit.png",
+    "webp": "assets/farm/icons/props/first-aid-kit.webp",
+    "png128": "assets/farm/icons/props/first-aid-kit.128.png",
+    "webp128": "assets/farm/icons/props/first-aid-kit.128.webp",
+    "name_ko": "구급상자"
+  },
+  "props/flower-planter": {
+    "png": "assets/farm/icons/props/flower-planter.png",
+    "webp": "assets/farm/icons/props/flower-planter.webp",
+    "png128": "assets/farm/icons/props/flower-planter.128.png",
+    "webp128": "assets/farm/icons/props/flower-planter.128.webp",
+    "name_ko": "화분"
+  },
+  "props/flower-crown": {
+    "png": "assets/farm/icons/props/flower-crown.png",
+    "webp": "assets/farm/icons/props/flower-crown.webp",
+    "png128": "assets/farm/icons/props/flower-crown.128.png",
+    "webp128": "assets/farm/icons/props/flower-crown.128.webp",
+    "name_ko": "꽃관"
+  },
+  "props/market-stall": {
+    "png": "assets/farm/icons/props/market-stall.png",
+    "webp": "assets/farm/icons/props/market-stall.webp",
+    "png128": "assets/farm/icons/props/market-stall.128.png",
+    "webp128": "assets/farm/icons/props/market-stall.128.webp",
+    "name_ko": "가판대"
+  },
+  "props/pitchfork": {
+    "png": "assets/farm/icons/props/pitchfork.png",
+    "webp": "assets/farm/icons/props/pitchfork.webp",
+    "png128": "assets/farm/icons/props/pitchfork.128.png",
+    "webp128": "assets/farm/icons/props/pitchfork.128.webp",
+    "name_ko": "쇠스랑"
+  },
+  "props/rake": {
+    "png": "assets/farm/icons/props/rake.png",
+    "webp": "assets/farm/icons/props/rake.webp",
+    "png128": "assets/farm/icons/props/rake.128.png",
+    "webp128": "assets/farm/icons/props/rake.128.webp",
+    "name_ko": "갈퀴"
+  },
+  "props/horseshoe": {
+    "png": "assets/farm/icons/props/horseshoe.png",
+    "webp": "assets/farm/icons/props/horseshoe.webp",
+    "png128": "assets/farm/icons/props/horseshoe.128.png",
+    "webp128": "assets/farm/icons/props/horseshoe.128.webp",
+    "name_ko": "말발굽"
+  },
+  "props/trophy": {
+    "png": "assets/farm/icons/props/trophy.png",
+    "webp": "assets/farm/icons/props/trophy.webp",
+    "png128": "assets/farm/icons/props/trophy.128.png",
+    "webp128": "assets/farm/icons/props/trophy.128.webp",
+    "name_ko": "트로피"
+  },
+  "props/oat-sack": {
+    "png": "assets/farm/icons/props/oat-sack.png",
+    "webp": "assets/farm/icons/props/oat-sack.webp",
+    "png128": "assets/farm/icons/props/oat-sack.128.png",
+    "webp128": "assets/farm/icons/props/oat-sack.128.webp",
+    "name_ko": "귀리 자루"
+  },
+  "props/leg-wraps": {
+    "png": "assets/farm/icons/props/leg-wraps.png",
+    "webp": "assets/farm/icons/props/leg-wraps.webp",
+    "png128": "assets/farm/icons/props/leg-wraps.128.png",
+    "webp128": "assets/farm/icons/props/leg-wraps.128.webp",
+    "name_ko": "다리 보호대"
+  },
+  "props/horse-jump": {
+    "png": "assets/farm/icons/props/horse-jump.png",
+    "webp": "assets/farm/icons/props/horse-jump.webp",
+    "png128": "assets/farm/icons/props/horse-jump.128.png",
+    "webp128": "assets/farm/icons/props/horse-jump.128.webp",
+    "name_ko": "장애물"
+  },
+  "props/sugar-jar": {
+    "png": "assets/farm/icons/props/sugar-jar.png",
+    "webp": "assets/farm/icons/props/sugar-jar.webp",
+    "png128": "assets/farm/icons/props/sugar-jar.128.png",
+    "webp128": "assets/farm/icons/props/sugar-jar.128.webp",
+    "name_ko": "설탕 병"
+  },
+  "props/mane-bow": {
+    "png": "assets/farm/icons/props/mane-bow.png",
+    "webp": "assets/farm/icons/props/mane-bow.webp",
+    "png128": "assets/farm/icons/props/mane-bow.128.png",
+    "webp128": "assets/farm/icons/props/mane-bow.128.webp",
+    "name_ko": "갈기 리본"
+  },
+  "props/halter": {
+    "png": "assets/farm/icons/props/halter.png",
+    "webp": "assets/farm/icons/props/halter.webp",
+    "png128": "assets/farm/icons/props/halter.128.png",
+    "webp128": "assets/farm/icons/props/halter.128.webp",
+    "name_ko": "굴레"
+  },
+  "props/bell-collar": {
+    "png": "assets/farm/icons/props/bell-collar.png",
+    "webp": "assets/farm/icons/props/bell-collar.webp",
+    "png128": "assets/farm/icons/props/bell-collar.128.png",
+    "webp128": "assets/farm/icons/props/bell-collar.128.webp",
+    "name_ko": "방울 목걸이"
+  },
+  "props/horse-blanket": {
+    "png": "assets/farm/icons/props/horse-blanket.png",
+    "webp": "assets/farm/icons/props/horse-blanket.webp",
+    "png128": "assets/farm/icons/props/horse-blanket.128.png",
+    "webp128": "assets/farm/icons/props/horse-blanket.128.webp",
+    "name_ko": "말 담요"
+  },
+  "props/apple": {
+    "png": "assets/farm/icons/props/apple.png",
+    "webp": "assets/farm/icons/props/apple.webp",
+    "png128": "assets/farm/icons/props/apple.128.png",
+    "webp128": "assets/farm/icons/props/apple.128.webp",
+    "name_ko": "사과"
+  },
+  "props/saddle-red": {
+    "png": "assets/farm/icons/props/saddle-red.png",
+    "webp": "assets/farm/icons/props/saddle-red.webp",
+    "png128": "assets/farm/icons/props/saddle-red.128.png",
+    "webp128": "assets/farm/icons/props/saddle-red.128.webp",
+    "name_ko": "빨간 안장"
+  },
+  "props/play-ball": {
+    "png": "assets/farm/icons/props/play-ball.png",
+    "webp": "assets/farm/icons/props/play-ball.webp",
+    "png128": "assets/farm/icons/props/play-ball.128.png",
+    "webp128": "assets/farm/icons/props/play-ball.128.webp",
+    "name_ko": "공"
+  },
+  "props/bucket": {
+    "png": "assets/farm/icons/props/bucket.png",
+    "webp": "assets/farm/icons/props/bucket.webp",
+    "png128": "assets/farm/icons/props/bucket.128.png",
+    "webp128": "assets/farm/icons/props/bucket.128.webp",
+    "name_ko": "양동이"
+  },
+  "props/cone": {
+    "png": "assets/farm/icons/props/cone.png",
+    "webp": "assets/farm/icons/props/cone.webp",
+    "png128": "assets/farm/icons/props/cone.128.png",
+    "webp128": "assets/farm/icons/props/cone.128.webp",
+    "name_ko": "안전 고깔"
+  },
+  "props/hoe": {
+    "png": "assets/farm/icons/props/hoe.png",
+    "webp": "assets/farm/icons/props/hoe.webp",
+    "png128": "assets/farm/icons/props/hoe.128.png",
+    "webp128": "assets/farm/icons/props/hoe.128.webp",
+    "name_ko": "괭이"
+  },
+  "props/wheelbarrow": {
+    "png": "assets/farm/icons/props/wheelbarrow.png",
+    "webp": "assets/farm/icons/props/wheelbarrow.webp",
+    "png128": "assets/farm/icons/props/wheelbarrow.128.png",
+    "webp128": "assets/farm/icons/props/wheelbarrow.128.webp",
+    "name_ko": "손수레"
+  },
+  "props/fence": {
+    "png": "assets/farm/icons/props/fence.png",
+    "webp": "assets/farm/icons/props/fence.webp",
+    "png128": "assets/farm/icons/props/fence.128.png",
+    "webp128": "assets/farm/icons/props/fence.128.webp",
+    "name_ko": "울타리"
+  },
+  "props/name-plate": {
+    "png": "assets/farm/icons/props/name-plate.png",
+    "webp": "assets/farm/icons/props/name-plate.webp",
+    "png128": "assets/farm/icons/props/name-plate.128.png",
+    "webp128": "assets/farm/icons/props/name-plate.128.webp",
+    "name_ko": "이름표"
+  },
+  "props/lamp-post": {
+    "png": "assets/farm/icons/props/lamp-post.png",
+    "webp": "assets/farm/icons/props/lamp-post.webp",
+    "png128": "assets/farm/icons/props/lamp-post.128.png",
+    "webp128": "assets/farm/icons/props/lamp-post.128.webp",
+    "name_ko": "가로등"
+  },
+  "props/bench": {
+    "png": "assets/farm/icons/props/bench.png",
+    "webp": "assets/farm/icons/props/bench.webp",
+    "png128": "assets/farm/icons/props/bench.128.png",
+    "webp128": "assets/farm/icons/props/bench.128.webp",
+    "name_ko": "벤치"
+  },
+  "props/grooming-brush": {
+    "png": "assets/farm/icons/props/grooming-brush.png",
+    "webp": "assets/farm/icons/props/grooming-brush.webp",
+    "png128": "assets/farm/icons/props/grooming-brush.128.png",
+    "webp128": "assets/farm/icons/props/grooming-brush.128.webp",
+    "name_ko": "말 빗"
+  },
+  "props/water-trough": {
+    "png": "assets/farm/icons/props/water-trough.png",
+    "webp": "assets/farm/icons/props/water-trough.webp",
+    "png128": "assets/farm/icons/props/water-trough.128.png",
+    "webp128": "assets/farm/icons/props/water-trough.128.webp",
+    "name_ko": "물통"
+  },
+  "food/chicken": {
+    "png": "assets/farm/icons/food/chicken.png",
+    "webp": "assets/farm/icons/food/chicken.webp",
+    "png128": "assets/farm/icons/food/chicken.128.png",
+    "webp128": "assets/farm/icons/food/chicken.128.webp",
+    "name_ko": "바삭 치킨"
+  },
+  "food/biscuit": {
+    "png": "assets/farm/icons/food/biscuit.png",
+    "webp": "assets/farm/icons/food/biscuit.webp",
+    "png128": "assets/farm/icons/food/biscuit.128.png",
+    "webp128": "assets/farm/icons/food/biscuit.128.webp",
+    "name_ko": "버터 비스킷"
+  },
+  "food/yangnyeom-chicken": {
+    "png": "assets/farm/icons/food/yangnyeom-chicken.png",
+    "webp": "assets/farm/icons/food/yangnyeom-chicken.webp",
+    "png128": "assets/farm/icons/food/yangnyeom-chicken.128.png",
+    "webp128": "assets/farm/icons/food/yangnyeom-chicken.128.webp",
+    "name_ko": "양념치킨"
+  },
+  "food/dakgangjeong": {
+    "png": "assets/farm/icons/food/dakgangjeong.png",
+    "webp": "assets/farm/icons/food/dakgangjeong.webp",
+    "png128": "assets/farm/icons/food/dakgangjeong.128.png",
+    "webp128": "assets/farm/icons/food/dakgangjeong.128.webp",
+    "name_ko": "닭강정"
+  },
+  "food/nuggets": {
+    "png": "assets/farm/icons/food/nuggets.png",
+    "webp": "assets/farm/icons/food/nuggets.webp",
+    "png128": "assets/farm/icons/food/nuggets.128.png",
+    "webp128": "assets/farm/icons/food/nuggets.128.webp",
+    "name_ko": "치킨너겟"
+  },
+  "food/fries": {
+    "png": "assets/farm/icons/food/fries.png",
+    "webp": "assets/farm/icons/food/fries.webp",
+    "png128": "assets/farm/icons/food/fries.128.png",
+    "webp128": "assets/farm/icons/food/fries.128.webp",
+    "name_ko": "감자튀김"
+  },
+  "food/cheese-balls": {
+    "png": "assets/farm/icons/food/cheese-balls.png",
+    "webp": "assets/farm/icons/food/cheese-balls.webp",
+    "png128": "assets/farm/icons/food/cheese-balls.128.png",
+    "webp128": "assets/farm/icons/food/cheese-balls.128.webp",
+    "name_ko": "치즈볼"
+  },
+  "food/chicken-burger": {
+    "png": "assets/farm/icons/food/chicken-burger.png",
+    "webp": "assets/farm/icons/food/chicken-burger.webp",
+    "png128": "assets/farm/icons/food/chicken-burger.128.png",
+    "webp128": "assets/farm/icons/food/chicken-burger.128.webp",
+    "name_ko": "치킨버거"
+  },
+  "food/lemonade": {
+    "png": "assets/farm/icons/food/lemonade.png",
+    "webp": "assets/farm/icons/food/lemonade.webp",
+    "png128": "assets/farm/icons/food/lemonade.128.png",
+    "webp128": "assets/farm/icons/food/lemonade.128.webp",
+    "name_ko": "핑크 레몬에이드"
+  },
+  "food/tteokbokki": {
+    "png": "assets/farm/icons/food/tteokbokki.png",
+    "webp": "assets/farm/icons/food/tteokbokki.webp",
+    "png128": "assets/farm/icons/food/tteokbokki.128.png",
+    "webp128": "assets/farm/icons/food/tteokbokki.128.webp",
+    "name_ko": "떡볶이"
+  },
+  "food/gimbap": {
+    "png": "assets/farm/icons/food/gimbap.png",
+    "webp": "assets/farm/icons/food/gimbap.webp",
+    "png128": "assets/farm/icons/food/gimbap.128.png",
+    "webp128": "assets/farm/icons/food/gimbap.128.webp",
+    "name_ko": "김밥"
+  },
+  "food/eomuk": {
+    "png": "assets/farm/icons/food/eomuk.png",
+    "webp": "assets/farm/icons/food/eomuk.webp",
+    "png128": "assets/farm/icons/food/eomuk.128.png",
+    "webp128": "assets/farm/icons/food/eomuk.128.webp",
+    "name_ko": "어묵"
+  },
+  "food/sundae": {
+    "png": "assets/farm/icons/food/sundae.png",
+    "webp": "assets/farm/icons/food/sundae.webp",
+    "png128": "assets/farm/icons/food/sundae.128.png",
+    "webp128": "assets/farm/icons/food/sundae.128.webp",
+    "name_ko": "순대"
+  },
+  "food/twigim": {
+    "png": "assets/farm/icons/food/twigim.png",
+    "webp": "assets/farm/icons/food/twigim.webp",
+    "png128": "assets/farm/icons/food/twigim.128.png",
+    "webp128": "assets/farm/icons/food/twigim.128.webp",
+    "name_ko": "모둠 튀김"
+  },
+  "food/ramyeon": {
+    "png": "assets/farm/icons/food/ramyeon.png",
+    "webp": "assets/farm/icons/food/ramyeon.webp",
+    "png128": "assets/farm/icons/food/ramyeon.128.png",
+    "webp128": "assets/farm/icons/food/ramyeon.128.webp",
+    "name_ko": "라면"
+  },
+  "food/hotdog": {
+    "png": "assets/farm/icons/food/hotdog.png",
+    "webp": "assets/farm/icons/food/hotdog.webp",
+    "png128": "assets/farm/icons/food/hotdog.128.png",
+    "webp128": "assets/farm/icons/food/hotdog.128.webp",
+    "name_ko": "핫도그"
+  },
+  "food/bungeoppang": {
+    "png": "assets/farm/icons/food/bungeoppang.png",
+    "webp": "assets/farm/icons/food/bungeoppang.webp",
+    "png128": "assets/farm/icons/food/bungeoppang.128.png",
+    "webp128": "assets/farm/icons/food/bungeoppang.128.webp",
+    "name_ko": "붕어빵"
+  },
+  "food/hotteok": {
+    "png": "assets/farm/icons/food/hotteok.png",
+    "webp": "assets/farm/icons/food/hotteok.webp",
+    "png128": "assets/farm/icons/food/hotteok.128.png",
+    "webp128": "assets/farm/icons/food/hotteok.128.webp",
+    "name_ko": "호떡"
+  },
+  "food/sikhye": {
+    "png": "assets/farm/icons/food/sikhye.png",
+    "webp": "assets/farm/icons/food/sikhye.webp",
+    "png128": "assets/farm/icons/food/sikhye.128.png",
+    "webp128": "assets/farm/icons/food/sikhye.128.webp",
+    "name_ko": "식혜"
+  },
+  "plates/plate-birch": {
+    "png": "assets/farm/icons/plates/plate-birch.png",
+    "webp": "assets/farm/icons/plates/plate-birch.webp",
+    "png128": "assets/farm/icons/plates/plate-birch.128.png",
+    "webp128": "assets/farm/icons/plates/plate-birch.128.webp",
+    "name_ko": "통나무와 새집"
+  },
+  "plates/plate-navy": {
+    "png": "assets/farm/icons/plates/plate-navy.png",
+    "webp": "assets/farm/icons/plates/plate-navy.webp",
+    "png128": "assets/farm/icons/plates/plate-navy.128.png",
+    "webp128": "assets/farm/icons/plates/plate-navy.128.webp",
+    "name_ko": "남색과 금테 별"
+  },
+  "plates/plate-mint": {
+    "png": "assets/farm/icons/plates/plate-mint.png",
+    "webp": "assets/farm/icons/plates/plate-mint.webp",
+    "png128": "assets/farm/icons/plates/plate-mint.128.png",
+    "webp128": "assets/farm/icons/plates/plate-mint.128.webp",
+    "name_ko": "민트 리본과 당근"
+  },
+  "plates/plate-iron": {
+    "png": "assets/farm/icons/plates/plate-iron.png",
+    "webp": "assets/farm/icons/plates/plate-iron.webp",
+    "png128": "assets/farm/icons/plates/plate-iron.128.png",
+    "webp128": "assets/farm/icons/plates/plate-iron.128.webp",
+    "name_ko": "철제 걸이 간판"
+  },
+  "plates/plate-flower-pony": {
+    "png": "assets/farm/icons/plates/plate-flower-pony.png",
+    "webp": "assets/farm/icons/plates/plate-flower-pony.webp",
+    "png128": "assets/farm/icons/plates/plate-flower-pony.128.png",
+    "webp128": "assets/farm/icons/plates/plate-flower-pony.128.webp",
+    "name_ko": "꽃 테두리와 조랑말 얼굴"
+  },
+  "plates/plate-flower": {
+    "png": "assets/farm/icons/plates/plate-flower.png",
+    "webp": "assets/farm/icons/plates/plate-flower.webp",
+    "png128": "assets/farm/icons/plates/plate-flower.128.png",
+    "webp128": "assets/farm/icons/plates/plate-flower.128.webp",
+    "name_ko": "꽃 테두리와 말발굽"
+  },
+  "plates/plate-oak": {
+    "png": "assets/farm/icons/plates/plate-oak.png",
+    "webp": "assets/farm/icons/plates/plate-oak.webp",
+    "png128": "assets/farm/icons/plates/plate-oak.128.png",
+    "webp128": "assets/farm/icons/plates/plate-oak.128.webp",
+    "name_ko": "참나무와 금 말발굽"
+  },
+  "env/tree-oak": {
+    "png": "assets/farm/icons/env/tree-oak.png",
+    "webp": "assets/farm/icons/env/tree-oak.webp",
+    "png128": "assets/farm/icons/env/tree-oak.128.png",
+    "webp128": "assets/farm/icons/env/tree-oak.128.webp",
+    "name_ko": "참나무"
+  },
+  "env/tree-blossom": {
+    "png": "assets/farm/icons/env/tree-blossom.png",
+    "webp": "assets/farm/icons/env/tree-blossom.webp",
+    "png128": "assets/farm/icons/env/tree-blossom.128.png",
+    "webp128": "assets/farm/icons/env/tree-blossom.128.webp",
+    "name_ko": "벚나무"
+  },
+  "env/tree-pine": {
+    "png": "assets/farm/icons/env/tree-pine.png",
+    "webp": "assets/farm/icons/env/tree-pine.webp",
+    "png128": "assets/farm/icons/env/tree-pine.128.png",
+    "webp128": "assets/farm/icons/env/tree-pine.128.webp",
+    "name_ko": "소나무"
+  },
+  "env/tree-apple": {
+    "png": "assets/farm/icons/env/tree-apple.png",
+    "webp": "assets/farm/icons/env/tree-apple.webp",
+    "png128": "assets/farm/icons/env/tree-apple.128.png",
+    "webp128": "assets/farm/icons/env/tree-apple.128.webp",
+    "name_ko": "사과나무"
+  },
+  "env/bush-flower": {
+    "png": "assets/farm/icons/env/bush-flower.png",
+    "webp": "assets/farm/icons/env/bush-flower.webp",
+    "png128": "assets/farm/icons/env/bush-flower.128.png",
+    "webp128": "assets/farm/icons/env/bush-flower.128.webp",
+    "name_ko": "꽃나무"
+  },
+  "env/flower-bed": {
+    "png": "assets/farm/icons/env/flower-bed.png",
+    "webp": "assets/farm/icons/env/flower-bed.webp",
+    "png128": "assets/farm/icons/env/flower-bed.128.png",
+    "webp128": "assets/farm/icons/env/flower-bed.128.webp",
+    "name_ko": "화단"
+  },
+  "env/wooden-bridge": {
+    "png": "assets/farm/icons/env/wooden-bridge.png",
+    "webp": "assets/farm/icons/env/wooden-bridge.webp",
+    "png128": "assets/farm/icons/env/wooden-bridge.128.png",
+    "webp128": "assets/farm/icons/env/wooden-bridge.128.webp",
+    "name_ko": "나무다리"
+  },
+  "env/windmill": {
+    "png": "assets/farm/icons/env/windmill.png",
+    "webp": "assets/farm/icons/env/windmill.webp",
+    "png128": "assets/farm/icons/env/windmill.128.png",
+    "webp128": "assets/farm/icons/env/windmill.128.webp",
+    "name_ko": "풍차"
+  },
+  "env/picnic-table": {
+    "png": "assets/farm/icons/env/picnic-table.png",
+    "webp": "assets/farm/icons/env/picnic-table.webp",
+    "png128": "assets/farm/icons/env/picnic-table.128.png",
+    "webp128": "assets/farm/icons/env/picnic-table.128.webp",
+    "name_ko": "야외 식탁"
+  },
+  "env/signpost": {
+    "png": "assets/farm/icons/env/signpost.png",
+    "webp": "assets/farm/icons/env/signpost.webp",
+    "png128": "assets/farm/icons/env/signpost.128.png",
+    "webp128": "assets/farm/icons/env/signpost.128.webp",
+    "name_ko": "이정표"
+  },
+  "env/bird-house": {
+    "png": "assets/farm/icons/env/bird-house.png",
+    "webp": "assets/farm/icons/env/bird-house.webp",
+    "png128": "assets/farm/icons/env/bird-house.128.png",
+    "webp128": "assets/farm/icons/env/bird-house.128.webp",
+    "name_ko": "새집"
+  },
+  "env/stone-well": {
+    "png": "assets/farm/icons/env/stone-well.png",
+    "webp": "assets/farm/icons/env/stone-well.webp",
+    "png128": "assets/farm/icons/env/stone-well.128.png",
+    "webp128": "assets/farm/icons/env/stone-well.128.webp",
+    "name_ko": "우물"
+  },
+  "env/duck-family": {
+    "png": "assets/farm/icons/env/duck-family.png",
+    "webp": "assets/farm/icons/env/duck-family.webp",
+    "png128": "assets/farm/icons/env/duck-family.128.png",
+    "webp128": "assets/farm/icons/env/duck-family.128.webp",
+    "name_ko": "오리 가족"
+  },
+  "env/tree-swing": {
+    "png": "assets/farm/icons/env/tree-swing.png",
+    "webp": "assets/farm/icons/env/tree-swing.webp",
+    "png128": "assets/farm/icons/env/tree-swing.128.png",
+    "webp128": "assets/farm/icons/env/tree-swing.128.webp",
+    "name_ko": "나무 그네"
+  },
+  "env/mushroom-stump": {
+    "png": "assets/farm/icons/env/mushroom-stump.png",
+    "webp": "assets/farm/icons/env/mushroom-stump.webp",
+    "png128": "assets/farm/icons/env/mushroom-stump.128.png",
+    "webp128": "assets/farm/icons/env/mushroom-stump.128.webp",
+    "name_ko": "버섯 그루터기"
+  },
+  "env/gazebo": {
+    "png": "assets/farm/icons/env/gazebo.png",
+    "webp": "assets/farm/icons/env/gazebo.webp",
+    "png128": "assets/farm/icons/env/gazebo.128.png",
+    "webp128": "assets/farm/icons/env/gazebo.128.webp",
+    "name_ko": "정자"
+  },
+  "env/wildflowers": {
+    "png": "assets/farm/icons/env/wildflowers.png",
+    "webp": "assets/farm/icons/env/wildflowers.webp",
+    "png128": "assets/farm/icons/env/wildflowers.128.png",
+    "webp128": "assets/farm/icons/env/wildflowers.128.webp",
+    "name_ko": "들꽃"
+  },
+  "stables/lv1": {
+    "png": "assets/farm/icons/stables/lv1.png",
+    "webp": "assets/farm/icons/stables/lv1.webp",
+    "png128": "assets/farm/icons/stables/lv1.128.png",
+    "webp128": "assets/farm/icons/stables/lv1.128.webp",
+    "name_ko": "1단계 마사"
+  },
+  "stables/lv2": {
+    "png": "assets/farm/icons/stables/lv2.png",
+    "webp": "assets/farm/icons/stables/lv2.webp",
+    "png128": "assets/farm/icons/stables/lv2.128.png",
+    "webp128": "assets/farm/icons/stables/lv2.128.webp",
+    "name_ko": "2단계 마사"
+  },
+  "stables/lv3": {
+    "png": "assets/farm/icons/stables/lv3.png",
+    "webp": "assets/farm/icons/stables/lv3.webp",
+    "png128": "assets/farm/icons/stables/lv3.128.png",
+    "webp128": "assets/farm/icons/stables/lv3.128.webp",
+    "name_ko": "3단계 마사"
+  },
+  "stables/lv4": {
+    "png": "assets/farm/icons/stables/lv4.png",
+    "webp": "assets/farm/icons/stables/lv4.webp",
+    "png128": "assets/farm/icons/stables/lv4.128.png",
+    "webp128": "assets/farm/icons/stables/lv4.128.webp",
+    "name_ko": "4단계 마사"
+  },
+  "wear/saddle-red": {
+    "png": "assets/farm/icons/wear/saddle-red.png",
+    "webp": "assets/farm/icons/wear/saddle-red.webp",
+    "png128": "assets/farm/icons/wear/saddle-red.128.png",
+    "webp128": "assets/farm/icons/wear/saddle-red.128.webp",
+    "name_ko": "빨간 안장"
+  },
+  "wear/saddle-blue": {
+    "png": "assets/farm/icons/wear/saddle-blue.png",
+    "webp": "assets/farm/icons/wear/saddle-blue.webp",
+    "png128": "assets/farm/icons/wear/saddle-blue.128.png",
+    "webp128": "assets/farm/icons/wear/saddle-blue.128.webp",
+    "name_ko": "파란 안장"
+  },
+  "wear/horse-blanket": {
+    "png": "assets/farm/icons/wear/horse-blanket.png",
+    "webp": "assets/farm/icons/wear/horse-blanket.webp",
+    "png128": "assets/farm/icons/wear/horse-blanket.128.png",
+    "webp128": "assets/farm/icons/wear/horse-blanket.128.webp",
+    "name_ko": "말 담요"
+  },
+  "wear/flower-crown": {
+    "png": "assets/farm/icons/wear/flower-crown.png",
+    "webp": "assets/farm/icons/wear/flower-crown.webp",
+    "png128": "assets/farm/icons/wear/flower-crown.128.png",
+    "webp128": "assets/farm/icons/wear/flower-crown.128.webp",
+    "name_ko": "꽃관"
+  },
+  "wear/mane-bow": {
+    "png": "assets/farm/icons/wear/mane-bow.png",
+    "webp": "assets/farm/icons/wear/mane-bow.webp",
+    "png128": "assets/farm/icons/wear/mane-bow.128.png",
+    "webp128": "assets/farm/icons/wear/mane-bow.128.webp",
+    "name_ko": "갈기 리본"
+  },
+  "wear/horse-hat": {
+    "png": "assets/farm/icons/wear/horse-hat.png",
+    "webp": "assets/farm/icons/wear/horse-hat.webp",
+    "png128": "assets/farm/icons/wear/horse-hat.128.png",
+    "webp128": "assets/farm/icons/wear/horse-hat.128.webp",
+    "name_ko": "말 모자"
+  },
+  "wear/bell-collar": {
+    "png": "assets/farm/icons/wear/bell-collar.png",
+    "webp": "assets/farm/icons/wear/bell-collar.webp",
+    "png128": "assets/farm/icons/wear/bell-collar.128.png",
+    "webp128": "assets/farm/icons/wear/bell-collar.128.webp",
+    "name_ko": "방울 목걸이"
+  },
+  "wear/halter": {
+    "png": "assets/farm/icons/wear/halter.png",
+    "webp": "assets/farm/icons/wear/halter.webp",
+    "png128": "assets/farm/icons/wear/halter.128.png",
+    "webp128": "assets/farm/icons/wear/halter.128.webp",
+    "name_ko": "굴레"
+  },
+  "wear/leg-wraps": {
+    "png": "assets/farm/icons/wear/leg-wraps.png",
+    "webp": "assets/farm/icons/wear/leg-wraps.webp",
+    "png128": "assets/farm/icons/wear/leg-wraps.128.png",
+    "webp128": "assets/farm/icons/wear/leg-wraps.128.webp",
+    "name_ko": "다리 보호대"
+  },
+  "kickboard/kickboard": {
+    "png": "assets/farm/icons/kickboard/kickboard.png",
+    "webp": "assets/farm/icons/kickboard/kickboard.webp",
+    "png128": "assets/farm/icons/kickboard/kickboard.128.png",
+    "webp128": "assets/farm/icons/kickboard/kickboard.128.webp",
+    "name_ko": "킥보드"
+  },
+  "coats/chestnut": {
+    "png": "assets/farm/icons/coats/chestnut.png",
+    "webp": "assets/farm/icons/coats/chestnut.webp",
+    "png128": "assets/farm/icons/coats/chestnut.128.png",
+    "webp128": "assets/farm/icons/coats/chestnut.128.webp",
+    "name_ko": "밤색"
+  },
+  "coats/grey": {
+    "png": "assets/farm/icons/coats/grey.png",
+    "webp": "assets/farm/icons/coats/grey.webp",
+    "png128": "assets/farm/icons/coats/grey.128.png",
+    "webp128": "assets/farm/icons/coats/grey.128.webp",
+    "name_ko": "백마"
+  },
+  "coats/black": {
+    "png": "assets/farm/icons/coats/black.png",
+    "webp": "assets/farm/icons/coats/black.webp",
+    "png128": "assets/farm/icons/coats/black.128.png",
+    "webp128": "assets/farm/icons/coats/black.128.webp",
+    "name_ko": "흑마"
+  },
+  "coats/bay": {
+    "png": "assets/farm/icons/coats/bay.png",
+    "webp": "assets/farm/icons/coats/bay.webp",
+    "png128": "assets/farm/icons/coats/bay.128.png",
+    "webp128": "assets/farm/icons/coats/bay.128.webp",
+    "name_ko": "갈색"
+  },
+  "coats/palomino": {
+    "png": "assets/farm/icons/coats/palomino.png",
+    "webp": "assets/farm/icons/coats/palomino.webp",
+    "png128": "assets/farm/icons/coats/palomino.128.png",
+    "webp128": "assets/farm/icons/coats/palomino.128.webp",
+    "name_ko": "팔로미노"
+  },
+  "coats/cream": {
+    "png": "assets/farm/icons/coats/cream.png",
+    "webp": "assets/farm/icons/coats/cream.webp",
+    "png128": "assets/farm/icons/coats/cream.128.png",
+    "webp128": "assets/farm/icons/coats/cream.128.webp",
+    "name_ko": "크림"
+  },
+  "avatars/auntie": {
+    "png": "assets/farm/icons/avatars/auntie.png",
+    "webp": "assets/farm/icons/avatars/auntie.webp",
+    "png128": "assets/farm/icons/avatars/auntie.128.png",
+    "webp128": "assets/farm/icons/avatars/auntie.128.webp",
+    "name_ko": "아주머니"
+  },
+  "avatars/girl": {
+    "png": "assets/farm/icons/avatars/girl.png",
+    "webp": "assets/farm/icons/avatars/girl.webp",
+    "png128": "assets/farm/icons/avatars/girl.128.png",
+    "webp128": "assets/farm/icons/avatars/girl.128.webp",
+    "name_ko": "소녀"
+  },
+  "avatars/grandma": {
+    "png": "assets/farm/icons/avatars/grandma.png",
+    "webp": "assets/farm/icons/avatars/grandma.webp",
+    "png128": "assets/farm/icons/avatars/grandma.128.png",
+    "webp128": "assets/farm/icons/avatars/grandma.128.webp",
+    "name_ko": "할머니"
+  },
+  "avatars/grandpa": {
+    "png": "assets/farm/icons/avatars/grandpa.png",
+    "webp": "assets/farm/icons/avatars/grandpa.webp",
+    "png128": "assets/farm/icons/avatars/grandpa.128.png",
+    "webp128": "assets/farm/icons/avatars/grandpa.128.webp",
+    "name_ko": "할아버지"
+  },
+  "avatars/office": {
+    "png": "assets/farm/icons/avatars/office.png",
+    "webp": "assets/farm/icons/avatars/office.webp",
+    "png128": "assets/farm/icons/avatars/office.128.png",
+    "webp128": "assets/farm/icons/avatars/office.128.webp",
+    "name_ko": "직장인"
+  },
+  "avatars/student": {
+    "png": "assets/farm/icons/avatars/student.png",
+    "webp": "assets/farm/icons/avatars/student.webp",
+    "png128": "assets/farm/icons/avatars/student.128.png",
+    "webp128": "assets/farm/icons/avatars/student.128.webp",
+    "name_ko": "학생"
+  },
+  "avatars/uncle": {
+    "png": "assets/farm/icons/avatars/uncle.png",
+    "webp": "assets/farm/icons/avatars/uncle.webp",
+    "png128": "assets/farm/icons/avatars/uncle.128.png",
+    "webp128": "assets/farm/icons/avatars/uncle.128.webp",
+    "name_ko": "아저씨"
+  },
+  "avatars/young-man": {
+    "png": "assets/farm/icons/avatars/young-man.png",
+    "webp": "assets/farm/icons/avatars/young-man.webp",
+    "png128": "assets/farm/icons/avatars/young-man.128.png",
+    "webp128": "assets/farm/icons/avatars/young-man.128.webp",
+    "name_ko": "청년"
+  },
+  "crops/carrot-growing": {
+    "png": "assets/farm/icons/crops/carrot-growing.png",
+    "webp": "assets/farm/icons/crops/carrot-growing.webp",
+    "png128": "assets/farm/icons/crops/carrot-growing.128.png",
+    "webp128": "assets/farm/icons/crops/carrot-growing.128.webp",
+    "name_ko": "자라는 당근"
+  },
+  "crops/carrot-ready": {
+    "png": "assets/farm/icons/crops/carrot-ready.png",
+    "webp": "assets/farm/icons/crops/carrot-ready.webp",
+    "png128": "assets/farm/icons/crops/carrot-ready.128.png",
+    "webp128": "assets/farm/icons/crops/carrot-ready.128.webp",
+    "name_ko": "다 자란 당근"
+  },
+  "crops/carrot": {
+    "png": "assets/farm/icons/crops/carrot.png",
+    "webp": "assets/farm/icons/crops/carrot.webp",
+    "png128": "assets/farm/icons/crops/carrot.128.png",
+    "webp128": "assets/farm/icons/crops/carrot.128.webp",
+    "name_ko": "당근"
+  },
+  "crops/seed-carrot": {
+    "png": "assets/farm/icons/crops/seed-carrot.png",
+    "webp": "assets/farm/icons/crops/seed-carrot.webp",
+    "png128": "assets/farm/icons/crops/seed-carrot.128.png",
+    "webp128": "assets/farm/icons/crops/seed-carrot.128.webp",
+    "name_ko": "당근 씨앗"
+  },
+  "crops/potato-growing": {
+    "png": "assets/farm/icons/crops/potato-growing.png",
+    "webp": "assets/farm/icons/crops/potato-growing.webp",
+    "png128": "assets/farm/icons/crops/potato-growing.128.png",
+    "webp128": "assets/farm/icons/crops/potato-growing.128.webp",
+    "name_ko": "자라는 감자"
+  },
+  "crops/potato-ready": {
+    "png": "assets/farm/icons/crops/potato-ready.png",
+    "webp": "assets/farm/icons/crops/potato-ready.webp",
+    "png128": "assets/farm/icons/crops/potato-ready.128.png",
+    "webp128": "assets/farm/icons/crops/potato-ready.128.webp",
+    "name_ko": "다 자란 감자"
+  },
+  "crops/potato": {
+    "png": "assets/farm/icons/crops/potato.png",
+    "webp": "assets/farm/icons/crops/potato.webp",
+    "png128": "assets/farm/icons/crops/potato.128.png",
+    "webp128": "assets/farm/icons/crops/potato.128.webp",
+    "name_ko": "감자"
+  },
+  "crops/seed-potato": {
+    "png": "assets/farm/icons/crops/seed-potato.png",
+    "webp": "assets/farm/icons/crops/seed-potato.webp",
+    "png128": "assets/farm/icons/crops/seed-potato.128.png",
+    "webp128": "assets/farm/icons/crops/seed-potato.128.webp",
+    "name_ko": "감자 씨앗"
+  },
+  "crops/strawberry-growing": {
+    "png": "assets/farm/icons/crops/strawberry-growing.png",
+    "webp": "assets/farm/icons/crops/strawberry-growing.webp",
+    "png128": "assets/farm/icons/crops/strawberry-growing.128.png",
+    "webp128": "assets/farm/icons/crops/strawberry-growing.128.webp",
+    "name_ko": "자라는 딸기"
+  },
+  "crops/strawberry-ready": {
+    "png": "assets/farm/icons/crops/strawberry-ready.png",
+    "webp": "assets/farm/icons/crops/strawberry-ready.webp",
+    "png128": "assets/farm/icons/crops/strawberry-ready.128.png",
+    "webp128": "assets/farm/icons/crops/strawberry-ready.128.webp",
+    "name_ko": "다 자란 딸기"
+  },
+  "crops/strawberry": {
+    "png": "assets/farm/icons/crops/strawberry.png",
+    "webp": "assets/farm/icons/crops/strawberry.webp",
+    "png128": "assets/farm/icons/crops/strawberry.128.png",
+    "webp128": "assets/farm/icons/crops/strawberry.128.webp",
+    "name_ko": "딸기"
+  },
+  "crops/seed-strawberry": {
+    "png": "assets/farm/icons/crops/seed-strawberry.png",
+    "webp": "assets/farm/icons/crops/seed-strawberry.webp",
+    "png128": "assets/farm/icons/crops/seed-strawberry.128.png",
+    "webp128": "assets/farm/icons/crops/seed-strawberry.128.webp",
+    "name_ko": "딸기 씨앗"
+  },
+  "crops/pumpkin-growing": {
+    "png": "assets/farm/icons/crops/pumpkin-growing.png",
+    "webp": "assets/farm/icons/crops/pumpkin-growing.webp",
+    "png128": "assets/farm/icons/crops/pumpkin-growing.128.png",
+    "webp128": "assets/farm/icons/crops/pumpkin-growing.128.webp",
+    "name_ko": "자라는 호박"
+  },
+  "crops/pumpkin-ready": {
+    "png": "assets/farm/icons/crops/pumpkin-ready.png",
+    "webp": "assets/farm/icons/crops/pumpkin-ready.webp",
+    "png128": "assets/farm/icons/crops/pumpkin-ready.128.png",
+    "webp128": "assets/farm/icons/crops/pumpkin-ready.128.webp",
+    "name_ko": "다 자란 호박"
+  },
+  "crops/pumpkin": {
+    "png": "assets/farm/icons/crops/pumpkin.png",
+    "webp": "assets/farm/icons/crops/pumpkin.webp",
+    "png128": "assets/farm/icons/crops/pumpkin.128.png",
+    "webp128": "assets/farm/icons/crops/pumpkin.128.webp",
+    "name_ko": "호박"
+  },
+  "crops/seed-pumpkin": {
+    "png": "assets/farm/icons/crops/seed-pumpkin.png",
+    "webp": "assets/farm/icons/crops/seed-pumpkin.webp",
+    "png128": "assets/farm/icons/crops/seed-pumpkin.128.png",
+    "webp128": "assets/farm/icons/crops/seed-pumpkin.128.webp",
+    "name_ko": "호박 씨앗"
+  }
+}

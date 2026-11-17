@@ -1,0 +1,610 @@
+{
+  "chicken": {
+    "file": "chicken.glb",
+    "name_ko": "바삭 치킨",
+    "shop": "papa",
+    "height_m": 0.159214,
+    "grip": {
+      "position": [
+        -0.09,
+        0.05572,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "biscuit": {
+    "file": "biscuit.glb",
+    "name_ko": "버터 비스킷",
+    "shop": "papa",
+    "height_m": 0.06964,
+    "grip": {
+      "position": [
+        -0.06295,
+        0.02437,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "yangnyeom-chicken": {
+    "file": "yangnyeom-chicken.glb",
+    "name_ko": "양념치킨",
+    "shop": "papa",
+    "height_m": 0.139963,
+    "grip": {
+      "position": [
+        -0.08988,
+        0.04899,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "dakgangjeong": {
+    "file": "dakgangjeong.glb",
+    "name_ko": "닭강정",
+    "shop": "papa",
+    "height_m": 0.179995,
+    "grip": {
+      "position": [
+        -0.07181,
+        0.063,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "nuggets": {
+    "file": "nuggets.glb",
+    "name_ko": "치킨너겟",
+    "shop": "papa",
+    "height_m": 0.093226,
+    "grip": {
+      "position": [
+        -0.0627,
+        0.03263,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "fries": {
+    "file": "fries.glb",
+    "name_ko": "감자튀김",
+    "shop": "papa",
+    "height_m": 0.159969,
+    "grip": {
+      "position": [
+        -0.04689,
+        0.05599,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "cheese-balls": {
+    "file": "cheese-balls.glb",
+    "name_ko": "치즈볼",
+    "shop": "papa",
+    "height_m": 0.159987,
+    "grip": {
+      "position": [
+        -0.06921,
+        0.056,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "chicken-burger": {
+    "file": "chicken-burger.glb",
+    "name_ko": "치킨버거",
+    "shop": "papa",
+    "height_m": 0.120064,
+    "grip": {
+      "position": [
+        -0.06164,
+        0.04202,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "lemonade": {
+    "file": "lemonade.glb",
+    "name_ko": "핑크 레몬에이드",
+    "shop": "papa",
+    "height_m": 0.180021,
+    "grip": {
+      "position": [
+        -0.04447,
+        0.06301,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "tteokbokki": {
+    "file": "tteokbokki.glb",
+    "name_ko": "떡볶이",
+    "shop": "bunsik",
+    "height_m": 0.101933,
+    "grip": {
+      "position": [
+        -0.08103,
+        0.03568,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "gimbap": {
+    "file": "gimbap.glb",
+    "name_ko": "김밥",
+    "shop": "bunsik",
+    "height_m": 0.074676,
+    "grip": {
+      "position": [
+        -0.0782,
+        0.02614,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "eomuk": {
+    "file": "eomuk.glb",
+    "name_ko": "어묵",
+    "shop": "bunsik",
+    "height_m": 0.180026,
+    "grip": {
+      "position": [
+        -0.06594,
+        0.06301,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "sundae": {
+    "file": "sundae.glb",
+    "name_ko": "순대",
+    "shop": "bunsik",
+    "height_m": 0.134291,
+    "grip": {
+      "position": [
+        -0.08099,
+        0.047,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "twigim": {
+    "file": "twigim.glb",
+    "name_ko": "모둠 튀김",
+    "shop": "bunsik",
+    "height_m": 0.124514,
+    "grip": {
+      "position": [
+        -0.08108,
+        0.04358,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "ramyeon": {
+    "file": "ramyeon.glb",
+    "name_ko": "라면",
+    "shop": "bunsik",
+    "height_m": 0.099487,
+    "grip": {
+      "position": [
+        -0.10815,
+        0.03482,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "hotdog": {
+    "file": "hotdog.glb",
+    "name_ko": "핫도그",
+    "shop": "bunsik",
+    "height_m": 0.093505,
+    "grip": {
+      "position": [
+        -0.10009,
+        0.04488,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "bungeoppang": {
+    "file": "bungeoppang.glb",
+    "name_ko": "붕어빵",
+    "shop": "bunsik",
+    "height_m": 0.159942,
+    "grip": {
+      "position": [
+        -0.0818,
+        0.05598,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "hotteok": {
+    "file": "hotteok.glb",
+    "name_ko": "호떡",
+    "shop": "bunsik",
+    "height_m": 0.169977,
+    "grip": {
+      "position": [
+        -0.05967,
+        0.05949,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "sikhye": {
+    "file": "sikhye.glb",
+    "name_ko": "식혜",
+    "shop": "bunsik",
+    "height_m": 0.159993,
+    "grip": {
+      "position": [
+        -0.08315,
+        0.056,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "placement": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  }
+}

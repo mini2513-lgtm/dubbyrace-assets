@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "requires_game_integration",
+  "avatars": {
+    "young-man": {
+      "excluded_clips": [
+        "heart_pose"
+      ],
+      "reason": "손을 가슴 앞에서 만나게 수정했지만 하트 윤곽이 선명하지 않아 게임에서 제외합니다."
+    },
+    "grandma": {
+      "excluded_clips": [
+        "heart_pose"
+      ],
+      "reason": "손을 가슴 앞에서 만나게 수정했지만 하트 윤곽이 선명하지 않아 게임에서 제외합니다."
+    },
+    "grandpa": {
+      "excluded_clips": [
+        "heart_pose"
+      ],
+      "reason": "손을 가슴 앞에서 만나게 수정했지만 하트 윤곽이 선명하지 않아 게임에서 제외합니다."
+    },
+    "girl": {
+      "excluded_clips": [
+        "heart_pose"
+      ],
+      "reason": "손을 가슴 앞에서 만나게 수정했지만 하트 윤곽이 선명하지 않아 게임에서 제외합니다."
+    },
+    "auntie": {
+      "excluded_clips": [
+        "heart_pose"
+      ],
+      "reason": "손을 가슴 앞에서 만나게 수정했지만 하트 윤곽이 선명하지 않아 게임에서 제외합니다."
+    },
+    "uncle": {
+      "excluded_clips": [
+        "heart_pose"
+      ],
+      "reason": "손을 가슴 앞에서 만나게 수정했지만 하트 윤곽이 선명하지 않아 게임에서 제외합니다."
+    },
+    "student": {
+      "excluded_clips": [
+        "heart_pose"
+      ],
+      "reason": "손을 가슴 앞에서 만나게 수정했지만 하트 윤곽이 선명하지 않아 게임에서 제외합니다."
+    },
+    "office": {
+      "excluded_clips": [
+        "heart_pose"
+      ],
+      "reason": "손을 가슴 앞에서 만나게 수정했지만 하트 윤곽이 선명하지 않아 게임에서 제외합니다."
+    }
+  }
+}

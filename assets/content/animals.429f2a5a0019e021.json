@@ -1,0 +1,54 @@
+{
+  "cat": {
+    "file": "animals/cat.glb",
+    "height_m": 0.35,
+    "clips": [
+      "Walk"
+    ],
+    "walk_speed_mps": 0.18909447945311272,
+    "rig": true
+  },
+  "dog": {
+    "file": "animals/dog.glb",
+    "height_m": 0.55,
+    "clips": [
+      "Walk"
+    ],
+    "walk_speed_mps": 0.046641568804493126,
+    "rig": true
+  },
+  "chicken": {
+    "file": "animals/chicken.glb",
+    "height_m": 0.4,
+    "clips": [],
+    "walk_speed_mps": null,
+    "rig": false
+  },
+  "rabbit": {
+    "file": "animals/rabbit.glb",
+    "height_m": 0.3,
+    "clips": [
+      "Walk"
+    ],
+    "walk_speed_mps": 0.07597817088008062,
+    "rig": true
+  },
+  "sheep": {
+    "file": "animals/sheep.glb",
+    "height_m": 0.8,
+    "clips": [
+      "Walk"
+    ],
+    "walk_speed_mps": 0.16768897885403977,
+    "rig": true
+  },
+  "goat": {
+    "file": "animals/goat.glb",
+    "height_m": 0.7,
+    "clips": [
+      "Walk"
+    ],
+    "walk_speed_mps": 0.3924610500845605,
+    "rig": true
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "horse": "pony2",
+      "item": "saddle-red",
+      "file": "assets\\farm\\wear\\pony2-saddle-red.m.glb",
+      "triangles": 2350,
+      "textures": [
+        [
+          1024,
+          1024
+        ]
+      ]
+    },
+    {
+      "horse": "pony2",
+      "item": "saddle-blue",
+      "file": "assets\\farm\\wear\\pony2-saddle-blue.m.glb",
+      "triangles": 2350,
+      "textures": [
+        [
+          1024,
+          1024
+        ]
+      ]
+    },
+    {
+      "horse": "pony2",
+      "item": "horse-blanket",
+      "file": "assets\\farm\\wear\\pony2-horse-blanket.m.glb",
+      "triangles": 1696,
+      "textures": []
+    },
+    {
+      "horse": "pony2",
+      "item": "flower-crown",
+      "file": "assets\\farm\\props\\flower-crown.m.glb",
+      "triangles": 2492,
+      "textures": [
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    {
+      "horse": "pony2",
+      "item": "mane-bow",
+      "file": "assets\\farm\\props\\mane-bow.m.glb",
+      "triangles": 2487,
+      "textures": [
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    {
+      "horse": "pony2",
+      "item": "horse-hat",
+      "file": "assets\\farm\\wear\\pony2-horse-hat.m.glb",
+      "triangles": 1262,
+      "textures": []
+    },
+    {
+      "horse": "pony2",
+      "item": "bell-collar",
+      "file": "assets\\farm\\props\\bell-collar.m.glb",
+      "triangles": 2491,
+      "textures": [
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    {
+      "horse": "pony2",
+      "item": "halter",
+      "file": "assets\\farm\\wear\\pony2-halter.m.glb",
+      "triangles": 2112,
+      "textures": []
+    },
+    {
+      "horse": "pony2",
+      "item": "leg-wraps",
+      "file": "assets\\farm\\wear\\pony2-leg-wraps.m.glb",
+      "triangles": 2048,
+      "textures": []
+    },
+    {
+      "horse": "pony2",
+      "item": "leg-wraps",
+      "file": "assets\\farm\\wear\\pony2-leg-wraps.m.glb",
+      "triangles": 2048,
+      "textures": []
+    },
+    {
+      "horse": "pony2",
+      "item": "leg-wraps",
+      "file": "assets\\farm\\wear\\pony2-leg-wraps.m.glb",
+      "triangles": 2048,
+      "textures": []
+    },
+    {
+      "horse": "pony2",
+      "item": "leg-wraps",
+      "file": "assets\\farm\\wear\\pony2-leg-wraps.m.glb",
+      "triangles": 2048,
+      "textures": []
+    },
+    {
+      "horse": "racehorse2",
+      "item": "saddle-red",
+      "file": "assets\\farm\\wear\\racehorse2-saddle-red.m.glb",
+      "triangles": 2350,
+      "textures": [
+        [
+          1024,
+          1024
+        ]
+      ]
+    },
+    {
+      "horse": "racehorse2",
+      "item": "saddle-blue",
+      "file": "assets\\farm\\wear\\racehorse2-saddle-blue.m.glb",
+      "triangles": 2350,
+      "textures": [
+        [
+          1024,
+          1024
+        ]
+      ]
+    },
+    {
+      "horse": "racehorse2",
+      "item": "horse-blanket",
+      "file": "assets\\farm\\wear\\racehorse2-horse-blanket.m.glb",
+      "triangles": 2096,
+      "textures": []
+    },
+    {
+      "horse": "racehorse2",
+      "item": "flower-crown",
+      "file": "assets\\farm\\props\\flower-crown.m.glb",
+      "triangles": 2492,
+      "textures": [
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    {
+      "horse": "racehorse2",
+      "item": "mane-bow",
+      "file": "assets\\farm\\props\\mane-bow.m.glb",
+      "triangles": 2487,
+      "textures": [
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    {
+      "horse": "racehorse2",
+      "item": "horse-hat",
+      "file": "assets\\farm\\wear\\racehorse2-horse-hat.m.glb",
+      "triangles": 1262,
+      "textures": []
+    },
+    {
+      "horse": "racehorse2",
+      "item": "bell-collar",
+      "file": "assets\\farm\\props\\bell-collar.m.glb",
+      "triangles": 2491,
+      "textures": [
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    {
+      "horse": "racehorse2",
+      "item": "halter",
+      "file": "assets\\farm\\wear\\racehorse2-halter.m.glb",
+      "triangles": 2112,
+      "textures": []
+    },
+    {
+      "horse": "racehorse2",
+      "item": "leg-wraps",
+      "file": "assets\\farm\\wear\\racehorse2-leg-wraps.m.glb",
+      "triangles": 2048,
+      "textures": []
+    },
+    {
+      "horse": "racehorse2",
+      "item": "leg-wraps",
+      "file": "assets\\farm\\wear\\racehorse2-leg-wraps.m.glb",
+      "triangles": 2048,
+      "textures": []
+    },
+    {
+      "horse": "racehorse2",
+      "item": "leg-wraps",
+      "file": "assets\\farm\\wear\\racehorse2-leg-wraps.m.glb",
+      "triangles": 2048,
+      "textures": []
+    },
+    {
+      "horse": "racehorse2",
+      "item": "leg-wraps",
+      "file": "assets\\farm\\wear\\racehorse2-leg-wraps.m.glb",
+      "triangles": 2048,
+      "textures": []
+    }
+  ]
+}

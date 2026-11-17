@@ -1,0 +1,135 @@
+{
+  "plate-birch": {
+    "file": "plates/plate-birch.glb",
+    "name_ko": "통나무와 새집",
+    "face": {
+      "center": [
+        0,
+        0,
+        0.025
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "width": 0.84,
+      "height": 0.23
+    },
+    "mount": "post"
+  },
+  "plate-navy": {
+    "file": "plates/plate-navy.glb",
+    "name_ko": "남색과 금테 별",
+    "face": {
+      "center": [
+        0,
+        0,
+        0.025
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "width": 0.82,
+      "height": 0.23
+    },
+    "mount": "post"
+  },
+  "plate-mint": {
+    "file": "plates/plate-mint.glb",
+    "name_ko": "민트 리본과 당근",
+    "face": {
+      "center": [
+        0,
+        0,
+        0.025
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "width": 0.72,
+      "height": 0.2
+    },
+    "mount": "post"
+  },
+  "plate-iron": {
+    "file": "plates/plate-iron.glb",
+    "name_ko": "철제 걸이 간판",
+    "face": {
+      "center": [
+        0.09,
+        0.73,
+        0.191
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "width": 1.13,
+      "height": 0.46
+    },
+    "mount": "standalone"
+  },
+  "plate-flower-pony": {
+    "file": "plates/plate-flower-pony.glb",
+    "name_ko": "꽃 테두리와 조랑말 얼굴",
+    "face": {
+      "center": [
+        0,
+        0,
+        0.025
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "width": 0.83,
+      "height": 0.26
+    },
+    "mount": "post"
+  },
+  "plate-flower": {
+    "file": "plates/plate-flower.glb",
+    "name_ko": "꽃 테두리와 말발굽",
+    "face": {
+      "center": [
+        0,
+        0,
+        0.025
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "width": 0.83,
+      "height": 0.25
+    },
+    "mount": "post"
+  },
+  "plate-oak": {
+    "file": "plates/plate-oak.glb",
+    "name_ko": "참나무와 금 말발굽",
+    "face": {
+      "center": [
+        0,
+        0,
+        0.025
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "width": 0.85,
+      "height": 0.25
+    },
+    "mount": "post"
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "carrot": {
+    "file": "carrot.glb",
+    "height_m": 0.24999,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "food"
+  },
+  "carrots-ready": {
+    "file": "carrots-ready.glb",
+    "height_m": 0.63545,
+    "tris_pc": 9991,
+    "tris_mobile": 2491,
+    "category": "farm"
+  },
+  "hay-bale": {
+    "file": "hay-bale.glb",
+    "height_m": 0.95476,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "farm"
+  },
+  "shovel": {
+    "file": "shovel.glb",
+    "height_m": 0.8,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "tool"
+  },
+  "watering-can": {
+    "file": "watering-can.glb",
+    "height_m": 0.34994,
+    "tris_pc": 9992,
+    "tris_mobile": 2491,
+    "category": "tool"
+  },
+  "horse-hat": {
+    "file": "horse-hat.glb",
+    "height_m": 0.16413,
+    "tris_pc": 9992,
+    "tris_mobile": 2491,
+    "category": "horse-wear"
+  },
+  "apple-crate": {
+    "file": "apple-crate.glb",
+    "height_m": 0.4263,
+    "tris_pc": 9992,
+    "tris_mobile": 2491,
+    "category": "food"
+  },
+  "rosette": {
+    "file": "rosette.glb",
+    "height_m": 0.24995,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "decor"
+  },
+  "mailbox": {
+    "file": "mailbox.glb",
+    "height_m": 1.19998,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "facility"
+  },
+  "saddle-blue": {
+    "file": "saddle-blue.glb",
+    "height_m": 0.42326,
+    "tris_pc": 9991,
+    "tris_mobile": 2491,
+    "category": "horse-wear"
+  },
+  "carrot-basket": {
+    "file": "carrot-basket.glb",
+    "height_m": 0.54086,
+    "tris_pc": 9991,
+    "tris_mobile": 2491,
+    "category": "food"
+  },
+  "carrot-cake": {
+    "file": "carrot-cake.glb",
+    "height_m": 0.30904,
+    "tris_pc": 9991,
+    "tris_mobile": 2491,
+    "category": "food"
+  },
+  "carrots-growing": {
+    "file": "carrots-growing.glb",
+    "height_m": 0.45265,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "farm"
+  },
+  "feed-trough": {
+    "file": "feed-trough.glb",
+    "height_m": 0.50459,
+    "tris_pc": 9991,
+    "tris_mobile": 2490,
+    "category": "farm"
+  },
+  "first-aid-kit": {
+    "file": "first-aid-kit.glb",
+    "height_m": 0.33542,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "tool"
+  },
+  "flower-planter": {
+    "file": "flower-planter.glb",
+    "height_m": 0.34505,
+    "tris_pc": 9992,
+    "tris_mobile": 2491,
+    "category": "decor"
+  },
+  "flower-crown": {
+    "file": "flower-crown.glb",
+    "height_m": 0.07831,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "horse-wear"
+  },
+  "market-stall": {
+    "file": "market-stall.glb",
+    "height_m": 2.30013,
+    "tris_pc": 9991,
+    "tris_mobile": 2491,
+    "category": "facility"
+  },
+  "pitchfork": {
+    "file": "pitchfork.glb",
+    "height_m": 1.2001,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "tool"
+  },
+  "rake": {
+    "file": "rake.glb",
+    "height_m": 0.28321,
+    "tris_pc": 9991,
+    "tris_mobile": 2492,
+    "category": "tool"
+  },
+  "horseshoe": {
+    "file": "horseshoe.glb",
+    "height_m": 0.09986,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "horse-wear"
+  },
+  "trophy": {
+    "file": "trophy.glb",
+    "height_m": 0.4,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "decor"
+  },
+  "oat-sack": {
+    "file": "oat-sack.glb",
+    "height_m": 0.65009,
+    "tris_pc": 9991,
+    "tris_mobile": 2491,
+    "category": "food"
+  },
+  "leg-wraps": {
+    "file": "leg-wraps.glb",
+    "height_m": 0.18725,
+    "tris_pc": 9992,
+    "tris_mobile": 2491,
+    "category": "horse-wear"
+  },
+  "horse-jump": {
+    "file": "horse-jump.glb",
+    "height_m": 1.15955,
+    "tris_pc": 9992,
+    "tris_mobile": 2491,
+    "category": "facility"
+  },
+  "sugar-jar": {
+    "file": "sugar-jar.glb",
+    "height_m": 0.24994,
+    "tris_pc": 9991,
+    "tris_mobile": 2492,
+    "category": "food"
+  },
+  "mane-bow": {
+    "file": "mane-bow.glb",
+    "height_m": 0.16333,
+    "tris_pc": 9988,
+    "tris_mobile": 2487,
+    "category": "horse-wear"
+  },
+  "halter": {
+    "file": "halter.glb",
+    "height_m": 0.31208,
+    "tris_pc": 9992,
+    "tris_mobile": 2491,
+    "category": "horse-wear"
+  },
+  "bell-collar": {
+    "file": "bell-collar.glb",
+    "height_m": 0.10821,
+    "tris_pc": 9991,
+    "tris_mobile": 2491,
+    "category": "horse-wear"
+  },
+  "horse-blanket": {
+    "file": "horse-blanket.glb",
+    "height_m": 0.49153,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "horse-wear"
+  },
+  "apple": {
+    "file": "apple.glb",
+    "height_m": 0.12003,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "food"
+  },
+  "saddle-red": {
+    "file": "saddle-red.glb",
+    "height_m": 0.34743,
+    "tris_pc": 9992,
+    "tris_mobile": 2491,
+    "category": "horse-wear"
+  },
+  "play-ball": {
+    "file": "play-ball.glb",
+    "height_m": 0.44998,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "decor"
+  },
+  "bucket": {
+    "file": "bucket.glb",
+    "height_m": 0.35008,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "tool"
+  },
+  "cone": {
+    "file": "cone.glb",
+    "height_m": 0.45,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "facility"
+  },
+  "hoe": {
+    "file": "hoe.glb",
+    "height_m": 0.31765,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "tool"
+  },
+  "wheelbarrow": {
+    "file": "wheelbarrow.glb",
+    "height_m": 0.73194,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "tool"
+  },
+  "fence": {
+    "file": "fence.glb",
+    "height_m": 0.94394,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "facility"
+  },
+  "name-plate": {
+    "file": "name-plate.glb",
+    "height_m": 0.3214,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "decor"
+  },
+  "lamp-post": {
+    "file": "lamp-post.glb",
+    "height_m": 2.59967,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "facility"
+  },
+  "bench": {
+    "file": "bench.glb",
+    "height_m": 1.08141,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "facility"
+  },
+  "grooming-brush": {
+    "file": "grooming-brush.glb",
+    "height_m": 0.12025,
+    "tris_pc": 9992,
+    "tris_mobile": 2491,
+    "category": "tool"
+  },
+  "water-trough": {
+    "file": "water-trough.glb",
+    "height_m": 0.55959,
+    "tris_pc": 9992,
+    "tris_mobile": 2492,
+    "category": "farm"
+  }
+}
