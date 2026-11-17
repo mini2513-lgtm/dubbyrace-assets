@@ -1,0 +1,113 @@
+{
+  "tree-pine-prized": {
+    "file": "econ/tree-pine-prized.glb",
+    "height_m": 4.5,
+    "footprint": [
+      4.94761,
+      4.52448
+    ],
+    "collide": true
+  },
+  "bonsai": {
+    "file": "econ/bonsai.glb",
+    "height_m": 0.9,
+    "footprint": [
+      0.752,
+      0.44154
+    ],
+    "collide": true
+  },
+  "flower-pot": {
+    "file": "econ/flower-pot.glb",
+    "height_m": 0.7,
+    "footprint": [
+      0.59139,
+      0.60306
+    ],
+    "collide": true
+  },
+  "wreath": {
+    "file": "econ/wreath.glb",
+    "height_m": 1.2,
+    "footprint": [
+      1.09236,
+      0.55046
+    ],
+    "collide": true
+  },
+  "hay-bench": {
+    "file": "econ/hay-bench.glb",
+    "height_m": 1,
+    "footprint": [
+      1.46735,
+      1.31022
+    ],
+    "collide": true
+  },
+  "scarecrow": {
+    "file": "econ/scarecrow.glb",
+    "height_m": 1.9,
+    "footprint": [
+      1.41055,
+      1.0141
+    ],
+    "collide": true
+  },
+  "tack-rack": {
+    "file": "econ/tack-rack.glb",
+    "height_m": 1.6,
+    "footprint": [
+      0.68364,
+      0.93784
+    ],
+    "collide": true
+  },
+  "horseshoe": {
+    "file": "econ/horseshoe.glb",
+    "height_m": 0.9,
+    "footprint": [
+      0.7104,
+      0.23085
+    ],
+    "collide": true
+  },
+  "house-wood": {
+    "file": "econ/house-wood.glb",
+    "height_m": 6,
+    "footprint": [
+      5.69715,
+      5.92866
+    ],
+    "collide": true,
+    "doorFacing": "+z"
+  },
+  "house-steel": {
+    "file": "econ/house-steel.glb",
+    "height_m": 8,
+    "footprint": [
+      7.47137,
+      6.19991
+    ],
+    "collide": true,
+    "doorFacing": "+z"
+  },
+  "house-villa": {
+    "file": "econ/house-villa.glb",
+    "height_m": 8,
+    "footprint": [
+      8.90758,
+      8.75981
+    ],
+    "collide": true,
+    "doorFacing": "+z"
+  },
+  "tree-maple": {
+    "file": "econ/tree-maple.glb",
+    "height_m": 4,
+    "footprint": [
+      3.35426,
+      3.42461
+    ],
+    "collide": true
+  }
+}
