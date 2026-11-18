@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "콩콩팥팥",
+  "short_name": "콩콩팥팥",
+  "lang": "ko",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff1d8",
+  "theme_color": "#3c5d42",
+  "icons": [
+    { "src": "/assets/farm/brand/app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/farm/brand/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/farm/brand/app-icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
