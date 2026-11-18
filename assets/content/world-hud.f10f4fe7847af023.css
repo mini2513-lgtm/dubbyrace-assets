@@ -201,3 +201,70 @@ body.pc-frame:has(#farm-world-panel[open]) .pc-frame-right *,body.pc-frame:has(#
 /* 검수 지적: PC에서는 채팅 열기 버튼이 없어 chat-open이 안 붙음 → 목록 스크롤과 신고 버튼을 늘 쓸 수 있게 */
 body.pc-frame #world-chat .chat-list{pointer-events:auto;overflow:auto;scrollbar-width:none}
 body.pc-frame #world-chat .chat-list article:is(:hover,:focus-within) button{display:inline-block}
+
+body.world-page.at-title :is(#hud,#world-pc-frame,#world-chat,#world-minimap,.farm-world-toolbar,.race-start-alert,#farm-next-task){display:none!important}
+body.world-page.at-title #farm-options :is(#tutorial-replay,fieldset:has(#title-logout[hidden])){display:none!important}
+body.world-page #farm-start .start-content{gap:clamp(8px,1.4vh,14px)}
+body.world-page #farm-start .start-logo img{max-height:min(280px,33vh)}
+body.world-page #farm-start .start-tagline{width:min(355px,82%)}
+body.world-page #farm-start .start-buttons{
+  width:min(420px,100%);box-sizing:border-box;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:14px;
+}
+body.world-page #farm-start .start-buttons button{font-size:21px;min-height:46px;white-space:nowrap}
+body.world-page #title-start{grid-column:1;grid-row:1 / span 2;height:100%}
+body.world-page #title-updates,body.world-page #title-options{grid-column:2}
+body.world-page #title-reset{grid-column:1 / -1}
+#world-character-reset{box-sizing:border-box;width:min(460px,calc(100vw - 24px));margin:auto}
+#world-character-reset p{line-height:1.45;word-break:keep-all}
+#world-character-reset form{display:grid;gap:8px}
+#world-character-reset input{width:100%;box-sizing:border-box}
+#world-character-reset [role=status]:empty{display:none}
+.character-reset-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+body.world-page.in-tutorial #farm-tutorial.tutorial-replay #tutorial-message{white-space:normal;text-overflow:clip;font-size:16px;overflow:visible}
+.pc-frame-vine{display:none}
+
+@media(min-width:1024px) and (pointer:fine){
+  body.world-page.pc-frame{
+    background:
+      radial-gradient(ellipse at 50% 4%,#f3c58c60,transparent 70%),
+      repeating-linear-gradient(0deg,#73461d13 0 1px,transparent 1px 13px,#f9da9b20 13px 14px,transparent 14px 37px),
+      linear-gradient(135deg,#bc7f4b,#a76940 60%,#925735);
+  }
+  #world-pc-frame>aside,#world-pc-frame>.pc-frame-bottom,body.world-page.pc-frame .world-top{
+    background:
+      radial-gradient(ellipse at 22% 13%,#fff2d2a0,transparent 78%),
+      repeating-linear-gradient(3deg,#823d1412 0 1px,transparent 1px 14px,#fff4ca56 14px 15px,transparent 15px 34px),
+      linear-gradient(#efc58b,#e1a96f)!important;
+    border-color:#7d492d!important;
+    box-shadow:none!important;
+  }
+  #world-pc-frame>aside{padding:16px 16px 52px}
+  body.pc-frame :is(.world-travel,.world-options) button{
+    background:linear-gradient(#fff7e6,#f5dfbd)!important;
+    border-color:#805237!important;
+    box-shadow:none!important;
+  }
+  body.pc-frame :is(.world-travel,.world-options) button:hover,
+  body.world-page.pc-frame #world-options-menu #bug-launch:hover{background:var(--leaf-soft)!important}
+  body.world-page.pc-frame .farm-world-toolbar button{
+    background:linear-gradient(#fff7e6,#f5dfbd);border-color:#805237;box-shadow:none;
+  }
+  body.world-page.pc-frame .farm-world-toolbar button:hover{background:var(--leaf-soft)}
+  .pc-frame-vine{
+    display:block;position:absolute;right:34px;bottom:110px;width:124px;height:30px;pointer-events:none;transform:scaleX(-1);
+    background:
+      radial-gradient(ellipse 17px 7px at 20px 19px,#587b42 94%,transparent 100%),
+      radial-gradient(ellipse 8px 13px at 43px 12px,#7e9650 93%,transparent 100%),
+      radial-gradient(ellipse 12px 7px at 63px 20px,#5d8049 95%,transparent 100%),
+      radial-gradient(ellipse 8px 10px at 83px 11px,#879e52 94%,transparent 100%),
+      radial-gradient(ellipse 8px 5px at 106px 17px,#9e4c40 95%,transparent 100%),
+      radial-gradient(ellipse 6px 5px at 119px 12px,#a85940 92%,transparent 100%),
+      radial-gradient(ellipse 54px 10px at 55px 11px,transparent 88%,#668347 92% 98%,transparent 100%);
+  }
+}
+/* 좁은 돈 및 집 서랍입니다. */
+#farm-world-panel .money-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:8px 0}#farm-world-panel .money-tabs button{min-width:0;padding:5px 2px;font-size:12px;white-space:nowrap;overflow:hidden;min-height:44px}
+#farm-world-panel .bank-ledger{list-style:none;margin:0;padding:0}#farm-world-panel .bank-ledger li{padding:12px 0;border-bottom:1px solid #b58e6345}#farm-world-panel .bank-ledger li>div{display:flex;gap:8px;align-items:center}#farm-world-panel .bank-ledger-label{min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#farm-world-panel .bank-ledger-amount{flex:none;white-space:nowrap;font-size:16px;font-variant-numeric:tabular-nums}#farm-world-panel .bank-ledger-amount.income{color:#32602b}#farm-world-panel .bank-ledger-amount.expense{color:#9f2e22}#farm-world-panel .bank-ledger small{display:block;font-size:13px;color:#6b4f38;margin-top:4px;white-space:nowrap}
+#farm-world-panel :is(.house-type-tabs,.house-size-chips){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:10px 0}#farm-world-panel .house-size-chips{grid-template-columns:repeat(4,minmax(0,1fr))}#farm-world-panel :is(.house-type-tabs,.house-size-chips) button{font-size:14px;min-width:0;padding:7px 2px;overflow-wrap:normal;white-space:normal;line-height:1.3}#farm-world-panel .house-size-chips svg{vertical-align:middle;margin-right:2px}#farm-world-panel .house-summary{margin:14px 0 20px;border-top:1px solid #b58e63;padding-top:12px}#farm-world-panel .house-summary h4{font-size:21px;margin:0 0 6px;overflow-wrap:normal}#farm-world-panel .house-price{font-size:24px;white-space:nowrap}#farm-world-panel .house-reason{font-size:15px;color:#8a381d}#farm-world-panel .house-summary>button{width:100%;min-height:48px;white-space:normal;overflow-wrap:normal}
+#farm-world-panel .farm-world-content label:not(:has(input[type=checkbox])){display:flex;flex-direction:column;align-items:stretch;gap:5px}#farm-world-panel .farm-world-content label :is(select,input:not([type=checkbox])){width:100%;max-width:100%;min-width:0;margin:0;box-sizing:border-box}#farm-world-panel :is(.econ-comparison,.farm-world-columns){grid-template-columns:1fr}#farm-world-panel .farm-world-content p{overflow-wrap:normal}#farm-world-panel .farm-world-content meter{width:100%}#farm-world-panel .farm-world-content button{max-width:100%;white-space:normal;overflow-wrap:normal}
+#farm-world-panel .money-read-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}#farm-world-panel .money-read-tabs button{font-size:16px}#farm-world-panel .bank-service-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}#farm-world-panel .money-banking-entry{margin:18px 0 0;padding-top:12px;border-top:1px solid #b58e6345}#farm-world-panel .money-banking-entry button{width:100%}#farm-world-panel .bank-bills{list-style:none;margin:0;padding:0}#farm-world-panel .bank-bills li{padding:12px 0;border-bottom:1px solid #b58e6345}#farm-world-panel .bank-bills time{font-size:14px;color:#6b4f38}#farm-world-panel .bank-bills li>div{display:flex;align-items:center;justify-content:space-between;gap:8px}#farm-world-panel .bank-bills b{white-space:nowrap;font-variant-numeric:tabular-nums}#farm-world-panel .bank-bills p{font-size:15px;line-height:1.45}#farm-world-panel .bank-bills small{display:block;line-height:1.5;font-size:13px}#farm-world-panel .bank-empty{font-size:15px}
