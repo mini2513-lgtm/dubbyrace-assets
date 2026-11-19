@@ -1,0 +1,775 @@
+{
+ "voice": "AI Studio designed announcer (user), calm/climax references, cloned with local Qwen3-TTS 0.6B",
+ "clips": {
+  "loaded": {
+   "file": "cm-loaded.mp3",
+   "text": "모든 말이 출발대에 들어갔습니다.",
+   "sec": 1.76
+  },
+  "start-1200": {
+   "file": "cm-start-1200.mp3",
+   "text": "1,200미터 경주, 출발했습니다!",
+   "sec": 2.15
+  },
+  "start-1400": {
+   "file": "cm-start-1400.mp3",
+   "text": "1,400미터 경주, 출발했습니다!",
+   "sec": 1.83
+  },
+  "start-1600": {
+   "file": "cm-start-1600.mp3",
+   "text": "1,600미터 경주, 출발했습니다!",
+   "sec": 2.26
+  },
+  "start-1800": {
+   "file": "cm-start-1800.mp3",
+   "text": "1,800미터 경주, 출발했습니다!",
+   "sec": 1.97
+  },
+  "clean": {
+   "file": "cm-clean.mp3",
+   "text": "여덟 마리 모두 고르게 출발합니다.",
+   "sec": 1.6
+  },
+  "corner": {
+   "file": "cm-corner.mp3",
+   "text": "이제 코너로 들어갑니다.",
+   "sec": 1.16
+  },
+  "backstretch": {
+   "file": "cm-backstretch.mp3",
+   "text": "건너편 직선, 무리가 길게 늘어섭니다.",
+   "sec": 1.95
+  },
+  "farturn": {
+   "file": "cm-farturn.mp3",
+   "text": "3, 4코너를 돌아 나옵니다!",
+   "sec": 2.25
+  },
+  "home": {
+   "file": "cm-home.mp3",
+   "text": "자, 마지막 직선입니다!",
+   "sec": 1.14
+  },
+  "last200": {
+   "file": "cm-last200.mp3",
+   "text": "남은 거리 200미터!",
+   "sec": 1.06
+  },
+  "two": {
+   "file": "cm-two.mp3",
+   "text": "두 마리가 앞서 있습니다.",
+   "sec": 1.07
+  },
+  "pack": {
+   "file": "cm-pack.mp3",
+   "text": "그 뒤로 나머지 말들이 바짝 따라붙고 있습니다.",
+   "sec": 1.92
+  },
+  "close": {
+   "file": "cm-close.mp3",
+   "text": "치열한 접전입니다!",
+   "sec": 1.18
+  },
+  "finish": {
+   "file": "cm-finish.mp3",
+   "text": "결승선 통과했습니다!",
+   "sec": 1.21
+  },
+  "photo": {
+   "file": "cm-photo.mp3",
+   "text": "아주 근소한 차이, 사진 판독에 들어갑니다.",
+   "sec": 2.08
+  },
+  "comeback": {
+   "file": "cm-comeback.mp3",
+   "text": "꼴찌에서 올라왔습니다! 대역전입니다!",
+   "sec": 2.08
+  },
+  "m-half": {
+   "file": "cm-m-half.mp3",
+   "text": "거리차는 반 마신 정도입니다.",
+   "sec": 1.48
+  },
+  "m-1": {
+   "file": "cm-m-1.mp3",
+   "text": "약 1마신 정도 앞서 있습니다.",
+   "sec": 1.64
+  },
+  "m-2": {
+   "file": "cm-m-2.mp3",
+   "text": "약 2마신 정도 앞서 있습니다.",
+   "sec": 1.56
+  },
+  "m-3": {
+   "file": "cm-m-3.mp3",
+   "text": "약 3마신 정도 앞서 있습니다.",
+   "sec": 1.49
+  },
+  "m-4": {
+   "file": "cm-m-4.mp3",
+   "text": "4마신 이상 크게 앞서 있습니다.",
+   "sec": 1.81
+  },
+  "gate-in": {
+   "file": "cm-gate-in.mp3",
+   "text": "출발대 진입했습니다. 곧 경주 시작합니다.",
+   "sec": 2.93
+  },
+  "even": {
+   "file": "cm-even.mp3",
+   "text": "전체적으로 고른 출발, 선행 싸움이 치열합니다.",
+   "sec": 2.45
+  },
+  "field-6": {
+   "file": "cm-field-6.mp3",
+   "text": "마군의 길이는 약 6마신.",
+   "sec": 1.6
+  },
+  "field-10": {
+   "file": "cm-field-10.mp3",
+   "text": "마군의 길이는 약 10마신.",
+   "sec": 1.78
+  },
+  "field-14": {
+   "file": "cm-field-14.mp3",
+   "text": "마군의 길이는 약 14마신.",
+   "sec": 1.67
+  },
+  "field-18": {
+   "file": "cm-field-18.mp3",
+   "text": "마군의 길이는 약 18마신.",
+   "sec": 1.83
+  },
+  "keep": {
+   "file": "cm-keep.mp3",
+   "text": "간격은 계속 유지되고 있습니다.",
+   "sec": 1.68
+  },
+  "turn-home": {
+   "file": "cm-turn-home.mp3",
+   "text": "코너를 돌아 결승선으로 향하는 직선 주로에 진입합니다!",
+   "sec": 3.12
+  },
+  "fast": {
+   "file": "cm-fast.mp3",
+   "text": "경주마들이 빠르게 질주하고 있습니다.",
+   "sec": 1.67
+  },
+  "near": {
+   "file": "cm-near.mp3",
+   "text": "결승선이 얼마 남지 않았습니다!",
+   "sec": 1.75
+  },
+  "chase": {
+   "file": "cm-chase.mp3",
+   "text": "거센 추격전이 펼쳐집니다!",
+   "sec": 1.62
+  },
+  "tight": {
+   "file": "cm-tight.mp3",
+   "text": "끝까지 매우 치열한 상황입니다!",
+   "sec": 1.39
+  },
+  "n-1": {
+   "file": "cm-n-1.mp3",
+   "text": "1번마,",
+   "sec": 0.38
+  },
+  "lead-1": {
+   "file": "cm-lead-1.mp3",
+   "text": "1번마, 선두로 나섭니다.",
+   "sec": 1.57
+  },
+  "front-1": {
+   "file": "cm-front-1.mp3",
+   "text": "1번마가 앞서고 있습니다.",
+   "sec": 1.02
+  },
+  "inside-1": {
+   "file": "cm-inside-1.mp3",
+   "text": "안쪽에서 1번마가 따라붙습니다.",
+   "sec": 1.51
+  },
+  "outside-1": {
+   "file": "cm-outside-1.mp3",
+   "text": "바깥쪽에서 1번마가 치고 나옵니다!",
+   "sec": 1.81
+  },
+  "top-1": {
+   "file": "cm-top-1.mp3",
+   "text": "1번마, 1위까지 올라섭니다!",
+   "sec": 1.69
+  },
+  "win-1": {
+   "file": "cm-win-1.mp3",
+   "text": "1번마! 1번마가 1착입니다!",
+   "sec": 2.02
+  },
+  "goodstart-1": {
+   "file": "cm-goodstart-1.mp3",
+   "text": "좋은 출발을 보이며 1번마가 앞서 나옵니다.",
+   "sec": 2.52
+  },
+  "closing-1": {
+   "file": "cm-closing-1.mp3",
+   "text": "뒤쪽에서 1번마가 거리차를 좁힙니다.",
+   "sec": 2.34
+  },
+  "chasing-1": {
+   "file": "cm-chasing-1.mp3",
+   "text": "1번마가 선두권을 추격합니다.",
+   "sec": 1.88
+  },
+  "follow-1": {
+   "file": "cm-follow-1.mp3",
+   "text": "그 뒤를 1번마가 추격하고 있습니다.",
+   "sec": 2.04
+  },
+  "kick-1": {
+   "file": "cm-kick-1.mp3",
+   "text": "뒤쪽에서 1번마가 추입을 시작합니다!",
+   "sec": 2.47
+  },
+  "challenge-1": {
+   "file": "cm-challenge-1.mp3",
+   "text": "1번마가 도전합니다!",
+   "sec": 1.12
+  },
+  "hold-1": {
+   "file": "cm-hold-1.mp3",
+   "text": "선두를 지키려는 1번마!",
+   "sec": 1.58
+  },
+  "n-2": {
+   "file": "cm-n-2.mp3",
+   "text": "2번마,",
+   "sec": 0.34
+  },
+  "lead-2": {
+   "file": "cm-lead-2.mp3",
+   "text": "2번마, 선두로 나섭니다.",
+   "sec": 1.29
+  },
+  "front-2": {
+   "file": "cm-front-2.mp3",
+   "text": "2번마가 앞서고 있습니다.",
+   "sec": 1.12
+  },
+  "inside-2": {
+   "file": "cm-inside-2.mp3",
+   "text": "안쪽에서 2번마가 따라붙습니다.",
+   "sec": 1.4
+  },
+  "outside-2": {
+   "file": "cm-outside-2.mp3",
+   "text": "바깥쪽에서 2번마가 치고 나옵니다!",
+   "sec": 1.61
+  },
+  "top-2": {
+   "file": "cm-top-2.mp3",
+   "text": "2번마, 1위까지 올라섭니다!",
+   "sec": 1.65
+  },
+  "win-2": {
+   "file": "cm-win-2.mp3",
+   "text": "2번마! 2번마가 1착입니다!",
+   "sec": 1.72
+  },
+  "goodstart-2": {
+   "file": "cm-goodstart-2.mp3",
+   "text": "좋은 출발을 보이며 2번마가 앞서 나옵니다.",
+   "sec": 2.43
+  },
+  "closing-2": {
+   "file": "cm-closing-2.mp3",
+   "text": "뒤쪽에서 2번마가 거리차를 좁힙니다.",
+   "sec": 1.62
+  },
+  "chasing-2": {
+   "file": "cm-chasing-2.mp3",
+   "text": "2번마가 선두권을 추격합니다.",
+   "sec": 1.51
+  },
+  "follow-2": {
+   "file": "cm-follow-2.mp3",
+   "text": "그 뒤를 2번마가 추격하고 있습니다.",
+   "sec": 1.74
+  },
+  "kick-2": {
+   "file": "cm-kick-2.mp3",
+   "text": "뒤쪽에서 2번마가 추입을 시작합니다!",
+   "sec": 1.52
+  },
+  "challenge-2": {
+   "file": "cm-challenge-2.mp3",
+   "text": "2번마가 도전합니다!",
+   "sec": 1.12
+  },
+  "hold-2": {
+   "file": "cm-hold-2.mp3",
+   "text": "선두를 지키려는 2번마!",
+   "sec": 1.44
+  },
+  "n-3": {
+   "file": "cm-n-3.mp3",
+   "text": "3번마,",
+   "sec": 0.48
+  },
+  "lead-3": {
+   "file": "cm-lead-3.mp3",
+   "text": "3번마, 선두로 나섭니다.",
+   "sec": 1.6
+  },
+  "front-3": {
+   "file": "cm-front-3.mp3",
+   "text": "3번마가 앞서고 있습니다.",
+   "sec": 1.3
+  },
+  "inside-3": {
+   "file": "cm-inside-3.mp3",
+   "text": "안쪽에서 3번마가 따라붙습니다.",
+   "sec": 1.66
+  },
+  "outside-3": {
+   "file": "cm-outside-3.mp3",
+   "text": "바깥쪽에서 3번마가 치고 나옵니다!",
+   "sec": 2.0
+  },
+  "top-3": {
+   "file": "cm-top-3.mp3",
+   "text": "3번마, 1위까지 올라섭니다!",
+   "sec": 1.81
+  },
+  "win-3": {
+   "file": "cm-win-3.mp3",
+   "text": "3번마! 3번마가 1착입니다!",
+   "sec": 2.08
+  },
+  "goodstart-3": {
+   "file": "cm-goodstart-3.mp3",
+   "text": "좋은 출발을 보이며 3번마가 앞서 나옵니다.",
+   "sec": 2.32
+  },
+  "closing-3": {
+   "file": "cm-closing-3.mp3",
+   "text": "뒤쪽에서 3번마가 거리차를 좁힙니다.",
+   "sec": 1.95
+  },
+  "chasing-3": {
+   "file": "cm-chasing-3.mp3",
+   "text": "3번마가 선두권을 추격합니다.",
+   "sec": 1.72
+  },
+  "follow-3": {
+   "file": "cm-follow-3.mp3",
+   "text": "그 뒤를 3번마가 추격하고 있습니다.",
+   "sec": 1.78
+  },
+  "kick-3": {
+   "file": "cm-kick-3.mp3",
+   "text": "뒤쪽에서 3번마가 추입을 시작합니다!",
+   "sec": 1.72
+  },
+  "challenge-3": {
+   "file": "cm-challenge-3.mp3",
+   "text": "3번마가 도전합니다!",
+   "sec": 1.32
+  },
+  "hold-3": {
+   "file": "cm-hold-3.mp3",
+   "text": "선두를 지키려는 3번마!",
+   "sec": 1.47
+  },
+  "n-4": {
+   "file": "cm-n-4.mp3",
+   "text": "4번마,",
+   "sec": 0.43
+  },
+  "lead-4": {
+   "file": "cm-lead-4.mp3",
+   "text": "4번마, 선두로 나섭니다.",
+   "sec": 1.55
+  },
+  "front-4": {
+   "file": "cm-front-4.mp3",
+   "text": "4번마가 앞서고 있습니다.",
+   "sec": 1.13
+  },
+  "inside-4": {
+   "file": "cm-inside-4.mp3",
+   "text": "안쪽에서 4번마가 따라붙습니다.",
+   "sec": 1.71
+  },
+  "outside-4": {
+   "file": "cm-outside-4.mp3",
+   "text": "바깥쪽에서 4번마가 치고 나옵니다!",
+   "sec": 1.88
+  },
+  "top-4": {
+   "file": "cm-top-4.mp3",
+   "text": "4번마, 1위까지 올라섭니다!",
+   "sec": 1.7
+  },
+  "win-4": {
+   "file": "cm-win-4.mp3",
+   "text": "4번마! 4번마가 1착입니다!",
+   "sec": 2.11
+  },
+  "goodstart-4": {
+   "file": "cm-goodstart-4.mp3",
+   "text": "좋은 출발을 보이며 4번마가 앞서 나옵니다.",
+   "sec": 2.38
+  },
+  "closing-4": {
+   "file": "cm-closing-4.mp3",
+   "text": "뒤쪽에서 4번마가 거리차를 좁힙니다.",
+   "sec": 2.22
+  },
+  "chasing-4": {
+   "file": "cm-chasing-4.mp3",
+   "text": "4번마가 선두권을 추격합니다.",
+   "sec": 2.25
+  },
+  "follow-4": {
+   "file": "cm-follow-4.mp3",
+   "text": "그 뒤를 4번마가 추격하고 있습니다.",
+   "sec": 1.96
+  },
+  "kick-4": {
+   "file": "cm-kick-4.mp3",
+   "text": "뒤쪽에서 4번마가 추입을 시작합니다!",
+   "sec": 1.64
+  },
+  "challenge-4": {
+   "file": "cm-challenge-4.mp3",
+   "text": "4번마가 도전합니다!",
+   "sec": 1.45
+  },
+  "hold-4": {
+   "file": "cm-hold-4.mp3",
+   "text": "선두를 지키려는 4번마!",
+   "sec": 1.7
+  },
+  "n-5": {
+   "file": "cm-n-5.mp3",
+   "text": "5번마,",
+   "sec": 0.33
+  },
+  "lead-5": {
+   "file": "cm-lead-5.mp3",
+   "text": "5번마, 선두로 나섭니다.",
+   "sec": 1.52
+  },
+  "front-5": {
+   "file": "cm-front-5.mp3",
+   "text": "5번마가 앞서고 있습니다.",
+   "sec": 1.23
+  },
+  "inside-5": {
+   "file": "cm-inside-5.mp3",
+   "text": "안쪽에서 5번마가 따라붙습니다.",
+   "sec": 1.68
+  },
+  "outside-5": {
+   "file": "cm-outside-5.mp3",
+   "text": "바깥쪽에서 5번마가 치고 나옵니다!",
+   "sec": 1.88
+  },
+  "top-5": {
+   "file": "cm-top-5.mp3",
+   "text": "5번마, 1위까지 올라섭니다!",
+   "sec": 2.16
+  },
+  "win-5": {
+   "file": "cm-win-5.mp3",
+   "text": "5번마! 5번마가 1착입니다!",
+   "sec": 1.63
+  },
+  "goodstart-5": {
+   "file": "cm-goodstart-5.mp3",
+   "text": "좋은 출발을 보이며 5번마가 앞서 나옵니다.",
+   "sec": 2.31
+  },
+  "closing-5": {
+   "file": "cm-closing-5.mp3",
+   "text": "뒤쪽에서 5번마가 거리차를 좁힙니다.",
+   "sec": 2.24
+  },
+  "chasing-5": {
+   "file": "cm-chasing-5.mp3",
+   "text": "5번마가 선두권을 추격합니다.",
+   "sec": 1.49
+  },
+  "follow-5": {
+   "file": "cm-follow-5.mp3",
+   "text": "그 뒤를 5번마가 추격하고 있습니다.",
+   "sec": 1.65
+  },
+  "kick-5": {
+   "file": "cm-kick-5.mp3",
+   "text": "뒤쪽에서 5번마가 추입을 시작합니다!",
+   "sec": 1.92
+  },
+  "challenge-5": {
+   "file": "cm-challenge-5.mp3",
+   "text": "5번마가 도전합니다!",
+   "sec": 1.38
+  },
+  "hold-5": {
+   "file": "cm-hold-5.mp3",
+   "text": "선두를 지키려는 5번마!",
+   "sec": 1.44
+  },
+  "n-6": {
+   "file": "cm-n-6.mp3",
+   "text": "6번마,",
+   "sec": 0.35
+  },
+  "lead-6": {
+   "file": "cm-lead-6.mp3",
+   "text": "6번마, 선두로 나섭니다.",
+   "sec": 1.49
+  },
+  "front-6": {
+   "file": "cm-front-6.mp3",
+   "text": "6번마가 앞서고 있습니다.",
+   "sec": 1.21
+  },
+  "inside-6": {
+   "file": "cm-inside-6.mp3",
+   "text": "안쪽에서 6번마가 따라붙습니다.",
+   "sec": 1.62
+  },
+  "outside-6": {
+   "file": "cm-outside-6.mp3",
+   "text": "바깥쪽에서 6번마가 치고 나옵니다!",
+   "sec": 2.0
+  },
+  "top-6": {
+   "file": "cm-top-6.mp3",
+   "text": "6번마, 1위까지 올라섭니다!",
+   "sec": 2.12
+  },
+  "win-6": {
+   "file": "cm-win-6.mp3",
+   "text": "6번마! 6번마가 1착입니다!",
+   "sec": 1.94
+  },
+  "goodstart-6": {
+   "file": "cm-goodstart-6.mp3",
+   "text": "좋은 출발을 보이며 6번마가 앞서 나옵니다.",
+   "sec": 2.39
+  },
+  "closing-6": {
+   "file": "cm-closing-6.mp3",
+   "text": "뒤쪽에서 6번마가 거리차를 좁힙니다.",
+   "sec": 1.62
+  },
+  "chasing-6": {
+   "file": "cm-chasing-6.mp3",
+   "text": "6번마가 선두권을 추격합니다.",
+   "sec": 2.86
+  },
+  "follow-6": {
+   "file": "cm-follow-6.mp3",
+   "text": "그 뒤를 6번마가 추격하고 있습니다.",
+   "sec": 1.59
+  },
+  "kick-6": {
+   "file": "cm-kick-6.mp3",
+   "text": "뒤쪽에서 6번마가 추입을 시작합니다!",
+   "sec": 1.6
+  },
+  "challenge-6": {
+   "file": "cm-challenge-6.mp3",
+   "text": "6번마가 도전합니다!",
+   "sec": 1.38
+  },
+  "hold-6": {
+   "file": "cm-hold-6.mp3",
+   "text": "선두를 지키려는 6번마!",
+   "sec": 1.83
+  },
+  "n-7": {
+   "file": "cm-n-7.mp3",
+   "text": "7번마,",
+   "sec": 0.4
+  },
+  "lead-7": {
+   "file": "cm-lead-7.mp3",
+   "text": "7번마, 선두로 나섭니다.",
+   "sec": 1.59
+  },
+  "front-7": {
+   "file": "cm-front-7.mp3",
+   "text": "7번마가 앞서고 있습니다.",
+   "sec": 1.07
+  },
+  "inside-7": {
+   "file": "cm-inside-7.mp3",
+   "text": "안쪽에서 7번마가 따라붙습니다.",
+   "sec": 1.73
+  },
+  "outside-7": {
+   "file": "cm-outside-7.mp3",
+   "text": "바깥쪽에서 7번마가 치고 나옵니다!",
+   "sec": 1.72
+  },
+  "top-7": {
+   "file": "cm-top-7.mp3",
+   "text": "7번마, 1위까지 올라섭니다!",
+   "sec": 2.17
+  },
+  "win-7": {
+   "file": "cm-win-7.mp3",
+   "text": "7번마! 7번마가 1착입니다!",
+   "sec": 1.9
+  },
+  "goodstart-7": {
+   "file": "cm-goodstart-7.mp3",
+   "text": "좋은 출발을 보이며 7번마가 앞서 나옵니다.",
+   "sec": 2.19
+  },
+  "closing-7": {
+   "file": "cm-closing-7.mp3",
+   "text": "뒤쪽에서 7번마가 거리차를 좁힙니다.",
+   "sec": 2.15
+  },
+  "chasing-7": {
+   "file": "cm-chasing-7.mp3",
+   "text": "7번마가 선두권을 추격합니다.",
+   "sec": 1.78
+  },
+  "follow-7": {
+   "file": "cm-follow-7.mp3",
+   "text": "그 뒤를 7번마가 추격하고 있습니다.",
+   "sec": 1.96
+  },
+  "kick-7": {
+   "file": "cm-kick-7.mp3",
+   "text": "뒤쪽에서 7번마가 추입을 시작합니다!",
+   "sec": 1.85
+  },
+  "challenge-7": {
+   "file": "cm-challenge-7.mp3",
+   "text": "7번마가 도전합니다!",
+   "sec": 1.42
+  },
+  "hold-7": {
+   "file": "cm-hold-7.mp3",
+   "text": "선두를 지키려는 7번마!",
+   "sec": 1.44
+  },
+  "n-8": {
+   "file": "cm-n-8.mp3",
+   "text": "8번마,",
+   "sec": 0.49
+  },
+  "lead-8": {
+   "file": "cm-lead-8.mp3",
+   "text": "8번마, 선두로 나섭니다.",
+   "sec": 1.37
+  },
+  "front-8": {
+   "file": "cm-front-8.mp3",
+   "text": "8번마가 앞서고 있습니다.",
+   "sec": 1.22
+  },
+  "inside-8": {
+   "file": "cm-inside-8.mp3",
+   "text": "안쪽에서 8번마가 따라붙습니다.",
+   "sec": 1.83
+  },
+  "outside-8": {
+   "file": "cm-outside-8.mp3",
+   "text": "바깥쪽에서 8번마가 치고 나옵니다!",
+   "sec": 1.92
+  },
+  "top-8": {
+   "file": "cm-top-8.mp3",
+   "text": "8번마, 1위까지 올라섭니다!",
+   "sec": 1.62
+  },
+  "win-8": {
+   "file": "cm-win-8.mp3",
+   "text": "8번마! 8번마가 1착입니다!",
+   "sec": 1.74
+  },
+  "goodstart-8": {
+   "file": "cm-goodstart-8.mp3",
+   "text": "좋은 출발을 보이며 8번마가 앞서 나옵니다.",
+   "sec": 2.27
+  },
+  "closing-8": {
+   "file": "cm-closing-8.mp3",
+   "text": "뒤쪽에서 8번마가 거리차를 좁힙니다.",
+   "sec": 2.29
+  },
+  "chasing-8": {
+   "file": "cm-chasing-8.mp3",
+   "text": "8번마가 선두권을 추격합니다.",
+   "sec": 1.49
+  },
+  "follow-8": {
+   "file": "cm-follow-8.mp3",
+   "text": "그 뒤를 8번마가 추격하고 있습니다.",
+   "sec": 1.82
+  },
+  "kick-8": {
+   "file": "cm-kick-8.mp3",
+   "text": "뒤쪽에서 8번마가 추입을 시작합니다!",
+   "sec": 1.68
+  },
+  "challenge-8": {
+   "file": "cm-challenge-8.mp3",
+   "text": "8번마가 도전합니다!",
+   "sec": 1.05
+  },
+  "hold-8": {
+   "file": "cm-hold-8.mp3",
+   "text": "선두를 지키려는 8번마!",
+   "sec": 1.58
+  },
+  "n-9": {
+   "file": "cm-n-9.mp3",
+   "text": "9번마,",
+   "sec": 0.37
+  },
+  "win-9": {
+   "file": "cm-win-9.mp3",
+   "text": "9번마! 9번마가 1착입니다!",
+   "sec": 2.02
+  },
+  "n-10": {
+   "file": "cm-n-10.mp3",
+   "text": "10번마,",
+   "sec": 0.56
+  },
+  "win-10": {
+   "file": "cm-win-10.mp3",
+   "text": "10번마! 10번마가 1착입니다!",
+   "sec": 2.18
+  },
+  "n-11": {
+   "file": "cm-n-11.mp3",
+   "text": "11번마,",
+   "sec": 0.51
+  },
+  "win-11": {
+   "file": "cm-win-11.mp3",
+   "text": "11번마! 11번마가 1착입니다!",
+   "sec": 2.34
+  },
+  "n-12": {
+   "file": "cm-n-12.mp3",
+   "text": "12번마,",
+   "sec": 0.58
+  },
+  "win-12": {
+   "file": "cm-win-12.mp3",
+   "text": "12번마! 12번마가 1착입니다!",
+   "sec": 2.74
+  }
+ }
+}
