@@ -168,8 +168,7 @@ body.pc-frame #world canvas{border-radius:12px}
 body.world-page.pc-frame .world-top{inset:12px 12px auto;height:68px;padding:0;display:grid;grid-template-columns:300px minmax(0,1fr) 300px;gap:12px;border:3px solid var(--wood-3)!important;border-radius:16px!important;box-sizing:border-box;z-index:7}
 .pc-frame-brand,.pc-frame-clock,.pc-frame-wallet{display:flex;align-items:center;gap:16px;padding:0 18px;min-width:0}.pc-frame-clock{justify-content:center;white-space:nowrap}.pc-frame-wallet{justify-content:flex-end;gap:10px}
 body.pc-frame .world-top>div:empty{display:none}
-body.pc-frame .pc-frame-clock{display:grid;grid-template-columns:repeat(3,max-content);row-gap:1px;justify-items:center}
-body.pc-frame .pc-frame-clock #world-watch-control{grid-column:1/-1}
+.pc-frame-clock{flex-wrap:wrap;align-content:center;row-gap:0}
 body.pc-frame .pc-frame-clock #world-watch{min-height:30px;padding:3px 9px}
 body.pc-frame .world-wordmark{height:46px!important}body.pc-frame .world-top #world-place{margin:0;font-size:23px}body.pc-frame #world-time{font:23px var(--font-hand)}body.pc-frame #world-online{font:19px var(--font-hand);background:var(--leaf-soft);border:2px solid var(--leaf-deep);border-radius:999px;padding:2px 12px}
 body.pc-frame .world-top #world-wallet{font:24px var(--font-hand);margin:0}body.pc-frame #world-notices{position:static;min-width:66px;flex-shrink:0;font-size:19px;height:44px;padding:0 12px}body.pc-frame #world-notices svg{display:none}
@@ -213,7 +212,7 @@ body.world-page.pc-frame #world-options-menu #bug-launch{height:52px!important;m
 body:not(.pc-frame) .farm-world-toolbar button[data-locked]{display:none!important}
 body.world-page.in-tutorial #farm-next-task{display:none!important}
 body.pc-frame.plot-map-open #world-pc-frame,body.pc-frame.plot-map-open #world-pc-frame *{visibility:hidden!important;pointer-events:none!important}
-body.pc-frame:has(#farm-world-panel[open]) .pc-frame-right *,body.pc-frame:has(#farm-world-panel[open]) .pc-frame-right>*{visibility:hidden!important}
+body.pc-frame:has(#farm-world-panel[open],#farm-quest-list[open],#world-notice-dialog[open]:not(:modal)) .pc-frame-right *{visibility:hidden!important}
 /* 검수 지적: PC에서는 채팅 열기 버튼이 없어 chat-open이 안 붙음 → 목록 스크롤과 신고 버튼을 늘 쓸 수 있게 */
 body.pc-frame #world-chat .chat-list{pointer-events:auto;overflow:auto;scrollbar-width:none}
 body.pc-frame #world-chat .chat-list article:is(:hover,:focus-within) button{display:inline-block}
@@ -394,15 +393,17 @@ body.world-page.ui-v2{
  --frame-cloud:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 48'%3E%3Cpath d='M17 43C-3 43 4 22 22 22c5-13 17-14 25-12 9-15 37-10 43 5 17-3 30 8 25 20-2 5-9 8-20 8Z' fill='%23fff5e3' stroke='%23f6c6a3' stroke-width='2'/%3E%3Cpath d='M24 27c4-9 12-11 19-10m8-4c8-8 23-7 30 0' fill='none' stroke='%23fffdf6' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
 }
 body.ui-v2 :is(
- [data-go=home],[data-go=plaza],[data-go=villageEntrance],[data-go=entrance],[data-go=stand],
+ [data-go=home],[data-go=plaza],[data-go=playground],[data-go=villageEntrance],[data-go=entrance],[data-go=stand],
  #world-updates-open,#world-options-open,#bug-launch,#world-ride,#title-updates,#title-options,#title-reset,#title-start,
  #world-chat button[type=submit]
 )::before{
  content:'';display:inline-block;flex:none;width:1.15em;height:1.15em;
  background:var(--frame-icon) center/contain no-repeat;
 }
-body.ui-v2 :is([data-go=home],[data-go=villageEntrance]){--frame-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' stroke='%238b5831' stroke-width='1.5' stroke-linejoin='round'%3E%3Cpath d='M6 14h20v15H6Z' fill='%23ffe29b'/%3E%3Cpath d='M3 14 16 3l13 11-2 3L16 7 5 17Z' fill='%23ed523e' stroke='%23a83424'/%3E%3Cpath d='M13 29v-8a3 3 0 0 1 6 0v8Z' fill='%23bd7941'/%3E%3Cpath d='M5 14 16 5l11 9' fill='none' stroke='%23ff9a6b'/%3E%3C/svg%3E")}
+body.ui-v2 [data-go=home]{--frame-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' stroke='%238b5831' stroke-width='1.5' stroke-linejoin='round'%3E%3Cpath d='M6 14h20v15H6Z' fill='%23ffe29b'/%3E%3Cpath d='M3 14 16 3l13 11-2 3L16 7 5 17Z' fill='%23ed523e' stroke='%23a83424'/%3E%3Cpath d='M13 29v-8a3 3 0 0 1 6 0v8Z' fill='%23bd7941'/%3E%3Cpath d='M5 14 16 5l11 9' fill='none' stroke='%23ff9a6b'/%3E%3C/svg%3E")}
 body.ui-v2 [data-go=plaza]{--frame-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='24' rx='13' ry='6' fill='%2395cc56' stroke='%23547834' stroke-width='1.4'/%3E%3Cellipse cx='16' cy='21' rx='11' ry='5' fill='%236ad5f1' stroke='%233283ae' stroke-width='1.4'/%3E%3Cpath d='M16 21V7m0 1c-7 0-9 6-8 9m8-9c7 0 9 6 8 9' fill='none' stroke='%2320a3e2' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='5' r='2' fill='%235fcdf9'/%3E%3C/svg%3E")}
+body.ui-v2 [data-go=villageEntrance]{--frame-icon:url('/assets/farm/icons/env/signpost.128.webp')}
+body.ui-v2 [data-go=playground]{--frame-icon:url('/assets/farm/icons/props/play-ball.128.webp')}
 body.ui-v2 [data-go=entrance]{--frame-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 29V8q11-8 22 0v21' fill='none' stroke='%23895532' stroke-width='3.2' stroke-linecap='round'/%3E%3Cpath d='M7 8q9-5 18 0v11q-9-5-18 0Z' fill='%23fff6e9' stroke='%23573d32'/%3E%3Cpath d='m7 9 6-2v5l-6 2Zm6 3 6-1v5l-6 1Zm6-5 6 2v5l-6-2Z' fill='%235c4337'/%3E%3C/svg%3E")}
 body.ui-v2 [data-go=stand]{--frame-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M6 28V15m20 13V15M8 13V4m8 9V4m8 9V4' fill='none' stroke='%23925932' stroke-width='1.6'/%3E%3Cpath d='m8 4 6 2-6 3' fill='%23ee5542'/%3E%3Cpath d='m16 4 6 2-6 3' fill='%23f3a921'/%3E%3Cpath d='m24 4 6 2-6 3' fill='%233bace0'/%3E%3Cpath d='M4 14h24v5H4zm0 8h24v4H4Z' fill='%23efad62' stroke='%23925932' stroke-width='1.1'/%3E%3Cpath d='M6 16h20M6 23h20' stroke='%23ffdc95' stroke-width='1.4'/%3E%3C/svg%3E")}
 body.ui-v2 :is(#world-updates-open,#title-updates){--frame-icon:var(--frame-bell)}
@@ -507,7 +508,7 @@ body.world-page.ui-v2 #world-joystick span{background:#fbc096;border-color:#a45d
    var(--frame-cloud) 71% 10%/clamp(62px,5.6vw,108px) auto no-repeat,
    var(--frame-bar)!important;
  }
- body.world-page.ui-v2.pc-frame .world-top .world-wordmark{height:clamp(61px,6.65vh,72px)!important}
+ body.world-page.ui-v2.pc-frame .world-top .world-wordmark{display:block;height:clamp(61px,6.65vh,64px)!important}
  body.world-page.ui-v2.pc-frame .world-top :is(#world-place,#world-time){
   color:var(--ink);font-size:clamp(23px,2.9vh,32px);font-weight:700;
  }
@@ -540,6 +541,13 @@ body.world-page.ui-v2 #world-joystick span{background:#fbc096;border-color:#a45d
   margin:0;padding:4px 12px;border-radius:999px;font-size:clamp(18px,2.2vh,24px);
   background:linear-gradient(90deg,#ffe6ad,transparent 94%);
  }
+ body.pc-frame .world-travel .travel-more[data-fit] summary{display:none}
+ body.pc-frame .world-travel .travel-more[data-fit] button:first-of-type{margin-top:0}
+ body.world-page.pc-frame #world-pc-frame .world-travel[data-compact]{--frame-side-button:40px;--frame-side-gap:4px}
+ body.world-page.pc-frame #world-pc-frame .world-travel[data-compact] button{height:40px!important;min-height:40px!important}
+ body.world-page.ui-v2.pc-frame #world-pc-frame>.pc-frame-left:has(.world-travel[data-compact]){padding-bottom:12px}
+ body.world-page.ui-v2.pc-frame .pc-frame-left:has(.world-travel[data-compact]) #farm-next-task:not([hidden]){min-height:0}
+ body.world-page.ui-v2.pc-frame #world-pc-frame:has(.world-travel[data-compact])::before{display:none}
  body.world-page.ui-v2.pc-frame #farm-next-task:not([hidden]){
   padding:clamp(9px,1.35vh,15px) 13px;min-height:clamp(90px,14.7vh,158px);font-size:clamp(18px,2.1vh,23px);
  }
@@ -866,10 +874,14 @@ body.world-page .in-world-ring.seed-menu:not([hidden]){
  width:max-content;max-width:calc(100vw - 16px);height:auto;max-height:45dvh;overflow:auto;pointer-events:auto;
  padding:6px;background:var(--paper,#fff8e9);border:1px solid #ac845b;border-radius:12px;box-sizing:border-box;
 }
-.seed-menu>div{display:grid;grid-template-columns:28px minmax(45px,1fr) auto auto;gap:5px;align-items:center}
-.seed-menu>div+div{margin-top:4px}
-body.world-page .seed-menu button{position:static;width:auto;height:auto;min-height:44px;border-radius:8px!important;padding:4px 7px!important;white-space:nowrap}
-body.world-page .seed-menu img{width:28px;height:28px}
+.seed-menu :is(.seed-crops,.seed-controls,.seed-quantity){display:flex;gap:5px;align-items:center;justify-content:center}
+.seed-menu :is(.seed-crops,.seed-controls){flex-wrap:wrap}
+.seed-menu .seed-controls{margin-top:6px;padding-top:6px;border-top:1px solid var(--wood-3)}
+.seed-menu .seed-quantity output{min-width:2ch;font-variant-numeric:tabular-nums}
+body.world-page .seed-menu button{position:static;width:auto;height:auto;min-height:44px;border-radius:8px!important;padding:4px 7px!important;white-space:nowrap;flex-direction:row;gap:4px}
+body.world-page .seed-menu :is([aria-pressed=true],.seed-plant){background:var(--leaf-soft)!important;border-color:var(--leaf-deep);color:var(--leaf-deep)}
+body.world-page .seed-menu button:disabled{cursor:default}
+body.world-page .seed-menu img{width:24px;height:24px}
 body.world-page .in-world-ring:is(.farm-action-list,.seed-menu):not([hidden]){
  position:fixed;left:50%;top:auto;bottom:calc(88px + env(safe-area-inset-bottom));transform:translateX(-50%);
  width:max-content;max-width:calc(100vw - 24px);height:auto;box-sizing:border-box;padding:9px;
@@ -877,6 +889,7 @@ body.world-page .in-world-ring:is(.farm-action-list,.seed-menu):not([hidden]){
  font:700 17px var(--font-hand);pointer-events:auto;text-align:center
 }
 body.world-page.pc-frame .in-world-ring:is(.farm-action-list,.seed-menu){bottom:calc(var(--pc-bottom) + 12px)}
+body.world-page:not(.pc-frame) .in-world-ring.seed-menu:not([hidden]){bottom:calc(116px + env(safe-area-inset-bottom))}
 .farm-action-list>div{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin-top:5px}
 body.world-page .in-world-ring.farm-action-list button.btn{
  position:static;width:auto;min-width:0;height:auto;min-height:44px;padding:6px 9px!important;
@@ -1112,7 +1125,7 @@ body.world-page #village-contribution[data-bonus]{width:220px;padding:5px 9px;wh
 .bank-rate{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 0}
 .bank-rate div+div{border-left:1px solid #ddccb3;padding-left:12px}
 .bank-rate small,.bank-book dt,.bank-close-confirm dt{display:block;font-size:13px;line-height:1.25}
-.bank-rate strong{font-size:24px;color:#315b47}
+.bank-rate strong{font-size:20px;color:#315b47;white-space:nowrap}
 #farm-world-panel .bank-feature{font-size:14px;margin:5px 0 10px}
 #farm-world-panel .bank-order label{display:block;margin:0 0 5px;font-size:14px}
 #farm-world-panel .bank-amount{display:flex;align-items:center;gap:5px;background:#fffdfa;border:1px solid #bdab90;border-radius:8px;padding:0 8px}
@@ -1124,6 +1137,12 @@ body.world-page #village-contribution[data-bonus]{width:220px;padding:5px 9px;wh
 .bank-reason{display:block;color:#943f29;margin-top:5px;font-size:14px}
 .bank-reason[data-saved=true]{color:#315b47}
 .bank-reason:empty{display:none}
+.bank-preview{display:block;margin-top:6px;color:#315b47;font-size:14px;font-weight:700}
+.bank-preview:empty{display:none}
+.bank-note{background:#fff8e9;border-left:3px solid #607b57;padding:8px 10px;margin:4px 0;font-size:14px}
+@media(max-width:600px) and (min-height:730px){
+ body.world-page[data-sheet=bank] #farm-world-panel[data-world-sheet]:has(.bank-note){max-height:63dvh}
+}
 #farm-world-panel .bank-owned{width:100%;margin:4px 0;background:#e3eddb;color:#2b513d;font-size:15px;border-color:#99b29a}
 .bank-deposit-info{display:flex;align-items:center;justify-content:space-between;gap:6px}
 #farm-world-panel .bank-deposit-info .bank-owned{width:auto;padding-inline:8px}
@@ -1244,7 +1263,7 @@ body.world-page #farm-next-task .quest-funds{display:grid;grid-template-columns:
  #farm-world-panel .bank-order{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.13fr);gap:2px 6px;align-items:end}
  #farm-world-panel .bank-order label{margin:0;line-height:1.2;word-break:keep-all}
  #farm-world-panel .bank-order .bank-primary{padding-inline:4px;font-size:14px;line-height:1.15;word-break:keep-all}
- #farm-world-panel :is(.bank-reason,.bank-choices,.bank-order:not(:has(label))>.bank-primary){grid-column:1/-1}
+ #farm-world-panel :is(.bank-reason,.bank-choices,.bank-preview,.bank-order:not(:has(label))>.bank-primary){grid-column:1/-1}
 }
 
 .quest-goals-heading{display:block;color:#62513a;font-weight:700;font-size:13px;line-height:1.3}
@@ -1277,6 +1296,12 @@ body.world-page :is(#farm-quest-dialog[data-choices],#farm-quest-list)[open]{
 }
 body.world-page:has(#farm-quest-dialog[data-choices][open],#farm-quest-list[open]) .farm-world-toolbar{visibility:visible}
 
+body.world-page.pc-frame :is(#farm-quest-list,#world-notice-dialog)[open]:not(:modal){
+ position:fixed;inset:var(--pc-top) var(--pc-gap) auto auto;margin:0;width:var(--pc-side);max-width:var(--pc-side);
+ max-height:calc(100dvh - var(--pc-top) - var(--pc-bottom));box-sizing:border-box;overflow:auto;overscroll-behavior:contain;
+}
+body.world-page.pc-frame #world-notice-dialog[open]:not(:modal){z-index:30}
+
 #farm-world-panel .resident-list{display:grid;gap:7px}
 #farm-world-panel .resident-list button{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 8px;align-items:center;min-height:48px;padding:7px 12px;text-align:left}
 .resident-list strong{overflow-wrap:anywhere}.resident-list small{grid-column:1;font-size:13px;color:#665847}
@@ -1302,6 +1327,7 @@ body:has(.world-interact-prompt[data-interaction="trough-"]:not([hidden])) .hors
  body.world-page.pc-frame .world-top .pc-frame-brand .world-wordmark{height:clamp(32px,4.5vw,46px)!important}
  body.world-page.pc-frame .world-top .pc-frame-clock :is(#world-place,#world-time){font-size:18px}
  body.world-page.pc-frame .world-top .pc-frame-clock #world-online{font-size:14px;padding:2px 6px}
+ body.world-page.pc-frame .pc-frame-clock #world-watch{min-height:30px}
  body.world-page.pc-frame .pc-frame-wallet{gap:4px;padding-inline:4px 8px}
  body.world-page.pc-frame .world-top #world-wallet{font-size:20px;padding-inline:8px}
  body.world-page.pc-frame .world-top #world-notices{padding-inline:8px}
@@ -1593,7 +1619,7 @@ body.world-page .race-overlay [data-k=result] .race-reward{width:32px;height:32p
 #world-ride-touch{display:none}
 #world-quest-fold:not(.quest-enabled),#world-quest-fold:not(.quest-enabled) #world-quest-fold-panel{display:contents}
 #world-quest-fold [hidden]{display:none!important}
-body.world-page #world-quest-fold>button{position:relative;display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;border-radius:14px!important}
+body.world-page #world-quest-fold>button:first-child{position:relative;display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;border-radius:14px!important}
 #world-quest-fold-panel>nav{display:flex;gap:6px}
 #world-quest-fold-panel>nav button{flex:1;min-height:44px;padding:3px 8px;font-size:15px}
 .quest-pins{padding:3px 7px;border:1px solid var(--wood-3);border-radius:8px;background:var(--paper)}
@@ -1650,6 +1676,10 @@ body.world-page #world-chat:not(.chat-faded) .chat-list{transition:none}
  body.world-page:not(.pc-frame):has(#world-chat.chat-open,dialog[open],.in-world-ring:not([hidden])) #world-ride-touch{visibility:hidden}
  body.world-page:not(.pc-frame) #world-options-menu #world-ride{display:none}
  body.world-page:not(.pc-frame) #world-quest-fold.quest-enabled{position:fixed;z-index:8;top:var(--hud-row);left:calc(var(--hud-left) + 52px)}
+ body.world-page #world-quest-summary{
+  position:absolute;top:0;left:50px;align-items:center;width:min(240px,calc(100vw - var(--hud-left) - var(--hud-right) - 156px));
+  height:44px;min-height:44px;padding:0 8px;border-radius:12px;font-size:15px;
+ }
  body.world-page.plot-map-open:not(.pc-frame) #world-quest-fold.quest-enabled{
   visibility:visible!important;z-index:36;top:calc(var(--hud-top) + 166px);left:auto;right:var(--hud-right);
  }
