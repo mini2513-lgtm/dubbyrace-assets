@@ -1,0 +1,8 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' stroke-linejoin='round' stroke-linecap='round'>
+<path d='M6 28V15m20 13V15M8 13V4m8 9V4m8 9V4' fill='none' stroke='#925932' stroke-width='1.6'/>
+<path d='m8 4 6 2-6 3' fill='#ee5542'/>
+<path d='m16 4 6 2-6 3' fill='#f3a921'/>
+<path d='m24 4 6 2-6 3' fill='#3bace0'/>
+<path d='M4 14h24v5H4zm0 8h24v4H4Z' fill='#efad62' stroke='#925932' stroke-width='1.1'/>
+<path d='M6 16h20M6 23h20' stroke='#ffdc95' stroke-width='1.4'/>
+</svg>

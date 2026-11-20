@@ -1,0 +1,62 @@
+/* The local village entry inherits the farm's wood, paper and clay tokens. */
+.at-title #topbar,.at-title #hud,.at-title #setup{visibility:hidden}
+#farm-start{position:fixed;inset:0;z-index:25;display:grid;place-items:center;padding:28px 16px;background:linear-gradient(180deg,rgba(29,46,26,.06),rgba(22,38,24,.18));overflow:auto}
+#farm-start[hidden],.farm-dialog [hidden]{display:none!important}
+.start-content{width:min(440px,100%);display:grid;justify-items:center;gap:18px;text-align:center}
+.start-logo{width:100%;padding:20px 22px 18px;animation:logo-float 6s ease-in-out infinite}
+.start-logo h1{font:700 clamp(44px,6vw,66px)/1.05 var(--font-hand);letter-spacing:-.03em;color:var(--ink);text-shadow:0 2px 0 var(--wood-1)}
+.start-logo p{font:700 25px/1.2 var(--font-hand);letter-spacing:.08em;margin-top:6px}
+.start-logo img{width:100%;max-height:280px;object-fit:contain;filter:drop-shadow(0 9px 10px rgba(24,30,20,.3))}
+.start-logo.has-art{padding:0}
+.start-logo picture{display:block}
+.start-logo .start-logo-ko{display:inline-block;margin-top:6px;padding:4px 16px;background:var(--paper);border-radius:var(--r-pill);font:700 24px/1.2 var(--font-hand);letter-spacing:-.02em;color:var(--ink);box-shadow:var(--float)}
+.start-invitation{padding:8px 18px;font-size:14px;line-height:1.6}
+.start-buttons{width:min(280px,100%);display:grid;gap:12px;padding:22px}
+.start-buttons .btn{width:100%;min-height:52px;font-size:27px}
+.start-account{max-width:100%;padding:8px 14px;font-size:13px;line-height:1.6;word-break:keep-all}
+.start-test{padding:5px 14px;font-size:13px}
+@keyframes logo-float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}
+.farm-dialog{position:fixed;inset:0;width:min(550px,calc(100% - 32px));max-height:calc(100dvh - 40px);margin:auto;padding:26px;border:0;color:var(--ink);overflow:auto;overscroll-behavior:contain;line-height:1.6}
+.farm-dialog::backdrop{background:rgba(31,39,24,.58)}
+.dialog-heading{position:sticky;top:-26px;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:-16px;margin-bottom:22px;padding:16px 0;background:var(--paper)}
+.dialog-heading h2{font:700 34px/1.1 var(--font-hand);letter-spacing:-.03em;text-wrap:balance}
+.farm-dialog .btn{min-height:44px;font-size:22px}
+.farm-dialog form{display:grid;gap:16px}
+.farm-dialog label{display:grid;gap:8px;font-size:16px;min-width:0}
+.farm-dialog input:not([type=range]):not([type=checkbox]),.farm-dialog select{width:100%;min-height:46px;border:2px solid var(--wood-3);background:var(--cream);border-radius:10px;padding:8px 12px;font:inherit;color:var(--ink)}
+.farm-dialog input[type=range]{width:100%;min-height:32px;accent-color:var(--leaf-deep)}
+.farm-dialog .check{display:flex;align-items:center;min-height:44px;gap:10px}
+.farm-dialog input[type=checkbox]{width:22px;height:22px;accent-color:var(--leaf-deep)}
+.farm-dialog fieldset{border:0;border-top:1px solid var(--stitch);margin:0;padding:14px 0 0;display:grid;gap:12px;min-width:0}
+.farm-dialog legend{font:700 26px var(--font-hand);padding-right:12px}
+.farm-dialog output{font-size:14px;font-variant-numeric:tabular-nums}
+.option-note,.farm-dialog small{font-size:13px;color:var(--ink-soft);line-height:1.65}
+.option-status,.auth-message{margin-top:18px;font-size:14px;line-height:1.7;word-break:keep-all}
+.auth-tabs{display:flex;gap:12px;margin-bottom:22px}
+#signup-fields{display:grid;gap:16px}
+.preview-entry{margin-top:20px;width:100%}
+.farm-dialog button:focus-visible,.game-options:focus-visible{outline:3px solid var(--leaf-deep);outline-offset:4px}
+.game-options{min-height:44px}
+.preview-badge{position:fixed;right:24px;bottom:210px;padding:5px 9px;font-size:12px;z-index:4}
+body:not([data-farm-session=preview]) .preview-badge{display:none}
+.world-real{display:none}.show-real-clock .world-real{display:block}
+.world-brand{font:700 18px var(--font-hand)}
+.setup-coats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0;padding:0;border:0}
+.setup-coats legend{font-size:14px;margin-bottom:8px}
+.setup-coats label{position:relative;display:flex;align-items:center;gap:5px;font-size:13px;min-height:44px;cursor:pointer}
+.setup-coats i{width:20px;height:20px;border-radius:50%;border:1px solid var(--wood-4);display:block;flex:none}
+.setup-coats input{width:18px!important;height:18px!important;padding:0!important;margin:0;accent-color:var(--leaf-deep)}
+.at-title #farm-debug{display:none}
+.reduce-motion *,.reduce-motion *::before,.reduce-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+body[data-farm-text=large]{--fs-xs:15px;--fs-sm:16px;--fs-md:18px;--fs-lg:23px;--fs-xl:28px}
+body[data-farm-text=large] .farm-dialog label{font-size:18px}
+@media(prefers-reduced-motion:reduce){.start-logo{animation:none}}
+@media(max-width:600px){
+ #farm-start{padding:24px 16px}.start-content{gap:15px}.start-logo{padding:18px 14px}.start-logo h1{font-size:52px}.start-logo p{font-size:23px}.start-logo img{max-height:220px}.start-buttons{padding:18px}.start-invitation{font-size:13px}
+ .farm-dialog{padding:20px;width:calc(100% - 24px);max-height:calc(100dvh - 24px)}.dialog-heading{top:-20px;gap:8px;margin-bottom:18px}.dialog-heading h2{font-size:30px}.dialog-heading>.btn{font-size:19px;padding:6px 12px}.auth-tabs>.btn{flex:1}
+ .preview-badge{right:12px;bottom:244px;font-size:11px}.world-brand{display:none}
+}
+.option-note{margin-top:12px}
+#title-start{font-size:29px}
+@media(max-width:600px){.preview-badge{bottom:274px}}
+.start-tagline{display:block;width:min(400px,88%);margin:2px auto 6px}.start-tagline img{display:block;width:100%;height:auto;filter:drop-shadow(0 5px 6px rgba(24,30,20,.22))}   /* 콩콩팥팥 tagline word art 2026-11-17 */
