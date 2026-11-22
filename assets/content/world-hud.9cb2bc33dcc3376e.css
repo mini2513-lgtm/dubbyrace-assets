@@ -2038,6 +2038,11 @@ body.forest-night-open #world > :not(canvas){visibility:hidden!important;pointer
 body.forest-night-open #world{position:fixed!important;inset:0!important;width:100%!important;height:100%!important;border:0!important;border-radius:0!important}
 #forest-nights[hidden],#forest-nights [hidden]{display:none!important}
 #forest-nights{position:fixed;inset:0;z-index:99;color:#fff4d8;font:700 16px system-ui;touch-action:none;user-select:none;isolation:isolate}
+#forest-nights [data-forest-goals]{display:none}
+#forest-nights[data-play=true] [data-forest-goals]{position:absolute;display:grid;gap:2px;top:max(52px,calc(env(safe-area-inset-top) + 47px));left:max(8px,env(safe-area-inset-left));background:#152923e8;color:#fff7df;padding:6px 9px;border-radius:9px;font:600 13px/1.35 system-ui;pointer-events:none}
+#forest-nights [data-forest-goals] b{display:inline-block;width:5.3em;color:#ffe4a0}
+#forest-nights[data-play=true] [data-team]:not([hidden]){left:auto;right:68px;top:52px}
+@media(max-width:480px){#forest-nights[data-play=true] [data-forest-goals]{top:65px}#forest-nights[data-play=true] [data-team]:not([hidden]){top:144px;right:10px}}
 #forest-nights header{position:absolute;top:max(10px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));display:flex;align-items:center;gap:7px;pointer-events:none;z-index:4}
 #forest-nights button,#forest-nights header strong,#forest-nights header span,#forest-nights [data-status]:not(:empty){font:inherit;color:inherit;background:#253941ed!important;border:1px solid #c3d7d36b;border-radius:16px;padding:8px 13px;box-shadow:0 2px 4px #101a2470!important}
 #forest-nights button{cursor:pointer;min-height:42px;touch-action:none}
@@ -2088,7 +2093,7 @@ body.world-page.forest-night-open #forest-nights [data-menu] button[data-role][a
 #forest-nights header [data-vitals]{display:flex;padding:0;gap:4px;border:0;background:none!important;box-shadow:none!important}
 #forest-nights [data-moon]{display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:radial-gradient(circle,#253941 54%,transparent 58%),conic-gradient(#ffe5aa var(--fill),#6b7380 0);font:14px system-ui}
 #forest-nights [data-fire]{flex-wrap:wrap}
-#forest-nights [data-fire] b{width:28px;height:7px;background:linear-gradient(to right,#ffca77 var(--fill),#6a5847 0);border:1px solid #b8986e;border-radius:4px}
+#forest-nights [data-fire] b{width:28px;height:7px;background:linear-gradient(to right,transparent 69%,#fff3d1 69% 73%,transparent 73%),linear-gradient(to right,#ffca77 var(--fill),#6a5847 0);border:1px solid #b8986e;border-radius:4px}
 #forest-nights header i{font-style:normal}
 #forest-nights [data-hunger] i[data-empty=true]{filter:grayscale(.9);opacity:.48}
 #forest-nights header [data-danger=true]{animation:forest-warning 1s ease-in-out infinite alternate}
@@ -2199,6 +2204,58 @@ body.pc-frame:has(#farm-quest-list[data-journal][open]):not(:has(#farm-world-pan
 #timed-activity-card li{display:grid;grid-template-columns:27px minmax(0,1fr) 31px;gap:6px;align-items:center}
 #timed-activity-card li img{width:27px;height:27px}
 #timed-activity-card li progress{width:100%;height:6px;accent-color:#527644}
+.investment-plan{margin:12px 0;padding:10px;border:1px solid #cfb697;border-radius:10px}
+.investment-plan h4{margin:.3em 0;font-size:18px}
+.investment-plan details,.investment-plan summary,.investment-future summary{cursor:pointer}
+.investment-steps{display:grid;grid-template-columns:repeat(var(--steps),minmax(0,1fr));gap:3px;margin:6px 0;padding:0;list-style:none}
+.investment-steps li{min-width:0;display:grid;place-items:center;align-content:center;gap:2px;min-height:41px;padding:3px 1px;box-sizing:border-box;border:1px solid #d1ba98;border-radius:7px;background:#faf0da;color:#5b4835;font:700 10px/1.15 system-ui,sans-serif;text-align:center;word-break:keep-all}
+.investment-steps li span{font-size:16px;line-height:1}
+.investment-steps li[data-done]{background:#eaf0d9;color:#325141}
+.investment-steps li[aria-current=step]{background:#fff0a7;border-color:#a7732e;animation:investment-glint 1.5s ease-in-out infinite}
+@keyframes investment-glint{50%{box-shadow:0 0 5px 1px #eab94b}}
+@media(prefers-reduced-motion:reduce){.investment-steps li[aria-current=step]{animation:none}}
+.investment-strip{margin:7px 0}
+.investment-strip>div{display:flex;height:7px;overflow:hidden;border-radius:8px;background:#eae0d0}
+.investment-strip ul,.investment-facts,.investment-money,.investment-ledger ol{list-style:none;margin:3px 0;padding:0}
+.investment-strip li{display:flex;justify-content:space-between;gap:5px;align-items:baseline}
+.investment-strip li:before{content:'';width:8px;height:8px;flex:none;border-radius:2px;background:var(--part)}
+.investment-strip b{margin-left:auto}
+.investment-strip i{background:var(--part)}
+.investment-strip [data-color=land]{--part:#a56c50}.investment-strip [data-color=build]{--part:#d89b50}
+.investment-strip [data-color=fund]{--part:#bd6253}.investment-strip [data-color=tax]{--part:#92739a}
+.investment-strip [data-color=loan]{--part:#568369}.investment-strip [data-color=own]{--part:#7b9860}
+.investment-facts,.investment-timing,.investment-reason{font-size:14px}
+.investment-reason{display:block;color:#793923;font-weight:700}
+.investment-reason:empty,[data-land-status]:empty{display:none}
+.investment-funding{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:7px}
+.investment-funding .investment-reason{grid-column:1/-1}
+.investment-ledger>ol{padding-inline-start:10px}
+.investment-money li{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px;margin:5px 0;text-align:left}
+.investment-money b{text-align:right;font-variant-numeric:tabular-nums}
+.investment-money i{grid-column:1/-1;position:relative;height:5px;background:#e9decd;border-radius:6px;overflow:hidden}
+.investment-money i::before{content:'';display:block;height:100%;width:var(--amount);background:#558566}
+.investment-money [data-color=out] i::before{background:#bc6d32}
+.investment-cash-change{font-weight:700;text-align:center}
+.investment-future{font-size:14px}
+body.world-page .in-world-confirm[data-investment-payment]{width:min(440px,calc(100vw - 24px));max-width:none;max-height:min(66dvh,560px);padding:12px 14px;font:14px/1.35 system-ui,sans-serif}
+body.world-page .in-world-confirm[data-investment-payment]:not([hidden]){display:flex;flex-direction:column;overflow:hidden;z-index:2}
+body.world-page .in-world-confirm[data-investment-payment] p{margin:4px 0 6px}
+body.world-page:not(.pc-frame):has(.in-world-confirm[data-investment-payment]:not([hidden]))
+ :is(#world-ride-controls,#world-joystick,#world-chat,.farm-world-toolbar){visibility:hidden}
+body.world-page .in-world-confirm[data-investment-payment]>p{font-size:19px;font-weight:700;margin-bottom:6px}
+.investment-confirm-body{min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 2px}
+.investment-confirm-actions{display:flex;flex:none;gap:6px;padding-top:7px;border-top:1px solid #e5d4ba}
+body.world-page .investment-confirm-actions button{flex:1;margin:0;min-height:44px}
+#investment-notice{position:fixed;z-index:9;width:250px;box-sizing:border-box;overflow:auto;padding:7px 9px;border:1px solid #a87b51;border-radius:12px;background:#fff6df;color:#513623;box-shadow:0 4px 12px #2c261b40;font:700 13px/1.2 system-ui,sans-serif;pointer-events:auto}
+#investment-notice h2{font:inherit;margin:0 36px 0 0}
+#investment-notice [data-route]{min-height:44px;width:100%;padding:4px;font:inherit}
+#investment-notice [data-dismiss]{position:absolute;right:3px;top:1px;min-width:36px;min-height:30px;padding:0}
+.farm-action-list:has(.investment-steps) [data-land-status]{font-size:13px}
+body.world-page .in-world-ring.farm-action-list:has(.investment-steps) button{position:static;width:auto;height:auto;min-height:44px;padding:6px 9px!important;border-radius:8px!important}
+@media(orientation:landscape) and (max-height:520px){
+ body.world-page .in-world-confirm[data-investment-payment]{bottom:54px;max-height:68dvh}
+ .investment-confirm-body .investment-steps li{min-height:35px}
+}
 @media(max-height:460px) and (orientation:landscape){
  body.world-page #farm-quest-list[data-journal][open]{grid-template-columns:minmax(0,1fr)}
  body.world-page #farm-quest-list[data-journal]>header{grid-area:1/1}
@@ -2211,7 +2268,10 @@ body.world-page #farm-quest-list[data-journal] .quest-detail-action{background:#
 #farm-quest-list[data-journal] [data-quest-detail][hidden],#farm-quest-list[data-journal] .quest-groups[hidden]{display:none}
 
 .timed-activity-art{display:grid;place-items:center;width:27px;height:27px;font:17px/1 system-ui,sans-serif;object-fit:contain}
-#world-quest-fold.quest-list-hud #farm-next-task{display:none!important}
+body.world-page #world-quest-fold.quest-list-hud.quest-enabled:has(#farm-next-task:not([hidden])){grid-template-columns:44px minmax(0,1fr)}
+body.world-page:not(.pc-frame) #world-quest-fold.quest-list-hud.quest-enabled:has(#farm-next-task:not([hidden])){width:max-content}
+body.world-page #world-quest-fold.quest-list-hud #farm-next-task:not([hidden]){grid-area:1/2;position:static;transform:none;width:max-content;max-width:none;min-height:44px;margin:0;padding:0 8px;font-size:15px;white-space:nowrap}
+body.world-page #world-quest-fold.quest-list-hud.quest-enabled #world-quest-fold-panel:not([hidden]){grid-column:1/-1}
 @media(pointer:coarse),(max-width:600px){
  body.world-page:not(.pc-frame) #farm-quest-list[data-journal][open]{max-height:min(60dvh,440px)}
 }
@@ -2270,5 +2330,65 @@ body.world-page.tablet-pc-frame #rhythm-card .rh-albums>button{width:44px}
 .game-chat input{flex:1;min-width:0;width:1px;border:0;border-radius:6px;padding:8px 6px;font:16px/1.1 system-ui;color:#203430;background:#fffaf0;user-select:text}
 .game-chat summary{cursor:pointer;padding:4px 2px;font-size:12px;color:#ffe0a4}
 .game-chat p{margin:0}
+
+#mobile-horse-status{position:fixed;z-index:14;top:calc(var(--hud-row,96px) + 176px);right:var(--hud-right,12px);pointer-events:auto}
+body.world-page #mobile-horse-status>button{display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;border-radius:14px}
+#mobile-horse-status>button img{width:34px;height:34px;object-fit:contain;pointer-events:none}
+#mobile-horse-status>button[aria-expanded=true]{outline:2px solid #5c753e}
+#mobile-horse-status .pc-horse-status{
+ position:absolute;top:50px;right:0;box-sizing:border-box;width:min(178px,46vw);
+ max-height:calc(100dvh - var(--hud-row,96px) - 226px - var(--hud-controls,66px) - 52px);
+ overflow:auto;overscroll-behavior:contain;touch-action:pan-y;padding:7px;color:var(--ink);
+ border:1px solid #ad794d;border-radius:12px;background:#fff5df;box-shadow:var(--float);font:700 15px/1.15 var(--font-hand)
+}
+#mobile-horse-status header{display:flex;align-items:center;gap:4px;margin-bottom:4px}
+#mobile-horse-status header>img{width:28px;height:28px;object-fit:contain}
+#mobile-horse-status header h2,#mobile-horse-status p{margin:0;font:inherit}
+#mobile-horse-status header strong{overflow-wrap:anywhere}
+#mobile-horse-status header .horse-follow-button{flex:none;width:44px;height:44px;min-height:44px;padding:0}
+#mobile-horse-status .horse-follow-button span{display:none}
+body.world-page #mobile-horse-status .horse-follow-button img{width:18px;height:18px}
+#mobile-horse-status .horse-care-list{display:grid;gap:3px}
+body.world-page #mobile-horse-status [data-horse-care]{
+ display:grid;grid-template-columns:18px auto minmax(0,1fr);grid-template-rows:auto 4px;gap:3px 4px;align-items:center;
+ text-align:left;min-height:44px;padding:3px 4px;background:#fffaf0;color:var(--ink);border:1px solid #e7be91;border-radius:8px;
+ font:inherit
+}
+#mobile-horse-status [data-horse-care]>:is(img,.horse-care-drop){grid-row:span 2;width:18px;height:18px;object-fit:contain}
+#mobile-horse-status [data-horse-care]>small{text-align:right;line-height:1;overflow-wrap:anywhere}
+#mobile-horse-status [data-horse-care] i{grid-column:2/4;height:4px;background:#ebdfca;border-radius:4px;overflow:hidden}
+#mobile-horse-status [data-horse-care] i b{display:block;height:100%;background:#739455}
+#mobile-horse-status .needs-care i b{background:#d58943}
+#mobile-horse-status .horse-race-entry button,#mobile-horse-status .vet-route{min-height:44px}
+body.world-page:is(.at-title,.world-broadcasting,.home-editing,.home-decorating,.forest-night-open)
+ #mobile-horse-status,body.world-page:has(dialog[open],.world-options.open,.world-travel.open,#world-chat.chat-open,.farm-world-training:not([hidden])) #mobile-horse-status{display:none}
+@media(orientation:landscape) and (max-height:520px){
+ #mobile-horse-status{left:var(--hud-left,12px);right:auto;top:calc(var(--hud-row,64px) + 104px)}
+ #mobile-horse-status .pc-horse-status{
+  top:-52px;left:70px;right:auto;width:min(236px,calc(50vw - var(--hud-left,12px) - 76px));
+  max-height:calc(100dvh - var(--hud-row,64px) - 52px - var(--hud-controls,66px) - 44px)
+ }
+ #mobile-horse-status .horse-care-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #mobile-horse-status .horse-care-list>:not([data-horse-care]){grid-column:1/-1}
+ #mobile-horse-status .horse-meal-checks{margin-right:2px;gap:1px}
+ #mobile-horse-status .horse-meal-checks>span{width:10px;height:10px}
+}
+
+body.world-page #quest-decor-card[open]{
+ display:grid;grid-template-columns:100px minmax(0,1fr);align-items:center;gap:12px;
+ box-sizing:border-box;width:min(385px,calc(100vw - 24px));padding:13px;
+ color:var(--ink);background:#fff5df;border:2px solid #9f6c43;border-radius:16px;box-shadow:var(--float);
+ font:700 18px/1.2 var(--font-hand)
+}
+#quest-decor-card::backdrop{background:#31271e35}
+.quest-decor-art{position:relative;align-self:stretch;min-height:98px;background:#f3dfb5;border-radius:10px;overflow:hidden}
+.quest-decor-art .quest-art{position:absolute;object-fit:contain}
+.quest-decor-art .quest-art:first-child{width:86px;height:86px;left:-2px;top:50%;transform:translateY(-50%)}
+.quest-decor-art .quest-art:last-child{width:48px;height:48px;right:1px;top:50%}
+#quest-decor-card :is(h2,p){margin:0 0 4px;font-family:inherit}
+body.world-page #quest-decor-card h2{padding:0;background:none;clip-path:none;font-size:20px;word-break:keep-all;text-wrap:balance}
+.quest-decor-actions{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+body.world-page .quest-decor-actions button{min-height:44px;padding:4px 8px;border:1px solid #a67048;border-radius:8px;background:#f3dfb5;color:#472d1c;font:inherit}
+body.world-page .quest-decor-actions [data-quests]{background:#486439;color:#fff7dc;border-color:#3b512f}
 .game-chat-bubble{position:absolute;z-index:5;pointer-events:none;transform:translate(-50%,-100%);max-width:min(190px,48vw);padding:4px 8px;border-radius:10px;background:#fff8e8;color:#26332e;box-shadow:0 1px 3px #152c3b80;text-shadow:none;font:600 13px/1.25 system-ui;overflow-wrap:anywhere}
 .game-chat-bubble::after{content:"";position:absolute;top:100%;left:50%;border:4px solid transparent;border-top-color:#fff8e8}
