@@ -2030,11 +2030,14 @@ body.world-page.pc-frame.world-broadcasting #world-quest-fold.quest-enabled.ques
 }
 
 /* 밤마을 숲지기 */
-body.forest-night-open :is(#world-minimap,#world-pc-frame,#hud,#world-stats,#world-joystick,.world-travel){display:none!important}
+body.forest-night-open :is(#world-minimap,#world-pc-frame,#world-stats,.world-travel),body.world-page.forest-night-open #hud > :not(#world-joystick){display:none!important}
 body.forest-night-open #forest-nights button{background-image:none!important;box-shadow:0 2px 3px #11232c77!important;font-family:system-ui!important}
-body.forest-night-open #forest-nights :is([data-marks],[data-actions]) button{border-radius:50%!important}
-body.forest-night-open > :not(#world):not(#forest-nights):not(style):not(script),
+body.forest-night-open #forest-nights [data-actions] button{border-radius:50%!important}
+body.forest-night-open > :not(#world):not(#forest-nights):not(#hud):not(style):not(script),
 body.forest-night-open #world > :not(canvas){visibility:hidden!important;pointer-events:none!important}
+body.forest-night-open #hud > #world-joystick{z-index:100}
+body.forest-night-open:has(#forest-nights[data-play=false]) #world-joystick{visibility:hidden}
+body.forest-night-open:has(#forest-nights [data-menu]:not([hidden])) #world-joystick{pointer-events:none}
 body.forest-night-open #world{position:fixed!important;inset:0!important;width:100%!important;height:100%!important;border:0!important;border-radius:0!important}
 #forest-nights[hidden],#forest-nights [hidden]{display:none!important}
 #forest-nights{position:fixed;inset:0;z-index:99;color:#fff4d8;font:700 16px system-ui;touch-action:none;user-select:none;isolation:isolate}
@@ -2050,24 +2053,22 @@ body.forest-night-open #world{position:fixed!important;inset:0!important;width:1
 #forest-nights header button{pointer-events:auto;margin-left:auto;font-size:22px;line-height:1}
 #forest-nights [data-menu]{position:absolute;z-index:6;left:50%;top:54%;transform:translate(-50%,-50%);display:flex;flex-wrap:wrap;justify-content:center;gap:8px;width:min(330px,85vw);padding:18px;border:1px solid #dec99188;border-radius:22px;background:#24393eef;text-align:center}
 #forest-nights [data-menu] b{flex-basis:100%;padding:0 0 8px}#forest-nights [data-menu] button{background:#ead29d!important;color:#283731}
-#forest-nights [data-marks]{position:absolute;z-index:3;transform:translate(-50%,-50%);text-align:center}
-#forest-nights [data-use]{position:relative;width:46px;height:46px;padding:0;border:2px solid #ffedbf;color:#253941;background:#f6d891!important;font-size:23px}
-#forest-nights [data-use] :is(kbd,small){position:absolute;right:-10px;padding:2px 4px;border-radius:5px;background:#fff4de;color:#29342e;font:700 12px system-ui;white-space:nowrap}
-#forest-nights [data-use] kbd{bottom:-3px}
-#forest-nights [data-use] small{top:-5px}
+#forest-nights [data-actions] [data-use]{position:relative;width:60px;height:60px;border:2px solid #ffedbf;color:#253941;background:#f6d891!important;font-size:29px}
+#forest-nights [data-actions] :is(kbd,small){position:absolute;right:-5px;padding:2px 4px;border-radius:5px;background:#fff4de;color:#29342e;font:700 12px system-ui;white-space:nowrap}
+#forest-nights [data-actions] kbd{bottom:-3px}
+#forest-nights [data-use] small{top:-12px;right:0}
 #forest-nights [data-use] small:empty{display:none}
 #forest-nights [data-crafts]{position:absolute;left:50%;bottom:calc(100% + 4px);transform:translateX(-50%);display:flex;gap:4px}
 #forest-nights [data-crafts] button{width:44px;height:44px;padding:0;font-size:22px}
-#forest-nights [data-stick]{position:absolute;bottom:max(22px,env(safe-area-inset-bottom));left:max(22px,env(safe-area-inset-left));width:83px;height:83px;border:2px solid #d9e5d691;border-radius:50%;background:#35474966;display:grid;place-items:center}
-#forest-nights [data-stick] i{width:33px;height:33px;border-radius:50%;background:#c7d5cfb3}
 #forest-nights [data-actions]{position:absolute;right:max(17px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));display:flex;align-items:flex-end;gap:7px}
 #forest-nights [data-actions] button{border-radius:50%;font-size:23px;padding:0;width:45px;height:45px}
-@media(pointer:coarse){#forest-nights [data-use] kbd{display:none}}
-@media(pointer:fine){#forest-nights [data-stick]{display:none}}
+#forest-nights [data-lamp]{position:relative}
+#forest-nights [data-lamp]::after{content:'';position:absolute;inset:0;border-radius:50%;background:conic-gradient(#ffd388 var(--lamp-ready,100%),#778886 0);mask:radial-gradient(closest-side,transparent calc(100% - 3px),#000 calc(100% - 2px));pointer-events:none}
+@media(pointer:coarse){#forest-nights [data-actions] kbd{display:none}}
 #forest-nights button[data-arrow]{position:absolute;top:63%;left:50%;transform:translateX(-50%);padding:3px 8px;min-height:27px;color:#ffdc91;background:#273b40bf!important;border:0;box-shadow:none!important}
 #forest-nights [data-arrow] i{display:inline-block;font-style:normal;transform:rotate(var(--turn))}
 #forest-nights [data-status]{position:absolute;top:17%;left:50%;transform:translateX(-50%);text-align:center;pointer-events:none}
-#forest-nights[data-play=false] :is([data-stick],[data-actions],[data-arrow]){display:none}
+#forest-nights[data-play=false] :is([data-actions],[data-arrow]){display:none}
 #forest-nights [data-menu]{max-height:70dvh;overflow-y:auto}
 #forest-nights [data-menu] [data-role]{width:26%;padding:4px 7px;font-size:26px}
 #forest-nights [data-role] small{display:block;font:700 14px system-ui}
@@ -2105,7 +2106,7 @@ body.world-page.forest-night-open #forest-nights [data-menu] button[data-role][a
 #forest-nights [data-lesson] b{font:22px/1.2 system-ui}
 #forest-nights [data-lesson] b.current{filter:drop-shadow(0 0 4px #ffde8f)}
 @media(max-width:480px){#forest-nights header{gap:3px;left:6px;right:6px}#forest-nights header [data-night],#forest-nights header [data-fire],#forest-nights header [data-hunger]{gap:1px;padding:4px}#forest-nights [data-fire] b{width:16px}#forest-nights [data-lesson]{bottom:108px}}
-@media(max-width:420px),(max-height:430px){#forest-nights{font-size:13px}#forest-nights header{gap:4px}#forest-nights header :is(span,strong){padding:7px 9px}#forest-nights [data-stick]{width:72px;height:72px;bottom:12px}#forest-nights [data-actions]{bottom:11px}}
+@media(max-width:420px),(max-height:430px){#forest-nights{font-size:13px}#forest-nights header{gap:4px}#forest-nights header :is(span,strong){padding:7px 9px}#forest-nights [data-actions]{bottom:11px}}
 
 
 /* 훈련에서는 아이가 트랙과 오른손 단추를 함께 봅니다. */
@@ -2330,5 +2331,65 @@ body.world-page.tablet-pc-frame #rhythm-card .rh-albums>button{width:44px}
 .game-chat input{flex:1;min-width:0;width:1px;border:0;border-radius:6px;padding:8px 6px;font:16px/1.1 system-ui;color:#203430;background:#fffaf0;user-select:text}
 .game-chat summary{cursor:pointer;padding:4px 2px;font-size:12px;color:#ffe0a4}
 .game-chat p{margin:0}
+
+#mobile-horse-status{position:fixed;z-index:14;top:calc(var(--hud-row,96px) + 176px);right:var(--hud-right,12px);pointer-events:auto}
+body.world-page #mobile-horse-status>button{display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;border-radius:14px}
+#mobile-horse-status>button img{width:34px;height:34px;object-fit:contain;pointer-events:none}
+#mobile-horse-status>button[aria-expanded=true]{outline:2px solid #5c753e}
+#mobile-horse-status .pc-horse-status{
+ position:absolute;top:50px;right:0;box-sizing:border-box;width:min(178px,46vw);
+ max-height:calc(100dvh - var(--hud-row,96px) - 226px - var(--hud-controls,66px) - 52px);
+ overflow:auto;overscroll-behavior:contain;touch-action:pan-y;padding:7px;color:var(--ink);
+ border:1px solid #ad794d;border-radius:12px;background:#fff5df;box-shadow:var(--float);font:700 15px/1.15 var(--font-hand)
+}
+#mobile-horse-status header{display:flex;align-items:center;gap:4px;margin-bottom:4px}
+#mobile-horse-status header>img{width:28px;height:28px;object-fit:contain}
+#mobile-horse-status header h2,#mobile-horse-status p{margin:0;font:inherit}
+#mobile-horse-status header strong{overflow-wrap:anywhere}
+#mobile-horse-status header .horse-follow-button{flex:none;width:44px;height:44px;min-height:44px;padding:0}
+#mobile-horse-status .horse-follow-button span{display:none}
+body.world-page #mobile-horse-status .horse-follow-button img{width:18px;height:18px}
+#mobile-horse-status .horse-care-list{display:grid;gap:3px}
+body.world-page #mobile-horse-status [data-horse-care]{
+ display:grid;grid-template-columns:18px auto minmax(0,1fr);grid-template-rows:auto 4px;gap:3px 4px;align-items:center;
+ text-align:left;min-height:44px;padding:3px 4px;background:#fffaf0;color:var(--ink);border:1px solid #e7be91;border-radius:8px;
+ font:inherit
+}
+#mobile-horse-status [data-horse-care]>:is(img,.horse-care-drop){grid-row:span 2;width:18px;height:18px;object-fit:contain}
+#mobile-horse-status [data-horse-care]>small{text-align:right;line-height:1;overflow-wrap:anywhere}
+#mobile-horse-status [data-horse-care] i{grid-column:2/4;height:4px;background:#ebdfca;border-radius:4px;overflow:hidden}
+#mobile-horse-status [data-horse-care] i b{display:block;height:100%;background:#739455}
+#mobile-horse-status .needs-care i b{background:#d58943}
+#mobile-horse-status .horse-race-entry button,#mobile-horse-status .vet-route{min-height:44px}
+body.world-page:is(.at-title,.world-broadcasting,.home-editing,.home-decorating,.forest-night-open)
+ #mobile-horse-status,body.world-page:has(dialog[open],.world-options.open,.world-travel.open,#world-chat.chat-open,.farm-world-training:not([hidden])) #mobile-horse-status{display:none}
+@media(orientation:landscape) and (max-height:520px){
+ #mobile-horse-status{left:var(--hud-left,12px);right:auto;top:calc(var(--hud-row,64px) + 104px)}
+ #mobile-horse-status .pc-horse-status{
+  top:-52px;left:70px;right:auto;width:min(236px,calc(50vw - var(--hud-left,12px) - 76px));
+  max-height:calc(100dvh - var(--hud-row,64px) - 52px - var(--hud-controls,66px) - 44px)
+ }
+ #mobile-horse-status .horse-care-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #mobile-horse-status .horse-care-list>:not([data-horse-care]){grid-column:1/-1}
+ #mobile-horse-status .horse-meal-checks{margin-right:2px;gap:1px}
+ #mobile-horse-status .horse-meal-checks>span{width:10px;height:10px}
+}
+
+body.world-page #quest-decor-card[open]{
+ display:grid;grid-template-columns:100px minmax(0,1fr);align-items:center;gap:12px;
+ box-sizing:border-box;width:min(385px,calc(100vw - 24px));padding:13px;
+ color:var(--ink);background:#fff5df;border:2px solid #9f6c43;border-radius:16px;box-shadow:var(--float);
+ font:700 18px/1.2 var(--font-hand)
+}
+#quest-decor-card::backdrop{background:#31271e35}
+.quest-decor-art{position:relative;align-self:stretch;min-height:98px;background:#f3dfb5;border-radius:10px;overflow:hidden}
+.quest-decor-art .quest-art{position:absolute;object-fit:contain}
+.quest-decor-art .quest-art:first-child{width:86px;height:86px;left:-2px;top:50%;transform:translateY(-50%)}
+.quest-decor-art .quest-art:last-child{width:48px;height:48px;right:1px;top:50%}
+#quest-decor-card :is(h2,p){margin:0 0 4px;font-family:inherit}
+body.world-page #quest-decor-card h2{padding:0;background:none;clip-path:none;font-size:20px;word-break:keep-all;text-wrap:balance}
+.quest-decor-actions{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+body.world-page .quest-decor-actions button{min-height:44px;padding:4px 8px;border:1px solid #a67048;border-radius:8px;background:#f3dfb5;color:#472d1c;font:inherit}
+body.world-page .quest-decor-actions [data-quests]{background:#486439;color:#fff7dc;border-color:#3b512f}
 .game-chat-bubble{position:absolute;z-index:5;pointer-events:none;transform:translate(-50%,-100%);max-width:min(190px,48vw);padding:4px 8px;border-radius:10px;background:#fff8e8;color:#26332e;box-shadow:0 1px 3px #152c3b80;text-shadow:none;font:600 13px/1.25 system-ui;overflow-wrap:anywhere}
 .game-chat-bubble::after{content:"";position:absolute;top:100%;left:50%;border:4px solid transparent;border-top-color:#fff8e8}
