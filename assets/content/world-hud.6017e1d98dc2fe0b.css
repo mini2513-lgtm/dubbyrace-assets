@@ -1,5 +1,15 @@
 .world-travel .travel-more summary{cursor:pointer;padding:7px 12px;font-weight:bold}.world-travel .travel-more button{width:100%;margin-top:4px}
 html:has(>body.world-page){overflow:hidden;overscroll-behavior:none}.world-page{position:fixed;inset:0;margin:0;overflow:clip;color:var(--ink);font-family:Gaegu,system-ui,sans-serif}#world{position:fixed;inset:0}#world canvas{display:block;width:100%;height:100%;touch-action:none}.world-top,.world-travel,.world-options,.world-status,.world-hint{position:fixed;z-index:4}.world-top{left:20px;right:20px;top:16px;display:flex;align-items:center;gap:26px;padding:12px 20px;border-radius:12px;box-shadow:0 4px 16px #4a342424}.world-top strong{font-size:26px}.world-top #world-place{display:inline-block;margin-left:14px;color:var(--leaf-deep);font-size:18px}.world-top time{font-size:20px}.world-travel{left:20px;top:106px;display:grid;gap:8px;padding:14px;border-radius:12px;box-shadow:0 5px 14px #4a342426}.world-travel strong{font-size:19px;text-align:center}.world-page button,.world-page select{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--wood-3);border-radius:8px;min-height:44px;padding:7px 13px;cursor:pointer;font-size:18px}.world-page button:hover{background:var(--leaf-soft)}.world-page button[aria-pressed=true]{background:var(--leaf-soft);color:var(--leaf-deep)}.world-page button:disabled{opacity:.5;cursor:wait}.world-page :focus-visible{outline:3px solid var(--leaf-deep);outline-offset:3px}.world-options{right:20px;top:106px;padding:12px;display:grid;gap:8px;border-radius:12px;box-shadow:0 4px 16px #4a342424}.world-options label{display:flex;gap:8px;align-items:center;justify-content:space-between}.world-options select{max-width:130px}.world-status{left:50%;bottom:92px;transform:translateX(-50%);max-width:min(600px,calc(100vw - 30px));padding:9px 16px;border-radius:10px;font-size:18px;text-align:center;pointer-events:none}.world-hint{right:20px;bottom:16px;padding:6px 12px;border-radius:8px;font-size:15px;pointer-events:none}#world-stats{position:fixed;z-index:5;right:20px;bottom:55px;background:var(--paper);padding:8px;border-radius:8px;color:var(--ink)}#world-joystick{display:none}::selection{background:var(--leaf);color:var(--ink)}
+@property --world-buffer-height{syntax:"<length>";inherits:false;initial-value:0px}
+@media (any-pointer:coarse){
+  body.world-page:not(.pc-frame){
+    position:absolute;
+    width:var(--world-view-width,100%);
+    height:var(--world-view-height,100dvh);
+  }
+  body.world-page:not(.pc-frame) #world{position:absolute;--world-buffer-height:100lvh}
+  html:has(>body.world-page:not(.pc-frame,.at-title)),body.world-page:not(.pc-frame,.at-title){background-color:#67865c}
+}
 @media(max-width:600px){.world-top{top:8px;left:8px;right:8px;gap:8px;flex-wrap:wrap;padding:8px 12px}.world-top strong{font-size:21px}.world-top time{font-size:16px}.world-top #world-place{font-size:16px;margin-left:8px}.world-travel{left:8px;top:92px;display:flex;flex-wrap:wrap;gap:5px;width:calc(100vw - 16px);padding:8px}.world-travel strong{display:none}.world-travel button{font-size:15px;flex:1;white-space:nowrap;padding:5px 8px}.world-options{top:208px;right:8px;padding:7px;gap:5px}.world-options label{font-size:14px}.world-options button,.world-options select{font-size:15px;min-height:38px;padding:5px 8px}.world-status{bottom:150px;font-size:16px}.world-hint{display:none}#world-stats{bottom:150px;font-size:12px;right:8px}#world-joystick{display:block;position:fixed;left:24px;bottom:90px;width:104px;height:104px;border-radius:50%;background:#fff8eab3;border:2px solid var(--wood-3);z-index:6;touch-action:none}#world-joystick span{display:block;position:absolute;left:30px;top:30px;width:40px;height:40px;background:var(--wood-2);border:1px solid var(--wood-4);border-radius:50%;pointer-events:none}#village-debug-controls{font-size:14px!important;gap:4px!important;bottom:8px!important}#village-debug-controls button{padding:5px 8px!important;font-size:14px!important}}
 .world-page [hidden]{display:none!important}.world-close{position:fixed;z-index:12;right:20px;top:104px}.world-broadcasting .world-travel,.world-broadcasting .world-options,.world-broadcasting:not(.world-live) #world-joystick,.world-broadcasting .world-hint{display:none!important}@media(max-width:600px){.world-close{top:88px;right:8px}}
 .world-broadcasting #world-watch{display:none!important}#world-watch{font-size:16px;margin-left:auto}
@@ -924,6 +934,24 @@ body.world-page .work-checklist th,body.world-page .work-checklist td{word-break
 body.world-page .work-checklist td:last-child{white-space:nowrap;overflow-wrap:normal}
 .work-checklist .work-hours{white-space:nowrap;display:inline-block}
 .work-horse-status{display:none}
+body.world-page button.horse-follow-button{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:44px;border:1px solid #998772;border-radius:10px;padding:3px 7px;background:#f1ebe0;color:#52493f;font:700 14px/1.1 var(--font-hand);white-space:nowrap;cursor:pointer}
+body.world-page button.horse-follow-button[aria-pressed=true]{--frame-button-active:#dbedc5;--frame-active-rim:#779363;--frame-active-depth:#66824f;--frame-active-edge:inset 0 2px 0 #f4ffe7;border-color:#607c45;background:#e3efcd;color:#324b29}
+body.world-page .horse-follow-button[hidden]{display:none}
+body.world-page button.horse-follow-button img{width:24px;height:24px;background:transparent;border:0;border-radius:0;object-fit:contain}
+.horse-follow-button[aria-pressed=false] img{filter:grayscale(1);opacity:.65}
+.pc-horse-status header .horse-follow-button{margin-left:auto}
+.in-world-ring .horse-follow-button span{display:none}
+body.world-page .in-world-ring button.horse-follow-button{left:83px;top:81px;width:56px;height:54px;flex-direction:column;gap:0;pointer-events:auto}
+.in-world-ring:has(.horse-follow-button) .horse-ring-stage{left:111px;top:149px;pointer-events:none}
+@media(pointer:coarse),(max-width:1023px){
+ body:not(.pc-frame) .work-horse-status{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:2px 6px;padding:5px 8px;border:1px solid #ddc49d;border-radius:8px;font-size:14px}
+ .work-horse-status .horse-follow-button{justify-self:end}
+ .work-horse-status>span,.work-horse-status>.horse-race-score{grid-column:1/-1}
+}
+@media(orientation:landscape) and (max-height:520px){
+ body:not(.pc-frame):has(.in-world-ring:not([hidden]) .horse-follow-button) :is(#farm-unlock-banner,.world-status,#farm-next-task,#world-quest-summary,#timed-activity-card){visibility:hidden}
+ body.world-page:not(.pc-frame)[data-sheet=work] #farm-world-panel[data-world-sheet][open]{max-height:62dvh}
+}
 .horse-race-score{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 6px;padding:3px 7px;border-radius:7px;background:#edf1db;color:#385328;font-size:.92em}
 .horse-race-score-direction{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .farm-training-result{margin:10px 0;padding:8px 6px;border-radius:10px;background:#f0eedb;word-break:keep-all}
@@ -2004,13 +2032,17 @@ body.world-page.pc-frame.world-broadcasting #world-quest-fold.quest-enabled.ques
 /* 밤마을 숲지기 */
 body.forest-night-open :is(#world-minimap,#world-pc-frame,#hud,#world-stats,#world-joystick,.world-travel){display:none!important}
 body.forest-night-open #forest-nights button{background-image:none!important;box-shadow:0 2px 3px #11232c77!important;font-family:system-ui!important}
-body.forest-night-open #forest-nights [data-marks] button{border-radius:50%!important}
-body.forest-night-open #forest-nights [data-use],body.forest-night-open #forest-nights [data-tools]{border-radius:50%!important}
+body.forest-night-open #forest-nights :is([data-marks],[data-actions]) button{border-radius:50%!important}
 body.forest-night-open > :not(#world):not(#forest-nights):not(style):not(script),
 body.forest-night-open #world > :not(canvas){visibility:hidden!important;pointer-events:none!important}
 body.forest-night-open #world{position:fixed!important;inset:0!important;width:100%!important;height:100%!important;border:0!important;border-radius:0!important}
 #forest-nights[hidden],#forest-nights [hidden]{display:none!important}
 #forest-nights{position:fixed;inset:0;z-index:99;color:#fff4d8;font:700 16px system-ui;touch-action:none;user-select:none;isolation:isolate}
+#forest-nights [data-forest-goals]{display:none}
+#forest-nights[data-play=true] [data-forest-goals]{position:absolute;display:grid;gap:2px;top:max(52px,calc(env(safe-area-inset-top) + 47px));left:max(8px,env(safe-area-inset-left));background:#152923e8;color:#fff7df;padding:6px 9px;border-radius:9px;font:600 13px/1.35 system-ui;pointer-events:none}
+#forest-nights [data-forest-goals] b{display:inline-block;width:5.3em;color:#ffe4a0}
+#forest-nights[data-play=true] [data-team]:not([hidden]){left:auto;right:68px;top:52px}
+@media(max-width:480px){#forest-nights[data-play=true] [data-forest-goals]{top:65px}#forest-nights[data-play=true] [data-team]:not([hidden]){top:144px;right:10px}}
 #forest-nights header{position:absolute;top:max(10px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));display:flex;align-items:center;gap:7px;pointer-events:none;z-index:4}
 #forest-nights button,#forest-nights header strong,#forest-nights header span,#forest-nights [data-status]:not(:empty){font:inherit;color:inherit;background:#253941ed!important;border:1px solid #c3d7d36b;border-radius:16px;padding:8px 13px;box-shadow:0 2px 4px #101a2470!important}
 #forest-nights button{cursor:pointer;min-height:42px;touch-action:none}
@@ -2018,16 +2050,20 @@ body.forest-night-open #world{position:fixed!important;inset:0!important;width:1
 #forest-nights header button{pointer-events:auto;margin-left:auto;font-size:22px;line-height:1}
 #forest-nights [data-menu]{position:absolute;z-index:6;left:50%;top:54%;transform:translate(-50%,-50%);display:flex;flex-wrap:wrap;justify-content:center;gap:8px;width:min(330px,85vw);padding:18px;border:1px solid #dec99188;border-radius:22px;background:#24393eef;text-align:center}
 #forest-nights [data-menu] b{flex-basis:100%;padding:0 0 8px}#forest-nights [data-menu] button{background:#ead29d!important;color:#283731}
-body.forest-night-open #forest-nights [data-head]{position:absolute;transform:translate(-50%,-100%);border:2px solid #ffd780;border-radius:50%;font-size:21px;padding:0;width:44px;height:44px;background:#374f49!important}
-#forest-nights [data-marks]{pointer-events:none;position:absolute;inset:0}
-#forest-nights [data-marks] button{position:absolute;transform:translate(-50%,-100%);pointer-events:auto;width:39px;height:39px;min-height:39px;padding:0;border-radius:50%;background:#243e3edb!important;font-size:21px}
-#forest-nights [data-marks] button.selected{border:2px solid #ffe6a3;box-shadow:0 0 14px #ffde9a!important}
-#forest-nights [data-marks] button.resting{opacity:.5}
+#forest-nights [data-marks]{position:absolute;z-index:3;transform:translate(-50%,-50%);text-align:center}
+#forest-nights [data-use]{position:relative;width:46px;height:46px;padding:0;border:2px solid #ffedbf;color:#253941;background:#f6d891!important;font-size:23px}
+#forest-nights [data-use] :is(kbd,small){position:absolute;right:-10px;padding:2px 4px;border-radius:5px;background:#fff4de;color:#29342e;font:700 12px system-ui;white-space:nowrap}
+#forest-nights [data-use] kbd{bottom:-3px}
+#forest-nights [data-use] small{top:-5px}
+#forest-nights [data-use] small:empty{display:none}
+#forest-nights [data-crafts]{position:absolute;left:50%;bottom:calc(100% + 4px);transform:translateX(-50%);display:flex;gap:4px}
+#forest-nights [data-crafts] button{width:44px;height:44px;padding:0;font-size:22px}
 #forest-nights [data-stick]{position:absolute;bottom:max(22px,env(safe-area-inset-bottom));left:max(22px,env(safe-area-inset-left));width:83px;height:83px;border:2px solid #d9e5d691;border-radius:50%;background:#35474966;display:grid;place-items:center}
 #forest-nights [data-stick] i{width:33px;height:33px;border-radius:50%;background:#c7d5cfb3}
 #forest-nights [data-actions]{position:absolute;right:max(17px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));display:flex;align-items:flex-end;gap:7px}
 #forest-nights [data-actions] button{border-radius:50%;font-size:23px;padding:0;width:45px;height:45px}
-#forest-nights [data-actions] [data-use]{background:#f6d891!important;border:3px solid #ffedbf;height:69px;width:69px;font-size:32px}
+@media(pointer:coarse){#forest-nights [data-use] kbd{display:none}}
+@media(pointer:fine){#forest-nights [data-stick]{display:none}}
 #forest-nights button[data-arrow]{position:absolute;top:63%;left:50%;transform:translateX(-50%);padding:3px 8px;min-height:27px;color:#ffdc91;background:#273b40bf!important;border:0;box-shadow:none!important}
 #forest-nights [data-arrow] i{display:inline-block;font-style:normal;transform:rotate(var(--turn))}
 #forest-nights [data-status]{position:absolute;top:17%;left:50%;transform:translateX(-50%);text-align:center;pointer-events:none}
@@ -2057,7 +2093,7 @@ body.world-page.forest-night-open #forest-nights [data-menu] button[data-role][a
 #forest-nights header [data-vitals]{display:flex;padding:0;gap:4px;border:0;background:none!important;box-shadow:none!important}
 #forest-nights [data-moon]{display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:radial-gradient(circle,#253941 54%,transparent 58%),conic-gradient(#ffe5aa var(--fill),#6b7380 0);font:14px system-ui}
 #forest-nights [data-fire]{flex-wrap:wrap}
-#forest-nights [data-fire] b{width:28px;height:7px;background:linear-gradient(to right,#ffca77 var(--fill),#6a5847 0);border:1px solid #b8986e;border-radius:4px}
+#forest-nights [data-fire] b{width:28px;height:7px;background:linear-gradient(to right,transparent 69%,#fff3d1 69% 73%,transparent 73%),linear-gradient(to right,#ffca77 var(--fill),#6a5847 0);border:1px solid #b8986e;border-radius:4px}
 #forest-nights header i{font-style:normal}
 #forest-nights [data-hunger] i[data-empty=true]{filter:grayscale(.9);opacity:.48}
 #forest-nights header [data-danger=true]{animation:forest-warning 1s ease-in-out infinite alternate}
@@ -2068,7 +2104,6 @@ body.world-page.forest-night-open #forest-nights [data-menu] button[data-role][a
 #forest-nights [data-lesson]{position:absolute;bottom:max(24px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);padding:7px 12px;border:1px solid #e6c890;border-radius:16px;background:#1d303ceb;color:#f5dfb4;pointer-events:none;white-space:nowrap}
 #forest-nights [data-lesson] b{font:22px/1.2 system-ui}
 #forest-nights [data-lesson] b.current{filter:drop-shadow(0 0 4px #ffde8f)}
-@media(pointer:fine){#forest-nights [data-key]{position:relative}#forest-nights [data-key]::after{content:attr(data-key);position:absolute;right:0;bottom:-5px;padding:1px 4px;border:1px solid #bfc6bd;border-radius:4px;color:#29342e;background:#fff4de;font:700 10px/1.15 system-ui;white-space:nowrap}#forest-nights [data-stick][data-key],#forest-nights [data-arrow][data-key]{position:absolute}}
 @media(max-width:480px){#forest-nights header{gap:3px;left:6px;right:6px}#forest-nights header [data-night],#forest-nights header [data-fire],#forest-nights header [data-hunger]{gap:1px;padding:4px}#forest-nights [data-fire] b{width:16px}#forest-nights [data-lesson]{bottom:108px}}
 @media(max-width:420px),(max-height:430px){#forest-nights{font-size:13px}#forest-nights header{gap:4px}#forest-nights header :is(span,strong){padding:7px 9px}#forest-nights [data-stick]{width:72px;height:72px;bottom:12px}#forest-nights [data-actions]{bottom:11px}}
 
@@ -2169,6 +2204,58 @@ body.pc-frame:has(#farm-quest-list[data-journal][open]):not(:has(#farm-world-pan
 #timed-activity-card li{display:grid;grid-template-columns:27px minmax(0,1fr) 31px;gap:6px;align-items:center}
 #timed-activity-card li img{width:27px;height:27px}
 #timed-activity-card li progress{width:100%;height:6px;accent-color:#527644}
+.investment-plan{margin:12px 0;padding:10px;border:1px solid #cfb697;border-radius:10px}
+.investment-plan h4{margin:.3em 0;font-size:18px}
+.investment-plan details,.investment-plan summary,.investment-future summary{cursor:pointer}
+.investment-steps{display:grid;grid-template-columns:repeat(var(--steps),minmax(0,1fr));gap:3px;margin:6px 0;padding:0;list-style:none}
+.investment-steps li{min-width:0;display:grid;place-items:center;align-content:center;gap:2px;min-height:41px;padding:3px 1px;box-sizing:border-box;border:1px solid #d1ba98;border-radius:7px;background:#faf0da;color:#5b4835;font:700 10px/1.15 system-ui,sans-serif;text-align:center;word-break:keep-all}
+.investment-steps li span{font-size:16px;line-height:1}
+.investment-steps li[data-done]{background:#eaf0d9;color:#325141}
+.investment-steps li[aria-current=step]{background:#fff0a7;border-color:#a7732e;animation:investment-glint 1.5s ease-in-out infinite}
+@keyframes investment-glint{50%{box-shadow:0 0 5px 1px #eab94b}}
+@media(prefers-reduced-motion:reduce){.investment-steps li[aria-current=step]{animation:none}}
+.investment-strip{margin:7px 0}
+.investment-strip>div{display:flex;height:7px;overflow:hidden;border-radius:8px;background:#eae0d0}
+.investment-strip ul,.investment-facts,.investment-money,.investment-ledger ol{list-style:none;margin:3px 0;padding:0}
+.investment-strip li{display:flex;justify-content:space-between;gap:5px;align-items:baseline}
+.investment-strip li:before{content:'';width:8px;height:8px;flex:none;border-radius:2px;background:var(--part)}
+.investment-strip b{margin-left:auto}
+.investment-strip i{background:var(--part)}
+.investment-strip [data-color=land]{--part:#a56c50}.investment-strip [data-color=build]{--part:#d89b50}
+.investment-strip [data-color=fund]{--part:#bd6253}.investment-strip [data-color=tax]{--part:#92739a}
+.investment-strip [data-color=loan]{--part:#568369}.investment-strip [data-color=own]{--part:#7b9860}
+.investment-facts,.investment-timing,.investment-reason{font-size:14px}
+.investment-reason{display:block;color:#793923;font-weight:700}
+.investment-reason:empty,[data-land-status]:empty{display:none}
+.investment-funding{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:7px}
+.investment-funding .investment-reason{grid-column:1/-1}
+.investment-ledger>ol{padding-inline-start:10px}
+.investment-money li{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px;margin:5px 0;text-align:left}
+.investment-money b{text-align:right;font-variant-numeric:tabular-nums}
+.investment-money i{grid-column:1/-1;position:relative;height:5px;background:#e9decd;border-radius:6px;overflow:hidden}
+.investment-money i::before{content:'';display:block;height:100%;width:var(--amount);background:#558566}
+.investment-money [data-color=out] i::before{background:#bc6d32}
+.investment-cash-change{font-weight:700;text-align:center}
+.investment-future{font-size:14px}
+body.world-page .in-world-confirm[data-investment-payment]{width:min(440px,calc(100vw - 24px));max-width:none;max-height:min(66dvh,560px);padding:12px 14px;font:14px/1.35 system-ui,sans-serif}
+body.world-page .in-world-confirm[data-investment-payment]:not([hidden]){display:flex;flex-direction:column;overflow:hidden;z-index:2}
+body.world-page .in-world-confirm[data-investment-payment] p{margin:4px 0 6px}
+body.world-page:not(.pc-frame):has(.in-world-confirm[data-investment-payment]:not([hidden]))
+ :is(#world-ride-controls,#world-joystick,#world-chat,.farm-world-toolbar){visibility:hidden}
+body.world-page .in-world-confirm[data-investment-payment]>p{font-size:19px;font-weight:700;margin-bottom:6px}
+.investment-confirm-body{min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 2px}
+.investment-confirm-actions{display:flex;flex:none;gap:6px;padding-top:7px;border-top:1px solid #e5d4ba}
+body.world-page .investment-confirm-actions button{flex:1;margin:0;min-height:44px}
+#investment-notice{position:fixed;z-index:9;width:250px;box-sizing:border-box;overflow:auto;padding:7px 9px;border:1px solid #a87b51;border-radius:12px;background:#fff6df;color:#513623;box-shadow:0 4px 12px #2c261b40;font:700 13px/1.2 system-ui,sans-serif;pointer-events:auto}
+#investment-notice h2{font:inherit;margin:0 36px 0 0}
+#investment-notice [data-route]{min-height:44px;width:100%;padding:4px;font:inherit}
+#investment-notice [data-dismiss]{position:absolute;right:3px;top:1px;min-width:36px;min-height:30px;padding:0}
+.farm-action-list:has(.investment-steps) [data-land-status]{font-size:13px}
+body.world-page .in-world-ring.farm-action-list:has(.investment-steps) button{position:static;width:auto;height:auto;min-height:44px;padding:6px 9px!important;border-radius:8px!important}
+@media(orientation:landscape) and (max-height:520px){
+ body.world-page .in-world-confirm[data-investment-payment]{bottom:54px;max-height:68dvh}
+ .investment-confirm-body .investment-steps li{min-height:35px}
+}
 @media(max-height:460px) and (orientation:landscape){
  body.world-page #farm-quest-list[data-journal][open]{grid-template-columns:minmax(0,1fr)}
  body.world-page #farm-quest-list[data-journal]>header{grid-area:1/1}
@@ -2181,7 +2268,10 @@ body.world-page #farm-quest-list[data-journal] .quest-detail-action{background:#
 #farm-quest-list[data-journal] [data-quest-detail][hidden],#farm-quest-list[data-journal] .quest-groups[hidden]{display:none}
 
 .timed-activity-art{display:grid;place-items:center;width:27px;height:27px;font:17px/1 system-ui,sans-serif;object-fit:contain}
-#world-quest-fold.quest-list-hud #farm-next-task{display:none!important}
+body.world-page #world-quest-fold.quest-list-hud.quest-enabled:has(#farm-next-task:not([hidden])){grid-template-columns:44px minmax(0,1fr)}
+body.world-page:not(.pc-frame) #world-quest-fold.quest-list-hud.quest-enabled:has(#farm-next-task:not([hidden])){width:max-content}
+body.world-page #world-quest-fold.quest-list-hud #farm-next-task:not([hidden]){grid-area:1/2;position:static;transform:none;width:max-content;max-width:none;min-height:44px;margin:0;padding:0 8px;font-size:15px;white-space:nowrap}
+body.world-page #world-quest-fold.quest-list-hud.quest-enabled #world-quest-fold-panel:not([hidden]){grid-column:1/-1}
 @media(pointer:coarse),(max-width:600px){
  body.world-page:not(.pc-frame) #farm-quest-list[data-journal][open]{max-height:min(60dvh,440px)}
 }
@@ -2202,7 +2292,7 @@ body.world-page.ui-v2.tablet-pc-frame #world-chat .chat-list{bottom:calc(var(--p
 body.world-page.tablet-pc-frame .pc-frame-wallet :is(#world-updates-open,#world-options-open,#bug-launch){
  flex-basis:44px;width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;
 }
-body.world-page.tablet-pc-frame :is(#world-clock,.pc-frame-map-tools,.pc-frame-clock,.pc-horse-status,#world-chat) button,
+body.world-page.tablet-pc-frame :is(#world-clock,.pc-frame-map-tools,.pc-frame-clock,.pc-horse-status,#world-chat,.pc-frame-wallet) button,
 body.world-page.tablet-pc-frame .world-travel summary{
  min-width:44px!important;min-height:44px!important;box-sizing:border-box;
 }
@@ -2212,6 +2302,9 @@ body.world-page.tablet-pc-frame #world-pc-frame .world-travel[data-compact] butt
 body.world-page.tablet-pc-frame:has(.farm-world-training[data-kind=speed]:not([hidden])) #world-joystick{
  left:max(12px,env(safe-area-inset-left));bottom:max(22px,env(safe-area-inset-bottom));
 }
+body.world-page.tablet-pc-frame:is(.splash-open,.forest-night-open) #world canvas{border-radius:0}
+body.world-page.tablet-pc-frame #rhythm-card:not([data-mode=play]){bottom:calc(var(--pc-bottom) + 14px)}
+body.world-page.tablet-pc-frame #rhythm-card .rh-albums>button{width:44px}
 @media(max-height:900px){
  body.world-page.ui-v2.tablet-pc-frame #world-pc-frame>.pc-frame-right{padding-bottom:12px;gap:6px}
  body.world-page.ui-v2.tablet-pc-frame #world-minimap{height:clamp(130px,18vh,162px)!important}
