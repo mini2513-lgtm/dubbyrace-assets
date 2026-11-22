@@ -1,0 +1,140 @@
+@font-face{font-family:AccessHoursJua;src:url('/assets/content/Jua-Regular.769677aef240bfc3.ttf') format('truetype');font-display:swap}
+#access-hours{
+ --access-ink:#253a33;--access-paper:#fff9e8;--leaf:#427658;--track:#d9e2cb;
+ position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:0;
+ color:var(--access-ink);background:var(--access-paper);font-family:AccessHoursJua,sans-serif;overflow:auto;
+}
+#access-hours[data-mode=sleep]{--access-ink:#fcf0cf;--access-paper:#192d44;--leaf:#ffdf8a;--track:#384d66}
+#access-hours::backdrop{background:var(--access-paper)}
+.access-hours-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);min-height:100%;background:var(--access-paper)}
+.access-hours-actions{
+ position:absolute;z-index:2;display:flex;gap:8px;
+ top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));
+}
+#access-hours .access-hours-actions .btn{min-height:44px;padding:3px 16px;color:#50301b}
+.access-hours-art{
+ position:relative;isolation:isolate;overflow:hidden;
+ background:#bad6cf url('/assets/content/village-morning.e878c7e55b62cd3d.webp') 50% 67%/cover no-repeat;
+}
+.access-hours-art::after{
+ content:"";position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(180deg,#e7f2de60,#638c6450 60%,#2e513c88);
+}
+.access-hours-sun{
+ position:absolute;left:13%;top:16%;width:clamp(36px,8vw,106px);aspect-ratio:1;
+ border-radius:50%;background:#ffe9a8;box-shadow:0 9px 35px #f8db7a75;
+}
+.access-hours-building{
+ position:absolute;left:47%;bottom:26%;width:clamp(120px,47%,360px);height:30%;
+ display:flex;align-items:center;justify-content:space-evenly;
+ background:linear-gradient(to top,#b28a63 10px,#f3d69c 10px);border-radius:4px;
+ box-shadow:0 12px 20px #2a443e52;
+}
+.access-hours-building::before{
+ content:"";position:absolute;inset:auto -6% calc(100% - 3px);
+ height:53%;background:#a54d3d;clip-path:polygon(50% 0,100% 77%,100% 100%,0 100%,0 77%);
+}
+.access-hours-building b{height:71%;width:23%;align-self:end;background:#815842;border:5px solid #f9e5b6;border-bottom:0;border-radius:10px 10px 0 0}
+.access-hours-building i{width:17%;height:39%;display:block;background:linear-gradient(to top,#547367 4px,#749988 4px);border:5px solid #fff0c8}
+.access-hours-building span{
+ position:absolute;bottom:100%;left:50%;translate:-50% 21%;
+ width:clamp(15px,6vw,40px);aspect-ratio:1;border:3px solid #815842;border-radius:50%;background:#fff5d9;
+}
+.access-hours-building span::before,.access-hours-building span::after{
+ content:"";position:absolute;left:50%;bottom:50%;width:2px;height:38%;background:#815842;
+}
+.access-hours-building span::after{transform:rotate(117deg);transform-origin:bottom}
+.access-hours-figure{
+ position:absolute;left:15%;bottom:10%;width:min(54%,340px);aspect-ratio:1;
+}
+.access-hours-portrait{display:block;width:100%;height:100%}
+.access-hours-figure img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(1px 8px 6px #233f4699);position:relative}
+.access-hours-figure i{
+ position:absolute;display:block;left:15%;bottom:6%;width:25%;height:29%;
+ background:linear-gradient(to top,#f8b562 8px,#d65c48 8px);border:3px solid #813f34;border-radius:36% 36% 21% 21%;transform:rotate(-11deg);
+}
+[data-mode=school] .access-hours-figure::after{
+ content:"";position:absolute;left:32%;bottom:8%;height:15%;width:5px;z-index:1;
+ background:#b9744e;border-radius:5px;transform:rotate(-22deg);
+}
+[data-mode=sleep] .access-hours-art{background-position:50% 71%;background-color:#203950;background-blend-mode:multiply}
+[data-mode=sleep] .access-hours-art::after{background:linear-gradient(180deg,#14305166,#12243755)}
+[data-mode=sleep] .access-hours-sun{background:#ffdf8a;box-shadow:0 5px 32px #fbeaa252}
+[data-mode=sleep] .access-hours-sun::after{content:"";position:absolute;inset:-8% -10% 24% 23%;background:#29425b;border-radius:50%}
+[data-mode=sleep] .access-hours-building{display:none}
+[data-mode=sleep] .access-hours-figure{
+ left:17%;bottom:16%;width:68%;max-width:450px;height:34%;aspect-ratio:auto;
+ border:8px solid #725c72;border-top-width:0;border-radius:25px;background:#ffedc7;
+ transform:rotate(-5deg);box-shadow:0 12px 24px #101e30a6;
+}
+[data-mode=sleep] .access-hours-portrait{
+ position:absolute;left:0;bottom:4%;width:52%;height:138%;transform:rotate(-64deg);
+}
+[data-mode=sleep] .access-hours-portrait::after{
+ content:"";position:absolute;left:39%;top:54%;width:39%;height:13%;
+ background:#474766;border:2px solid #a2a8cd;border-radius:38%;transform:rotate(5deg);
+}
+[data-mode=sleep] .access-hours-figure i{
+ z-index:1;inset:7% 3% 0 42%;width:auto;height:auto;transform:none;
+ background:#9babc8;border:0;border-radius:24px 18px 14px 8px;box-shadow:inset 11px 0 #cbd1e7;
+}
+.access-hours-information{
+ align-self:center;justify-self:center;display:grid;justify-items:center;text-align:center;
+ gap:clamp(10px,2.4vh,24px);padding:64px 12px 12px;width:100%;box-sizing:border-box;
+}
+.access-hours-information h1{font-size:clamp(30px,5vw,68px);line-height:1.05;font-weight:400;margin:0;outline:none}
+#access-hours-title:focus{outline:none!important}
+.access-hours-information p{margin:0;font-size:clamp(19px,3vw,33px)}
+.access-hours-error:empty{display:none}
+.access-hours-ring{
+ --remaining:100%;position:relative;width:clamp(148px,23vw,285px);aspect-ratio:1;border-radius:50%;
+ display:grid;place-items:center;background:conic-gradient(var(--leaf) var(--remaining),var(--track) 0);
+}
+.access-hours-ring::before{content:"";position:absolute;inset:clamp(8px,1.1vw,13px);border-radius:50%;background:var(--access-paper)}
+.access-hours-ring time{position:relative;font-size:clamp(28px,4.65vw,59px);font-variant-numeric:tabular-nums}
+#access-hours-notice{
+ position:fixed;z-index:2147483000;inset:auto;top:var(--notice-top,max(6px,env(safe-area-inset-top)));left:50%;margin:0;transform:translateX(-50%);
+ display:flex;align-items:center;gap:8px;max-width:calc(100% - 20px);pointer-events:none;
+ padding:4px 13px 4px 7px;border:1px solid #6f8e70;border-radius:28px;
+ font:400 clamp(15px,2.7vw,21px)/1 AccessHoursJua,sans-serif;white-space:nowrap;
+ color:#20382f;background:#fff7df;box-shadow:0 4px 10px #24302755;
+}
+#access-hours-notice[hidden]{display:none}
+#access-hours-notice[data-mode=sleep]{color:#fff2d2;background:#20354c;border-color:#526884}
+#access-hours-notice[data-expanded=false]{
+ left:var(--clock-left,auto);right:auto;top:var(--clock-top,8px);transform:none;
+ gap:0;padding:3px;
+}
+#access-hours-notice[data-expanded=false] b,#access-hours-notice[data-expanded=false] output{display:none}
+#world-clock[data-access-moon]{padding-inline-end:36px}
+#access-hours-notice i{
+ position:relative;flex:0 0 auto;width:25px;aspect-ratio:1;border-radius:50%;
+ background:conic-gradient(#488257 var(--remaining),#dde7d4 0);
+}
+#access-hours-notice i::before{content:"";position:absolute;inset:3px;background:#fff7df;border-radius:50%}
+#access-hours-notice i::after{content:"";position:absolute;inset:7px;border-radius:50%;border:2px solid #335c42}
+#access-hours-notice[data-mode=sleep] i{background:conic-gradient(#ffdf8a var(--remaining),#6d8094 0)}
+#access-hours-notice[data-mode=sleep] i::before{background:#20354c}
+#access-hours-notice[data-mode=sleep] i::after{
+ border:0;inset:5px;background:#ffdf8a;
+ mask:radial-gradient(circle at 75% 28%,transparent 47%,#000 52%);
+}
+@media(orientation:portrait){
+ .access-hours-layout{grid-template-columns:1fr;grid-template-rows:minmax(250px,48dvh) auto}
+ .access-hours-information{align-self:start;padding:20px 12px max(16px,env(safe-area-inset-bottom))}
+ .access-hours-ring{width:clamp(170px,54vw,258px)}
+ .access-hours-ring time{font-size:clamp(35px,11vw,56px)}
+ .access-hours-building{left:44%;bottom:22%}
+ .access-hours-actions{top:auto;bottom:max(12px,env(safe-area-inset-bottom))}
+ .access-hours-information{padding-bottom:68px}
+}
+@media(orientation:landscape) and (max-height:420px){
+ .access-hours-information{gap:8px;padding-top:61px}
+ .access-hours-ring{width:clamp(130px,44dvh,175px)}
+}
+@media(max-width:420px){
+ .access-hours-actions{right:50%;transform:translateX(50%);white-space:nowrap}
+}
+@media(max-width:900px){
+ #access-hours-notice[data-expanded=true]{top:calc(var(--notice-top,6px) + 50px)}
+}
