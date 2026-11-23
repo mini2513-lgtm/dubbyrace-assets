@@ -1178,7 +1178,7 @@ body.world-page #village-contribution[data-bonus]{width:220px;padding:5px 9px;wh
 #farm-world-panel .bank-feature{font-size:14px;margin:5px 0 10px}
 #farm-world-panel .bank-order label{display:block;margin:0 0 5px;font-size:14px}
 #farm-world-panel .bank-amount{display:flex;align-items:center;gap:5px;background:#fffdfa;border:1px solid #bdab90;border-radius:8px;padding:0 8px}
-#farm-world-panel .bank-amount input{width:100%;min-width:0;background:transparent;border:0;padding:3px 0;min-height:39px;font-size:18px;appearance:textfield}
+#farm-world-panel .bank-amount input{width:100%;min-width:0;background:transparent;border:0;padding:3px 0;min-height:39px;font-size:16px;appearance:textfield}
 #farm-world-panel .bank-amount input::-webkit-inner-spin-button{appearance:none;margin:0}
 #farm-world-panel .bank-primary{width:100%;margin-top:3px;padding-inline:4px;white-space:nowrap;background:#315b47;border:1px solid #244936;color:#fffdf2;font-size:17px;box-shadow:none}
 .bank-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;margin-top:4px}
@@ -1193,8 +1193,6 @@ body.world-page #village-contribution[data-bonus]{width:220px;padding:5px 9px;wh
  body.world-page[data-sheet=bank] #farm-world-panel[data-world-sheet]:has(.bank-note){max-height:63dvh}
 }
 #farm-world-panel .bank-owned{width:100%;margin:4px 0;background:#e3eddb;color:#2b513d;font-size:15px;border-color:#99b29a}
-.bank-deposit-info{display:flex;align-items:center;justify-content:space-between;gap:6px}
-#farm-world-panel .bank-deposit-info .bank-owned{width:auto;padding-inline:8px}
 #farm-world-panel .bank-books{flex-wrap:wrap;gap:4px}
 #farm-world-panel .bank-books button{font-size:14px}
 .bank-book{border:1px solid #a49370;border-radius:6px 13px 13px 6px;background:#fffdf3;box-shadow:0 2px 0 #d2be9c,0 4px 0 #f5eedc;overflow:hidden}
@@ -1271,10 +1269,10 @@ body.world-page .farm-world-panel.bank-close-dialog{width:min(340px,calc(100vw -
  #farm-world-panel:has(.bank-tabs) .bank-product{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px 10px;padding:8px 10px}
  #farm-world-panel .bank-product-head img{width:28px;height:28px}
  #farm-world-panel .bank-product-head h3{font-size:17px}
- #farm-world-panel .bank-product .bank-rate{grid-column:1;grid-row:2;margin:0}
- #farm-world-panel .bank-product .bank-order{grid-column:2;grid-row:1/span 3}
- #farm-world-panel .bank-product .bank-feature{grid-column:1;font-size:12px;margin:0}
- #farm-world-panel .bank-product .bank-deposit-info{grid-column:1;flex-wrap:wrap}
+ #farm-world-panel .bank-product .bank-rate{margin:4px 0 0}
+ #farm-world-panel .bank-product .bank-feature{font-size:12px;margin:0}
+ #farm-world-panel .bank-product :is(.bank-preview,.bank-primary){margin-top:0}
+ #farm-world-panel .bank-product .bank-order label{margin-bottom:0}
  #farm-world-panel .bank-rate strong{font-size:19px}
 }
 
@@ -1298,7 +1296,9 @@ body.world-page #farm-next-task .quest-funds{display:grid;grid-template-columns:
 .quest-funds>span:first-child{grid-column:1/-1}
 #farm-quest-dialog[data-choices] .quest-choice button{max-width:none;font-size:14px;line-height:1.2;padding:5px 8px;white-space:normal}
 @media(max-width:600px),(max-height:500px) and (orientation:landscape){
- #farm-world-panel .bank-filters{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:6px;align-items:center}
+ #farm-world-panel .bank-filters{display:flex;flex-wrap:wrap;gap:0 6px;align-items:center}
+ #farm-world-panel .bank-groups{flex:1 0 96px}
+ #farm-world-panel .bank-picks{flex-wrap:wrap}
  #farm-world-panel .bank-filters button{padding-inline:2px;font-size:14px}
  #farm-world-panel .bank-picks{gap:2px}
  #farm-world-panel .bank-tabs,#farm-world-panel .bank-groups,#farm-world-panel .bank-picks{margin-bottom:5px}
@@ -1689,7 +1689,9 @@ body.world-page .race-overlay [data-k=result] .race-reward{width:32px;height:32p
 #world-balance{display:grid;grid-template-columns:auto auto;column-gap:4px;align-items:center}.world-top #world-balance #world-wallet{grid-column:1;grid-row:1}#world-balance #world-loan-arrears{grid-column:1/-1;justify-self:center}#hud #world-network{position:static;min-height:26px;min-width:25px;border:0;display:inline-flex;align-items:flex-end;justify-content:center;gap:2px;padding:5px 3px;box-sizing:border-box;color:#9b5707;background:transparent}#hud #world-network[hidden]{display:none!important}
 .world-network span{width:4px;height:5px;border:1px solid currentColor;border-radius:1px;box-sizing:border-box;background:currentColor}.world-network span:nth-child(2){height:9px}.world-network span:nth-child(3){height:13px;background:transparent}#hud #world-network[data-level=offline]{color:#a12926}.world-network[data-level=offline] span{background:transparent}
 
-#world-ride-controls{display:flex;align-items:center;gap:5px}
+#world-ride-controls{display:flex;align-items:center;gap:5px;position:relative}
+#world-ride-note{display:none;position:absolute;right:0;bottom:100%;margin-bottom:5px;padding:4px 8px;border-radius:8px;background:#fff6df;color:#573522;white-space:nowrap;pointer-events:none}
+#world-ride-note[hidden]{display:none}
 body.world-page:not(.pc-frame) #world-ride-controls{position:fixed;z-index:8;left:20px;bottom:48px}
 body.pc-frame #world-ride-controls{flex:none}
 @media(max-width:1099px) and (pointer:fine){
@@ -1756,6 +1758,7 @@ body.world-page #world-chat:not(.chat-faded) .chat-list{transition:none}
  }
  body.world-page:not(.pc-frame) #world-ride-controls button{width:44px;padding:0;border-radius:14px!important}
  #world-ride-controls :is(.hud-button-label,kbd){display:none}
+ #world-ride-note:not([hidden]){display:block;right:auto;left:0}
  #world-ride-swap .hud-button-icon{width:18px}
  body.world-page:not(.pc-frame):has(#world-chat.chat-open) #world-ride-controls{visibility:hidden}
  body.world-page:not(.pc-frame) #world-quest-fold.quest-enabled{position:fixed;z-index:8;top:var(--hud-row);left:calc(var(--hud-left) + 52px)}
@@ -1825,6 +1828,7 @@ body.world-practice-broadcast.race-result-open .race-commentary{top:35%;bottom:a
  body.world-page:not(.pc-frame) #world-ride-controls{
   left:auto;right:calc(var(--hud-right) + 52px);bottom:var(--hud-controls);
  }
+ #world-ride-note:not([hidden]){left:auto;right:calc(100% + 6px);bottom:50%;margin:0;transform:translateY(50%)}
  body.world-page #world-chat .chat-compose :is(button,input){min-width:44px;min-height:44px}
  body.world-page #farm-world-panel :is(.bank-tabs,.bank-picks,.bank-choices) button{min-width:44px}
  body.world-page #farm-world-panel .bank-amount input{min-height:44px}
@@ -2041,10 +2045,10 @@ body.forest-night-open #world{position:fixed!important;inset:0!important;width:1
 #forest-nights[hidden],#forest-nights [hidden]{display:none!important}
 #forest-nights{position:fixed;inset:0;z-index:99;color:#fff4d8;font:700 16px system-ui;touch-action:none;user-select:none;isolation:isolate}
 #forest-nights [data-forest-goals]{display:none}
-#forest-nights[data-play=true] [data-forest-goals]{position:absolute;display:grid;gap:2px;top:max(52px,calc(env(safe-area-inset-top) + 47px));left:max(8px,env(safe-area-inset-left));background:#152923e8;color:#fff7df;padding:6px 9px;border-radius:9px;font:600 13px/1.35 system-ui;pointer-events:none}
+#forest-nights[data-play=true] [data-forest-goals]{position:absolute;display:grid;gap:2px;top:max(60px,calc(env(safe-area-inset-top) + 50px));left:max(8px,env(safe-area-inset-left));max-width:calc(100% - 16px);background:#152923e8;color:#fff7df;padding:6px 9px;border-radius:9px;font:600 13px/1.35 system-ui;pointer-events:none}
 #forest-nights [data-forest-goals] b{display:inline-block;width:5.3em;color:#ffe4a0}
 #forest-nights[data-play=true] [data-team]:not([hidden]){left:auto;right:68px;top:52px}
-@media(max-width:480px){#forest-nights[data-play=true] [data-forest-goals]{top:65px}#forest-nights[data-play=true] [data-team]:not([hidden]){top:144px;right:10px}}
+@media(max-width:480px){#forest-nights[data-play=true] [data-forest-goals]{top:106px}#forest-nights[data-play=true] [data-team]:not([hidden]){top:175px;right:10px}}
 #forest-nights header{position:absolute;top:max(10px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));display:flex;align-items:center;gap:7px;pointer-events:none;z-index:4}
 #forest-nights button,#forest-nights header strong,#forest-nights header span,#forest-nights [data-status]:not(:empty){font:inherit;color:inherit;background:#253941ed!important;border:1px solid #c3d7d36b;border-radius:16px;padding:8px 13px;box-shadow:0 2px 4px #101a2470!important}
 #forest-nights button{cursor:pointer;min-height:42px;touch-action:none}
@@ -2052,16 +2056,26 @@ body.forest-night-open #world{position:fixed!important;inset:0!important;width:1
 #forest-nights header button{pointer-events:auto;margin-left:auto;font-size:22px;line-height:1}
 #forest-nights [data-menu]{position:absolute;z-index:6;left:50%;top:54%;transform:translate(-50%,-50%);display:flex;flex-wrap:wrap;justify-content:center;gap:8px;width:min(330px,85vw);padding:18px;border:1px solid #dec99188;border-radius:22px;background:#24393eef;text-align:center}
 #forest-nights [data-menu] b{flex-basis:100%;padding:0 0 8px}#forest-nights [data-menu] button{background:#ead29d!important;color:#283731}
+#forest-nights [data-forest-map]{display:none}
+#forest-nights[data-play=true] [data-forest-map]{position:absolute;display:grid;justify-items:center;right:max(10px,env(safe-area-inset-right));top:max(112px,calc(env(safe-area-inset-top) + 100px));border:1px solid #a6b8a9;border-radius:12px;background:#152923eb;padding:1px 3px 4px;pointer-events:none}
+#forest-nights [data-forest-map] canvas{width:clamp(64px,15vh,100px);height:auto}
+#forest-nights [data-forest-map] small{display:flex;align-items:center;gap:4px;font-size:11px;white-space:nowrap}
+#forest-nights [data-forest-map] i{width:7px;height:7px;background:#ffd07b}
+#forest-nights [data-forest-map] i+i{border-radius:50%;background:#ff8c9e}
+#forest-nights [data-dog-warning]{position:absolute;inset:0;box-shadow:inset 0 0 36px 9px #ed7547;opacity:0;pointer-events:none}
 #forest-nights [data-actions] [data-use]{position:relative;width:60px;height:60px;border:2px solid #ffedbf;color:#253941;background:#f6d891!important;font-size:29px}
 #forest-nights [data-actions] :is(kbd,small){position:absolute;right:-5px;padding:2px 4px;border-radius:5px;background:#fff4de;color:#29342e;font:700 12px system-ui;white-space:nowrap}
-#forest-nights [data-actions] kbd{bottom:-3px}
+#forest-nights [data-actions] kbd{top:-3px;left:-5px;right:auto}
+#forest-nights [data-actions] [data-action-name]{position:absolute;left:50%;top:calc(100% + 2px);transform:translateX(-50%);color:#fff4d8;background:#263b35;padding:2px 5px;border-radius:5px;font:700 12px/1.2 system-ui;white-space:nowrap}
+#forest-nights [data-actions] [data-action-name]:empty{display:none}
 #forest-nights [data-use] small{top:-12px;right:0}
 #forest-nights [data-use] small:empty{display:none}
 #forest-nights [data-crafts]{position:absolute;left:50%;bottom:calc(100% + 4px);transform:translateX(-50%);display:flex;gap:4px}
 #forest-nights [data-crafts] button{width:44px;height:44px;padding:0;font-size:22px}
-#forest-nights [data-actions]{position:absolute;right:max(17px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));display:flex;align-items:flex-end;gap:7px}
+#forest-nights [data-actions]{position:absolute;right:max(25px,env(safe-area-inset-right));bottom:max(28px,calc(env(safe-area-inset-bottom) + 20px));display:flex;align-items:flex-end;gap:7px}
 #forest-nights [data-actions] button{border-radius:50%;font-size:23px;padding:0;width:45px;height:45px}
-#forest-nights [data-lamp]{position:relative}
+#forest-nights :is([data-lamp],[data-eat]){position:relative}
+#forest-nights [data-lamp][data-lit=true]{opacity:1;outline:2px solid #ffe4a0}
 #forest-nights [data-lamp]::after{content:'';position:absolute;inset:0;border-radius:50%;background:conic-gradient(#ffd388 var(--lamp-ready,100%),#778886 0);mask:radial-gradient(closest-side,transparent calc(100% - 3px),#000 calc(100% - 2px));pointer-events:none}
 @media(pointer:coarse){#forest-nights [data-actions] kbd{display:none}}
 #forest-nights button[data-arrow]{position:absolute;top:63%;left:50%;transform:translateX(-50%);padding:3px 8px;min-height:27px;color:#ffdc91;background:#273b40bf!important;border:0;box-shadow:none!important}
@@ -2089,10 +2103,12 @@ body.world-page.forest-night-open #forest-nights [data-menu] button[data-role][a
 #forest-nights header [data-leave]{margin-left:0}
 #forest-nights[data-play=false] header [data-leave]{margin-left:auto}
 #forest-nights header [data-rules]{width:35px;padding-inline:0}
-#forest-nights header [data-night],#forest-nights header [data-fire],#forest-nights header [data-hunger]{position:relative;display:inline-flex;align-items:center;gap:4px;padding:5px 7px;min-height:32px;box-sizing:border-box;white-space:nowrap}
+#forest-nights header [data-night]{position:relative;display:inline-flex;align-items:center;gap:4px;padding:5px 7px;min-height:32px;box-sizing:border-box;white-space:nowrap}
 #forest-nights header [data-vitals]{display:flex;padding:0;gap:4px;border:0;background:none!important;box-shadow:none!important}
+#forest-nights [data-vitals]>div{position:relative;display:grid;grid-template-rows:19px auto;justify-items:center;padding:4px 6px;border:1px solid #c3d7d36b;border-radius:10px;background:#253941ed;white-space:nowrap;font-size:13px}
+#forest-nights [data-vitals]>div>div{display:flex;align-items:center;gap:2px}
+#forest-nights [data-vitals] small{color:#ffe8b4;font-size:11px}
 #forest-nights [data-moon]{display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:radial-gradient(circle,#253941 54%,transparent 58%),conic-gradient(#ffe5aa var(--fill),#6b7380 0);font:14px system-ui}
-#forest-nights [data-fire]{flex-wrap:wrap}
 #forest-nights [data-fire] b{width:28px;height:7px;background:linear-gradient(to right,transparent 69%,#fff3d1 69% 73%,transparent 73%),linear-gradient(to right,#ffca77 var(--fill),#6a5847 0);border:1px solid #b8986e;border-radius:4px}
 #forest-nights header i{font-style:normal}
 #forest-nights [data-hunger] i[data-empty=true]{filter:grayscale(.9);opacity:.48}
@@ -2104,8 +2120,16 @@ body.world-page.forest-night-open #forest-nights [data-menu] button[data-role][a
 #forest-nights [data-lesson]{position:absolute;bottom:max(24px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);padding:7px 12px;border:1px solid #e6c890;border-radius:16px;background:#1d303ceb;color:#f5dfb4;pointer-events:none;white-space:nowrap}
 #forest-nights [data-lesson] b{font:22px/1.2 system-ui}
 #forest-nights [data-lesson] b.current{filter:drop-shadow(0 0 4px #ffde8f)}
-@media(max-width:480px){#forest-nights header{gap:3px;left:6px;right:6px}#forest-nights header [data-night],#forest-nights header [data-fire],#forest-nights header [data-hunger]{gap:1px;padding:4px}#forest-nights [data-fire] b{width:16px}#forest-nights [data-lesson]{bottom:108px}}
-@media(max-width:420px),(max-height:430px){#forest-nights{font-size:13px}#forest-nights header{gap:4px}#forest-nights header :is(span,strong){padding:7px 9px}#forest-nights [data-actions]{bottom:11px}}
+@media(max-width:480px){
+ #forest-nights header{flex-wrap:wrap;gap:3px;left:6px;right:6px}
+ #forest-nights header [data-night]{gap:1px;padding:4px}
+ #forest-nights header [data-vitals]{order:1;flex-basis:100%}
+ #forest-nights [data-vitals]>div{padding-inline:3px}
+ #forest-nights [data-fire] b{width:16px}
+ #forest-nights [data-lesson]{bottom:108px}
+ #forest-nights[data-play=true] [data-forest-map]{top:210px}
+}
+@media(max-width:420px),(max-height:430px){#forest-nights{font-size:13px}#forest-nights header{gap:4px}}
 
 
 /* 훈련에서는 아이가 트랙과 오른손 단추를 함께 봅니다. */
@@ -2202,6 +2226,7 @@ body.pc-frame:has(#farm-quest-list[data-journal][open]):not(:has(#farm-world-pan
 #timed-activity-card h2{font:700 15px/1.3 system-ui,sans-serif;margin:0 0 4px}
 #timed-activity-card ul{display:grid;gap:3px;padding:0;margin:0;list-style:none}
 #timed-activity-card li{display:grid;grid-template-columns:27px minmax(0,1fr) 31px;gap:6px;align-items:center}
+#timed-activity-card li[data-activity="forest"]{grid-template-columns:27px minmax(0,1fr) auto 31px}
 #timed-activity-card li img{width:27px;height:27px}
 #timed-activity-card li progress{width:100%;height:6px;accent-color:#527644}
 .investment-plan{margin:12px 0;padding:10px;border:1px solid #cfb697;border-radius:10px}
@@ -2252,6 +2277,10 @@ body.world-page .investment-confirm-actions button{flex:1;margin:0;min-height:44
 #investment-notice [data-dismiss]{position:absolute;right:3px;top:1px;min-width:36px;min-height:30px;padding:0}
 .farm-action-list:has(.investment-steps) [data-land-status]{font-size:13px}
 body.world-page .in-world-ring.farm-action-list:has(.investment-steps) button{position:static;width:auto;height:auto;min-height:44px;padding:6px 9px!important;border-radius:8px!important}
+.in-world-ring .investment-tend-action img{width:24px;height:24px}
+.in-world-ring .investment-tend-action small{margin-top:3px;font-size:12px;white-space:nowrap}
+body.world-page .in-world-ring[data-kind="tend"]>.investment-tend-action{width:118px;height:72px;border-radius:12px!important}
+.in-world-tend-result{position:absolute;padding:5px 9px;border:1px solid #ad794d;border-radius:8px;background:#fff9e9;color:#39281d;box-shadow:0 3px 10px #45302140;font:700 15px/1.2 var(--font-hand);white-space:nowrap}
 @media(orientation:landscape) and (max-height:520px){
  body.world-page .in-world-confirm[data-investment-payment]{bottom:54px;max-height:68dvh}
  .investment-confirm-body .investment-steps li{min-height:35px}
@@ -2392,3 +2421,24 @@ body.world-page .quest-decor-actions button{min-height:44px;padding:4px 8px;bord
 body.world-page .quest-decor-actions [data-quests]{background:#486439;color:#fff7dc;border-color:#3b512f}
 .game-chat-bubble{position:absolute;z-index:5;pointer-events:none;transform:translate(-50%,-100%);max-width:min(190px,48vw);padding:4px 8px;border-radius:10px;background:#fff8e8;color:#26332e;box-shadow:0 1px 3px #152c3b80;text-shadow:none;font:600 13px/1.25 system-ui;overflow-wrap:anywhere}
 .game-chat-bubble::after{content:"";position:absolute;top:100%;left:50%;border:4px solid transparent;border-top-color:#fff8e8}
+
+body.world-page button.world-jump-button{
+ display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;
+ border:2px solid #855931;border-radius:50%;background:#fff2cc;color:#583b22;
+ font:700 24px/1 system-ui;touch-action:none;
+}
+body.world-page #world-jump{
+ position:fixed;right:var(--hud-right,max(12px,env(safe-area-inset-right)));
+ bottom:calc(var(--hud-controls,68px) + 52px);z-index:8;
+}
+body.tablet-pc-frame #world-jump{right:calc(var(--pc-inline,12px) + 12px);bottom:calc(var(--pc-bottom,60px) + 12px)}
+@media(pointer:coarse) and (orientation:landscape) and (max-height:520px){
+ body.world-page:not(.pc-frame) #world-jump{right:calc(var(--hud-right,12px) + 72px)}
+}
+body.world-page:is(.rhythm-open,.shoe-playing,.world-broadcasting,.plot-map-open) #world-jump,
+body.world-page:has(#world-chat.chat-open) #world-jump{visibility:hidden}
+#forest-nights[data-play=false] .world-jump-button,#forest-nights:has([data-menu]:not([hidden])) .world-jump-button,
+#rhythm-card:not([data-mode=play]) .world-jump-button{display:none!important}
+body.world-page #rhythm-card .world-jump-button{position:absolute;right:8px;bottom:8px;z-index:2}
+body.world-page .farm-world-training [data-train-hop]{right:max(5%,env(safe-area-inset-right));bottom:calc(max(11%,env(safe-area-inset-bottom)) + 72px)}
+body.world-page .farm-world-training[data-kind=stamina] [data-train-input]{width:44px;min-width:44px;height:44px;min-height:44px;padding:0;bottom:calc(max(6%,env(safe-area-inset-bottom)) + clamp(54px,12vh,70px) + 8px)}
