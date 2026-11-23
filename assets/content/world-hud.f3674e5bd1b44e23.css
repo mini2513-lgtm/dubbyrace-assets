@@ -58,7 +58,7 @@ body.world-page :is(.farm-world-panel,#world-notice-dialog) h2{width:max-content
  body.world-page .race-progress{display:none!important}body.world-page .race-start-alert{top:calc(max(6px,env(safe-area-inset-top)) + 86px)!important;left:6px!important;right:6px!important;width:calc(100vw - 12px)!important;max-width:none!important;transform:none!important;box-sizing:border-box;min-height:44px;max-height:48px;padding:0 6px!important;display:flex;align-items:center;justify-content:space-between;gap:6px;border-radius:10px!important;background:var(--butter-soft)!important;color:var(--ink)!important;border:2px solid var(--wood-3)!important;font:700 14px/1.1 var(--font-hand)!important}
  body.world-page .race-start-alert span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}body.world-page .race-start-alert button{display:inline-flex!important;flex-shrink:0;width:auto!important;min-height:40px!important;margin:0!important;padding:4px 8px!important;font:700 15px var(--font-hand)!important}body.world-page:has(.race-start-alert:not([hidden])) #world-minimap{top:calc(max(6px,env(safe-area-inset-top)) + 140px)}
  body.world-page:has(dialog[open]:not([data-world-sheet])) :is(.world-options,.world-travel,#world-menu-toggle,#world-minimap,#world-joystick,#world-chat,.race-start-alert,.world-status,.farm-world-toolbar){visibility:hidden}
- body.world-page:has(#world-chat-panel:not([hidden])) :is(#world-minimap,#world-joystick,.farm-world-toolbar,.race-start-alert){visibility:hidden}
+ body.world-page:not(.forest-night-open):has(#world-chat-panel:not([hidden])) :is(#world-minimap,#world-joystick,.farm-world-toolbar,.race-start-alert){visibility:hidden}
  body.world-page.plot-map-open :is(#world-menu-toggle,.world-travel-toggle,#world-joystick,.race-start-alert){visibility:hidden}
 }
 
@@ -953,6 +953,20 @@ body.world-page button.horse-follow-button img{width:24px;height:24px;background
 }
 .horse-race-score{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 6px;padding:3px 7px;border-radius:7px;background:#edf1db;color:#385328;font-size:.92em}
 .horse-race-score-direction{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.horse-ability-card{background:#fffaf0;border:1px solid #e7be91;border-radius:9px;font:700 15px/1.15 var(--font-hand)}
+.horse-ability-card summary{cursor:pointer;padding:8px;color:#385328}
+.horse-ability-card summary:focus-visible{outline:2px solid #527644;outline-offset:-3px;border-radius:8px}
+.horse-ability-card>div{display:grid;gap:6px;padding:0 8px 7px}
+.horse-ability-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 4px;align-items:center}
+.horse-ability-row>span,.horse-ability-row>small{font-size:.85em;color:#5a513d}
+.horse-ability-meter{height:7px;grid-column:1/-1;position:relative;overflow:hidden;border-radius:4px;background:#ebdfca}
+.horse-ability-meter span{display:block;width:var(--filled);height:100%;background:#638652}
+.horse-ability-meter>i,.horse-ability-ticks>span{position:absolute;left:var(--mark);transform:translateX(-50%)}
+.horse-ability-meter>i{inset-block:0;width:1px;background:#5b563d}
+.horse-ability-ticks{position:relative;height:13px;color:#5a513d;font-size:12px;font-variant-numeric:tabular-nums}
+.horse-ability-row small{grid-column:1/-1;justify-self:start}
+.horse-ability-card .horse-ability-bonus{justify-self:start;white-space:normal;word-break:keep-all;font-size:.83em}
+#mobile-horse-status .horse-ability-card summary{min-height:44px;align-content:center;box-sizing:border-box}
 .farm-training-result{margin:10px 0;padding:8px 6px;border-radius:10px;background:#f0eedb;word-break:keep-all}
 .farm-training-result h3{margin-top:0}
 .farm-training-score{font-size:15px;font-weight:700;color:#385328}
@@ -1130,7 +1144,7 @@ body.world-page #village-contribution[data-bonus]{width:220px;padding:5px 9px;wh
  body.world-page:not(.pc-frame) #world-chat:not(.chat-open) .chat-list{
   width:min(210px,50vw);max-height:64px;pointer-events:none;
  }
- body.world-page:not(.pc-frame):has(#world-chat.chat-open) :is(.farm-world-toolbar,#world-joystick){visibility:hidden}
+ body.world-page:not(.pc-frame,.forest-night-open):has(#world-chat.chat-open) :is(.farm-world-toolbar,#world-joystick){visibility:hidden}
 }
 @media(max-width:600px) and (orientation:portrait){
  body.world-page:not(.pc-frame) .world-top{grid-template-columns:minmax(96px,auto) minmax(0,1fr) auto;column-gap:6px}
@@ -1572,6 +1586,47 @@ body.world-page #race-panel > .race-panel{
 #race-panel .race-entry-tools details{padding:0;border:0}
 #race-panel .race-entry-tools details[open]{flex-basis:100%}
 #race-panel .race-entry-tools summary{line-height:44px}
+body.world-page #race-panel[open][data-mode=entry]{max-height:min(72dvh,640px)}
+#race-panel[data-mode=entry] :is(.race-ability-line,.race-wins-remaining){margin:5px 0}
+#race-panel[data-mode=entry] h3{margin:12px 0 4px}
+#race-panel[data-mode=entry] .race-empty{padding:4px 0}
+#race-panel .race-demotion-risk{margin:6px 0;color:#803c2b;font-weight:700}
+#race-panel .race-style-match[data-fits=true]{color:#315b37;font-weight:700}
+#race-panel [data-race-style]{min-height:44px;padding:4px 10px}
+body.world-page .farm-world-panel.race-style-dialog[open]{inset:0;width:min(660px,calc(100vw - 24px));max-height:calc(100dvh - 24px);height:fit-content;min-height:0;margin:auto;padding:12px 16px;overflow:auto;font-family:var(--font-hand)}
+.race-style-dialog h2{margin:0 0 4px}
+.race-style-dialog p{margin:0 0 8px}
+.race-style-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+body.world-page .race-style-dialog .race-style-options label{display:grid;grid-template-columns:auto 1fr;align-content:start;align-items:center;gap:3px 8px;padding:7px 9px;border:1px solid #ad794d;background:#fffaf0;color:#3b3527;border-radius:10px;cursor:pointer;word-break:keep-all}
+.race-style-options label:has(input:checked){outline:2px solid #527644;outline-offset:-2px;background:#edf4df}
+.race-style-options label>:is(strong,span:not(.race-style-track),small){grid-column:1/-1}
+.race-style-options strong{display:block;font-size:1.14em}
+.race-style-options span:not(.race-style-track),.race-style-options small{display:block}
+.race-style-options small{color:#385328;font-weight:700}
+.race-style-track{display:grid;grid-template-columns:repeat(4,1fr);align-items:center;height:26px;width:min(130px,100%);padding:0 5px;border-block:2px solid #bf9a65;border-radius:7px;background:#f4e3c7}
+.race-style-track :is(i,img){grid-row:1;justify-self:center}
+.race-style-track i{height:5px;width:8px;background:#956e4b;border-radius:50%}
+.race-style-track i:nth-child(1){grid-column:1}.race-style-track i:nth-child(2){grid-column:2}.race-style-track i:nth-child(3){grid-column:3}
+.race-style-track img{width:24px;height:22px;object-fit:contain;grid-column:4}
+.race-style-track[data-style=stalk] img{grid-column:3}
+.race-style-track[data-style=close] img{grid-column:1}
+.race-style-track[data-style=free] img{grid-column:2}
+.race-style-dialog .farm-world-actions{margin-top:10px}
+@media(max-width:480px){
+ .race-style-options{grid-template-columns:1fr;gap:5px}
+ body.world-page .race-style-dialog .race-style-options label{grid-template-columns:16px 62px minmax(0,1fr);padding:5px 7px}
+ .race-style-options label input{grid-column:1;grid-row:1/4}
+ .race-style-options label .race-style-track{grid-column:2;grid-row:1/4;width:62px;box-sizing:border-box}
+ .race-style-options label>:is(strong,span:not(.race-style-track),small){grid-column:3}
+ .race-style-track img{width:17px}
+}
+.horse-ability-summary{display:grid;gap:3px}
+.horse-ability-summary strong{font-size:1.16em;color:#385328}
+.horse-ability-summary small{line-height:1.1}
+
+@media(orientation:landscape) and (max-height:520px){
+ body.world-page #race-panel[open][data-mode=entry]{max-height:calc(100dvh - 20px)}
+}
 body.world-page :is(.race-own-result,.race-overlay [data-k=result]){
  max-height:50vh;max-height:50dvh;overflow-y:auto;overscroll-behavior:contain;
 }
@@ -2033,10 +2088,10 @@ body.world-page.pc-frame.world-broadcasting #world-quest-fold.quest-enabled.ques
 }
 
 /* 밤마을 숲지기 */
-body.forest-night-open :is(#world-minimap,#world-pc-frame,#world-stats,.world-travel),body.world-page.forest-night-open #hud > :not(#world-joystick){display:none!important}
+body.forest-night-open :is(#world-minimap,#world-pc-frame,#world-stats,.world-travel),body.world-page.forest-night-open #hud > :not(#world-joystick,#world-chat){display:none!important}
 body.forest-night-open #forest-nights button{background-image:none!important;box-shadow:0 2px 3px #11232c77!important;font-family:system-ui!important}
 body.forest-night-open #forest-nights [data-actions] button{border-radius:50%!important}
-body.forest-night-open > :not(#world):not(#forest-nights):not(#hud):not(style):not(script),
+body.forest-night-open > :not(#world,#forest-nights,#hud,.world-chat-bubble,style,script),
 body.forest-night-open #world > :not(canvas){visibility:hidden!important;pointer-events:none!important}
 body.forest-night-open #hud > #world-joystick{z-index:100}
 body.forest-night-open:has(#forest-nights[data-play=false]) #world-joystick{visibility:hidden}
@@ -2160,6 +2215,8 @@ body.world-page.pc-frame:has(.farm-world-training:not([hidden])) #world-pc-frame
  .farm-world-training [data-steer="1"]::after{content:"D / →"}
 }
 .training-lap-result{display:grid;gap:5px;color:#493c2a}
+.training-performance,.training-outcome{display:grid;gap:5px;align-content:start}
+.training-outcome{padding:8px 10px;border:1px solid #d5dcb9;border-radius:10px;background:#f1f5e1}
 .training-stars{text-align:center;font:700 45px/1 system-ui;color:#ecaa28;-webkit-text-stroke:1px #996919}
 .training-stars i{font-style:normal;color:#b4a48c;-webkit-text-stroke:0}
 #farm-world-panel .training-lap-result h3{display:flex;align-items:center;justify-content:center;gap:7px;margin:0 0 6px;font-size:23px}
@@ -2172,7 +2229,13 @@ body.world-page.pc-frame:has(.farm-world-training:not([hidden])) #world-pc-frame
 .training-marks .won{color:#466f46;fill:#a5c878}
 .training-marks .miss{color:#a39786;fill:none}
 .training-time{border-block:1px solid #d9cbb4;padding:6px 0}
+.training-star-guide{display:flex;justify-content:space-between;align-items:center;gap:4px;font-size:14px;color:#694a2e}
+.training-star-guide svg{width:15px;height:15px;fill:#ecb14b;flex:none}
 .training-time small,.training-growth b{font-size:14px;color:#3d6650}
+.training-level-up{font-size:27px;color:#2d5939;line-height:1.1}
+.training-filled,.training-bonus,.training-practice-reason{font-size:14px}
+.training-bonus{color:#3d6650}
+.training-practice-reason{line-height:1.25;color:#754423;word-break:keep-all}
 .training-meter{height:10px;border-radius:6px;background:#eadfc8;overflow:hidden}
 .training-meter i{display:block;width:var(--after);height:100%;border-radius:inherit;background:#66965d;animation:training-gain .85s ease-out both}
 @keyframes training-gain{from{width:var(--before)}to{width:var(--after)}}
@@ -2181,7 +2244,10 @@ body.world-page.pc-frame:has(.farm-world-training:not([hidden])) #world-pc-frame
 body.world-page #farm-world-panel .training-lap-result footer button:first-child{background:#39664e!important;color:#fff9e9!important}
 @media (orientation:landscape) and (max-height:500px){
  body[data-sheet=training] #farm-world-panel[data-world-sheet]{inset:66px 12px auto auto;width:min(365px,54vw);max-width:54vw;max-height:calc(100dvh - 78px);padding:8px 12px}
- body.world-page[data-sheet=trainingResult] #farm-world-panel[data-world-sheet][open]{padding:9px 18px}
+ body.world-page[data-sheet=trainingResult] #farm-world-panel[data-world-sheet][open]{padding:12px 16px;width:min(640px,calc(100vw - 24px))}
+ .training-lap-result{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:15px}
+ .training-outcome{align-content:center}
+ .training-lap-result footer{grid-column:1/-1}
  .training-stars{font-size:36px}
 }
 
@@ -2342,23 +2408,22 @@ body.world-page.tablet-pc-frame #rhythm-card .rh-albums>button{width:44px}
 @media(max-height:460px) and (orientation:landscape){
  body.world-page:not(.pc-frame) #farm-quest-list[data-journal][open]{width:min(560px,calc(100vw - 156px));max-height:calc(100dvh - 100px)}
 }
-#forest-nights .game-chat,#splash-game .game-chat{
- position:absolute;z-index:8;top:max(62px,calc(env(safe-area-inset-top) + 58px));right:max(10px,env(safe-area-inset-right));
- display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:4px;align-items:start;
- width:min(240px,60vw);font:600 13px/1.3 system-ui,sans-serif;color:#fff9e9;text-shadow:none;pointer-events:none
+body.world-page:is(.forest-night-open,.splash-open) #hud #world-chat:has(#world-chat-panel){
+ inset:auto auto max(var(--game-chat-floor),calc(var(--chat-bottom,0px) + 8px)) max(12px,env(safe-area-inset-left))!important;
+ width:min(360px,calc(100vw - max(12px,env(safe-area-inset-left)) - max(12px,env(safe-area-inset-right))))!important;
+ max-width:none!important;align-items:stretch;z-index:102
 }
-#forest-nights .game-chat .game-chat-toggle,#splash-game .game-chat .game-chat-toggle{grid-area:1/2;width:44px;height:44px;padding:0;font-size:22px;line-height:1;pointer-events:auto}
-.game-chat ol{padding:0;margin:0;list-style:none}
-.game-chat .game-chat-lines{grid-area:1/1;justify-self:end;max-width:100%;text-align:right}
-.game-chat li{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.game-chat-lines li,.game-chat p:not(:empty){border-radius:7px;padding:2px 6px;background:#1a3037d9}
-.game-chat-lines strong{color:#ffda95}
-.game-chat .game-chat-panel,.game-chat p:not(:empty){grid-column:1/-1;pointer-events:auto}
-.game-chat .game-chat-panel{padding:5px;border:1px solid #94aba0;border-radius:10px;background:#203b3cef}
-.game-chat form{display:flex;align-items:center;gap:4px}
-.game-chat input{flex:1;min-width:0;width:1px;border:0;border-radius:6px;padding:8px 6px;font:16px/1.1 system-ui;color:#203430;background:#fffaf0;user-select:text}
-.game-chat summary{cursor:pointer;padding:4px 2px;font-size:12px;color:#ffe0a4}
-.game-chat p{margin:0}
+body.world-page.splash-open{--game-chat-floor:calc(132px + env(safe-area-inset-bottom))}
+body.world-page.forest-night-open{--game-chat-floor:max(132px,calc(var(--hud-controls,90px) + 84px),calc(var(--pc-bottom,0px) + 102px))}
+body.world-page:is(.forest-night-open,.splash-open) #hud #world-chat :is(.chat-list,[role=status]){position:static;width:auto}
+body.world-page:is(.forest-night-open,.splash-open) #hud #world-chat .chat-list{max-height:clamp(24px,calc(var(--chat-height,80dvh) - 150px),150px)!important}
+@media(orientation:landscape) and (max-height:460px){
+ body.world-page:is(.forest-night-open,.splash-open) #hud #world-chat .chat-list{
+  max-height:clamp(24px,min(calc(var(--chat-height,80dvh) - 150px),calc(100dvh - var(--game-chat-floor) - 184px)),150px)!important
+ }
+}
+body.world-page:is(.forest-night-open,.splash-open):not(.pc-frame) #hud #world-chat:not(.chat-open) [data-toggle]{display:grid;place-items:center;min-width:44px;min-height:44px}
+body:is(.forest-night-open,.splash-open) .world-chat-bubble{z-index:101}
 
 #mobile-horse-status{position:fixed;z-index:14;top:calc(var(--hud-row,96px) + 176px);right:var(--hud-right,12px);pointer-events:auto}
 body.world-page #mobile-horse-status>button{display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;border-radius:14px}
@@ -2370,6 +2435,10 @@ body.world-page #mobile-horse-status>button{display:grid;place-items:center;widt
  overflow:auto;overscroll-behavior:contain;touch-action:pan-y;padding:7px;color:var(--ink);
  border:1px solid #ad794d;border-radius:12px;background:#fff5df;box-shadow:var(--float);font:700 15px/1.15 var(--font-hand)
 }
+#mobile-horse-status .pc-horse-status:has(.horse-ability-card[open]){
+ width:min(258px,calc(100vw - 24px));max-height:calc(100dvh - var(--hud-row,96px) - 226px - var(--hud-controls,66px) - 12px)
+}
+#mobile-horse-status .horse-ability-row>b{white-space:nowrap}
 #mobile-horse-status header{display:flex;align-items:center;gap:4px;margin-bottom:4px}
 #mobile-horse-status header>img{width:28px;height:28px;object-fit:contain}
 #mobile-horse-status header h2,#mobile-horse-status p{margin:0;font:inherit}
@@ -2399,6 +2468,13 @@ body.world-page:is(.at-title,.world-broadcasting,.home-editing,.home-decorating,
  }
  #mobile-horse-status .horse-care-list{grid-template-columns:repeat(2,minmax(0,1fr))}
  #mobile-horse-status .horse-care-list>:not([data-horse-care]){grid-column:1/-1}
+ #mobile-horse-status .pc-horse-status:has(.horse-ability-card[open]){
+  width:min(288px,calc(50vw - var(--hud-left,12px) - 76px));max-height:calc(100dvh - var(--hud-row,64px) - 64px)
+ }
+ #mobile-horse-status .horse-ability-card>div{gap:3px}
+ #mobile-horse-status .horse-ability-row{row-gap:1px}
+ #mobile-horse-status .horse-ability-meter{grid-column:1/-1}
+ #mobile-horse-status .horse-ability-row small{grid-column:1/-1}
  #mobile-horse-status .horse-meal-checks{margin-right:2px;gap:1px}
  #mobile-horse-status .horse-meal-checks>span{width:10px;height:10px}
 }
@@ -2419,8 +2495,6 @@ body.world-page #quest-decor-card h2{padding:0;background:none;clip-path:none;fo
 .quest-decor-actions{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
 body.world-page .quest-decor-actions button{min-height:44px;padding:4px 8px;border:1px solid #a67048;border-radius:8px;background:#f3dfb5;color:#472d1c;font:inherit}
 body.world-page .quest-decor-actions [data-quests]{background:#486439;color:#fff7dc;border-color:#3b512f}
-.game-chat-bubble{position:absolute;z-index:5;pointer-events:none;transform:translate(-50%,-100%);max-width:min(190px,48vw);padding:4px 8px;border-radius:10px;background:#fff8e8;color:#26332e;box-shadow:0 1px 3px #152c3b80;text-shadow:none;font:600 13px/1.25 system-ui;overflow-wrap:anywhere}
-.game-chat-bubble::after{content:"";position:absolute;top:100%;left:50%;border:4px solid transparent;border-top-color:#fff8e8}
 
 body.world-page button.world-jump-button{
  display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;
@@ -2437,8 +2511,7 @@ body.tablet-pc-frame #world-jump{right:calc(var(--pc-inline,12px) + 12px);bottom
 }
 body.world-page:is(.rhythm-open,.shoe-playing,.world-broadcasting,.plot-map-open) #world-jump,
 body.world-page:has(#world-chat.chat-open) #world-jump{visibility:hidden}
-#forest-nights[data-play=false] .world-jump-button,#forest-nights:has([data-menu]:not([hidden])) .world-jump-button,
-#rhythm-card:not([data-mode=play]) .world-jump-button{display:none!important}
-body.world-page #rhythm-card .world-jump-button{position:absolute;right:8px;bottom:8px;z-index:2}
+body.world-page .world-jump-button[hidden],
+#forest-nights[data-play=false] .world-jump-button,#forest-nights:has([data-menu]:not([hidden])) .world-jump-button{display:none!important}
 body.world-page .farm-world-training [data-train-hop]{right:max(5%,env(safe-area-inset-right));bottom:calc(max(11%,env(safe-area-inset-bottom)) + 72px)}
 body.world-page .farm-world-training[data-kind=stamina] [data-train-input]{width:44px;min-width:44px;height:44px;min-height:44px;padding:0;bottom:calc(max(6%,env(safe-area-inset-bottom)) + clamp(54px,12vh,70px) + 8px)}
