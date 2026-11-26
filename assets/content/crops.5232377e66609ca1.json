@@ -1,0 +1,218 @@
+{
+  "carrot": {
+    "name_ko": "당근",
+    "growing": "carrot-growing.glb",
+    "ready": "carrot-ready.glb",
+    "item": "carrot.glb",
+    "seed": "seed-carrot.glb",
+    "soil_diameter_m": 0.7925738096237183,
+    "plot_size_m": 1.2,
+    "growing_height_m": 0.44906,
+    "ready_height_m": 0.63545,
+    "item_height_m": 0.25,
+    "height_m": 0.25,
+    "grip": {
+      "position": [
+        0,
+        0.1125,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "seed_height_m": 0.15
+  },
+  "potato": {
+    "name_ko": "감자",
+    "growing": "potato-growing.glb",
+    "ready": "potato-ready.glb",
+    "item": "potato.glb",
+    "seed": "seed-potato.glb",
+    "soil_diameter_m": 0.7925738096237183,
+    "plot_size_m": 1.2,
+    "growing_height_m": 0.44883,
+    "ready_height_m": 0.636081,
+    "item_height_m": 0.16,
+    "height_m": 0.16,
+    "grip": {
+      "position": [
+        0.0,
+        0.040824,
+        0.0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "seed_height_m": 0.149998
+  },
+  "strawberry": {
+    "name_ko": "딸기",
+    "growing": "strawberry-growing.glb",
+    "ready": "strawberry-ready.glb",
+    "item": "strawberry.glb",
+    "seed": "seed-strawberry.glb",
+    "soil_diameter_m": 0.7925738096237183,
+    "plot_size_m": 1.2,
+    "growing_height_m": 0.449422,
+    "ready_height_m": 0.635734,
+    "item_height_m": 0.14,
+    "height_m": 0.14,
+    "grip": {
+      "position": [
+        0.0,
+        0.0442,
+        0.0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "seed_height_m": 0.15
+  },
+  "pumpkin": {
+    "name_ko": "호박",
+    "growing": "pumpkin-growing.glb",
+    "ready": "pumpkin-ready.glb",
+    "item": "pumpkin.glb",
+    "seed": "seed-pumpkin.glb",
+    "soil_diameter_m": 0.7925738096237183,
+    "plot_size_m": 1.2,
+    "growing_height_m": 0.449259,
+    "ready_height_m": 0.493933,
+    "item_height_m": 0.283891,
+    "height_m": 0.283891,
+    "grip": {
+      "position": [
+        0,
+        0.127751,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "seed_height_m": 0.15
+  },
+  "cabbage": {
+    "name_ko": "배추",
+    "growing": "cabbage-growing.glb",
+    "ready": "cabbage-ready.glb",
+    "item": "cabbage.glb",
+    "seed": "seed-cabbage.glb",
+    "soil_diameter_m": 0.7925738096237183,
+    "plot_size_m": 1.2,
+    "growing_height_m": 0.389216,
+    "ready_height_m": 0.659801,
+    "item_height_m": 0.28,
+    "height_m": 0.28,
+    "grip": {
+      "position": [
+        0,
+        0.126,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "seed_height_m": 0.149998
+  },
+  "pepper": {
+    "name_ko": "고추",
+    "growing": "pepper-growing.glb",
+    "ready": "pepper-ready.glb",
+    "item": "pepper.glb",
+    "seed": "seed-pepper.glb",
+    "soil_diameter_m": 0.7925738096237183,
+    "plot_size_m": 1.2,
+    "growing_height_m": 0.502027,
+    "ready_height_m": 0.690492,
+    "item_height_m": 0.235,
+    "height_m": 0.235,
+    "grip": {
+      "position": [
+        0,
+        0.10575,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "seed_height_m": 0.149998
+  },
+  "tomato": {
+    "name_ko": "토마토",
+    "growing": "tomato-growing.glb",
+    "ready": "tomato-ready.glb",
+    "item": "tomato.glb",
+    "seed": "seed-tomato.glb",
+    "soil_diameter_m": 0.7925738096237183,
+    "plot_size_m": 1.2,
+    "growing_height_m": 0.502027,
+    "ready_height_m": 0.675205,
+    "item_height_m": 0.16,
+    "height_m": 0.16,
+    "grip": {
+      "position": [
+        0,
+        0.072,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "seed_height_m": 0.149998
+  },
+  "corn": {
+    "name_ko": "옥수수",
+    "growing": "corn-growing.glb",
+    "ready": "corn-ready.glb",
+    "item": "corn.glb",
+    "seed": "seed-corn.glb",
+    "soil_diameter_m": 0.7925738096237183,
+    "plot_size_m": 1.2,
+    "growing_height_m": 0.5047,
+    "ready_height_m": 1.171902,
+    "item_height_m": 0.255,
+    "height_m": 0.255,
+    "grip": {
+      "position": [
+        0,
+        0.11475,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "seed_height_m": 0.149998
+  }
+}
