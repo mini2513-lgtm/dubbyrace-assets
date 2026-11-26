@@ -2416,7 +2416,7 @@ body.world-page.tablet-pc-frame #world-pc-frame .world-travel[data-compact] butt
 body.world-page.tablet-pc-frame:has(.farm-world-training[data-kind=speed]:not([hidden])) #world-joystick{
  left:max(12px,env(safe-area-inset-left));bottom:max(22px,env(safe-area-inset-bottom));
 }
-body.world-page.tablet-pc-frame:is(.splash-open,.forest-night-open) #world canvas{border-radius:0}
+body.world-page.tablet-pc-frame:is(.splash-open,.forest-night-open,.tower-open) #world canvas{border-radius:0}
 body.world-page.tablet-pc-frame #rhythm-card:not([data-mode=play]){bottom:calc(var(--pc-bottom) + 14px)}
 body.world-page.tablet-pc-frame #rhythm-card .rh-albums>button{width:44px}
 @media(max-height:900px){
@@ -2427,22 +2427,22 @@ body.world-page.tablet-pc-frame #rhythm-card .rh-albums>button{width:44px}
 @media(max-height:460px) and (orientation:landscape){
  body.world-page:not(.pc-frame) #farm-quest-list[data-journal][open]{width:min(560px,calc(100vw - 156px));max-height:calc(100dvh - 100px)}
 }
-body.world-page:is(.forest-night-open,.splash-open) #hud #world-chat:has(#world-chat-panel){
+body.world-page:is(.forest-night-open,.splash-open,.tower-open) #hud #world-chat:has(#world-chat-panel){
  inset:auto auto max(var(--game-chat-floor),calc(var(--chat-bottom,0px) + 8px)) max(12px,env(safe-area-inset-left))!important;
  width:min(360px,calc(100vw - max(12px,env(safe-area-inset-left)) - max(12px,env(safe-area-inset-right))))!important;
  max-width:none!important;align-items:stretch;z-index:102
 }
 body.world-page.splash-open{--game-chat-floor:calc(132px + env(safe-area-inset-bottom))}
 body.world-page.forest-night-open{--game-chat-floor:max(132px,calc(var(--hud-controls,90px) + 84px),calc(var(--pc-bottom,0px) + 102px))}
-body.world-page:is(.forest-night-open,.splash-open) #hud #world-chat :is(.chat-list,[role=status]){position:static;width:auto}
-body.world-page:is(.forest-night-open,.splash-open) #hud #world-chat .chat-list{max-height:clamp(24px,calc(var(--chat-height,80dvh) - 150px),150px)!important}
+body.world-page:is(.forest-night-open,.splash-open,.tower-open) #hud #world-chat :is(.chat-list,[role=status]){position:static;width:auto}
+body.world-page:is(.forest-night-open,.splash-open,.tower-open) #hud #world-chat .chat-list{max-height:clamp(24px,calc(var(--chat-height,80dvh) - 150px),150px)!important}
 @media(orientation:landscape) and (max-height:460px){
- body.world-page:is(.forest-night-open,.splash-open) #hud #world-chat .chat-list{
+ body.world-page:is(.forest-night-open,.splash-open,.tower-open) #hud #world-chat .chat-list{
   max-height:clamp(24px,min(calc(var(--chat-height,80dvh) - 150px),calc(100dvh - var(--game-chat-floor) - 184px)),150px)!important
  }
 }
-body.world-page:is(.forest-night-open,.splash-open):not(.pc-frame) #hud #world-chat:not(.chat-open) [data-toggle]{display:grid;place-items:center;min-width:44px;min-height:44px}
-body:is(.forest-night-open,.splash-open) .world-chat-bubble{z-index:101}
+body.world-page:is(.forest-night-open,.splash-open,.tower-open):not(.pc-frame) #hud #world-chat:not(.chat-open) [data-toggle]{display:grid;place-items:center;min-width:44px;min-height:44px}
+body:is(.forest-night-open,.splash-open,.tower-open) .world-chat-bubble{z-index:101}
 
 @media(orientation:portrait) and (max-width:699px){
  body.world-page:not(.pc-frame) #meteor-alert{right:calc(var(--hud-right,12px) + 54px)}
@@ -2541,3 +2541,57 @@ body.world-page .world-jump-button[hidden],
 #forest-nights[data-play=false] .world-jump-button,#forest-nights:has([data-menu]:not([hidden])) .world-jump-button{display:none!important}
 body.world-page .farm-world-training [data-train-hop]{right:max(5%,env(safe-area-inset-right));bottom:calc(max(11%,env(safe-area-inset-bottom)) + 72px)}
 body.world-page .farm-world-training[data-kind=stamina] [data-train-input]{width:44px;min-width:44px;height:44px;min-height:44px;padding:0;bottom:calc(max(6%,env(safe-area-inset-bottom)) + clamp(54px,12vh,70px) + 8px)}
+
+#world-market-news{display:none;color:var(--ink);font:600 14px/1.25 system-ui,sans-serif;font-variant-numeric:tabular-nums}
+#world-market-toggle[hidden],#world-market-news[hidden]{display:none!important}
+.world-page .world-top #world-market-toggle{flex:none;min-width:42px;min-height:34px;margin:0;padding:3px 7px;font:700 14px/1.15 system-ui,sans-serif}
+#world-market-news.market-open:not([hidden]){position:absolute;inset:0;z-index:3;display:grid;grid-template-columns:minmax(0,1fr) auto;align-content:center;gap:2px 8px;padding:2px 8px;text-align:center;background:var(--paper,#fff2d6);border-radius:inherit}
+#world-market-news.market-open>div{grid-column:1}
+.world-top:has(>#world-market-news.market-open)>:not(#world-market-news){visibility:hidden}
+.world-page #world-market-news [data-market-close]{grid-column:2;grid-row:1/3;align-self:center;min-width:44px;min-height:38px;margin:0;padding:2px 6px;font:700 14px/1.15 system-ui,sans-serif}
+@media(max-width:600px) and (orientation:portrait){
+ body.world-page:not(.pc-frame) .world-top{grid-template-columns:minmax(0,1fr) max-content auto 38px;grid-template-rows:38px 32px;gap:1px 4px;align-content:center;padding:2px 6px}
+ body.world-page:not(.pc-frame) .world-top #world-balance{grid-column:2;grid-row:1;position:static;align-self:center;justify-self:end;row-gap:0}
+ body.world-page:not(.pc-frame) .world-top #world-balance #world-loan-arrears{position:static;grid-row:3;font-size:10px;line-height:1;padding:0 2px}
+ body.world-page:not(.pc-frame) .world-top #world-notices{grid-column:4;grid-row:1;position:static;width:38px;min-width:38px;height:36px;min-height:36px}
+ body.world-page:not(.pc-frame) .world-top #world-online{grid-column:3;grid-row:1;justify-self:center}
+ body.world-page:not(.pc-frame) .world-top #world-clock{position:absolute;left:7px;bottom:4px;height:32px;gap:2px;grid-area:auto}
+ body.world-page:not(.pc-frame) .world-top #world-watch-control{position:absolute;left:clamp(129px,35vw,148px);right:7px;bottom:4px;height:32px;gap:3px;grid-area:auto;justify-content:flex-end}
+ body.world-page:not(.pc-frame) .world-top #world-watch{min-height:32px;height:32px;padding:2px 5px;font-size:13px}
+ body.world-page:not(.pc-frame) .world-top #world-market-toggle{min-height:32px;height:32px}
+ body.world-page:not(.pc-frame) .world-top #world-race-notice{min-width:0;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+ #world-market-news.market-open{font-size:clamp(12px,3.25vw,14px);gap:2px 4px;padding-inline:5px}
+}
+@media(max-width:360px) and (orientation:portrait){
+ body.world-page:not(.pc-frame) .world-top>div:first-child{gap:3px!important}
+ body.world-page:not(.pc-frame) .world-top .world-wordmark{height:19px!important}
+ body.world-page:not(.pc-frame) .world-top #world-place{font-size:11px}
+}
+@media(pointer:coarse) and (orientation:landscape) and (max-height:520px){
+ body.world-page:not(.pc-frame) .world-top{gap:4px;padding-inline:7px}
+ body.world-page:not(.pc-frame) .world-top #world-notices{position:static;flex:none;width:38px;min-width:38px;height:38px;min-height:38px;font-size:0;padding:2px}
+ body.world-page:not(.pc-frame) .world-top #world-notices svg{display:inline;width:20px;height:20px}
+ body.world-page:not(.pc-frame) .world-top #world-watch-control{position:static;flex:1 1 auto;min-width:0;gap:3px;justify-content:flex-end}
+ body.world-page:not(.pc-frame) .world-top #world-race-notice{flex:1 1 0;min-width:0;overflow:hidden;text-overflow:ellipsis}
+ body.world-page:not(.pc-frame) .world-top #world-watch{flex:none;height:34px;min-height:34px;padding:2px 5px;font-size:13px}
+ body.world-page:not(.pc-frame) .world-top #world-balance{row-gap:0;line-height:1}
+ body.world-page:not(.pc-frame) .world-top #world-balance #world-loan-arrears{position:static;font-size:10px;line-height:1;padding:0 2px}
+}
+@media(pointer:coarse) and (orientation:landscape) and (max-height:520px) and (max-width:740px){
+ body.world-page:not(.pc-frame) .world-top .world-wordmark{height:23px!important}
+}
+@media(min-width:1280px){
+ body.world-page.pc-frame .world-top:has(#world-market-news:not([hidden])){grid-template-columns:auto minmax(max-content,1fr) minmax(0,auto) auto;align-items:center;column-gap:8px}
+ body.pc-frame .world-top .pc-frame-brand{grid-column:1;grid-row:1}
+ body.pc-frame .world-top:has(#world-market-news:not([hidden])) .pc-frame-clock{grid-column:3;grid-row:1}
+ body.pc-frame .world-top:has(#world-market-news:not([hidden])) .pc-frame-wallet{grid-column:4;grid-row:1}
+ body.pc-frame #world-market-news:not([hidden]){display:grid;position:static;grid-column:2;grid-row:1;align-content:center;text-align:center;gap:2px;padding:0;white-space:nowrap;font-size:clamp(12px,1vw,14px);background:none}
+ body.pc-frame .world-top #world-market-toggle,body.pc-frame #world-market-news [data-market-close]{display:none}
+}
+body.world-page #farm-unlock-banner{width:max-content;box-sizing:border-box;justify-content:center;flex-wrap:wrap}
+#farm-unlock-banner strong{white-space:nowrap}
+body.world-page.pc-frame:has(#world-market-news:not([hidden])) #farm-unlock-banner{top:var(--pc-top)}
+@media(max-width:600px),(pointer:coarse){
+ body.world-page:not(.pc-frame) #farm-unlock-banner{top:calc(var(--hud-row) + 52px);max-width:calc(100vw - 116px);gap:4px 6px;padding:5px 7px}
+ body.world-page:not(.pc-frame) #farm-unlock-banner img{width:22px;height:22px}
+}
