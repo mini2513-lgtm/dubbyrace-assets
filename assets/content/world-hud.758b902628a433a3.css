@@ -339,6 +339,45 @@ body.world-page #farm-next-task.quest-tracker:not([hidden]){
 .quest-field-experience[open],.quest-field-experience div{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
 .quest-field-experience button{min-width:44px;min-height:44px;display:flex;align-items:center;gap:5px}
 .quest-field-experience img{width:25px;height:25px;object-fit:contain}
+:is(#finance-guide,#finance-factory-guide)[open]{
+ display:grid;gap:10px;box-sizing:border-box;position:fixed;inset:auto max(18px,env(safe-area-inset-right)) 104px auto;
+ margin:0;width:min(430px,calc(100% - 36px));max-width:none;max-height:calc(100dvh - 120px);overflow:auto;
+ padding:14px;border:2px solid #c69e6e;border-radius:17px;background:#fff9eb!important;color:#412f23;
+ box-shadow:0 6px 24px #40271738!important;font:700 16px/1.4 var(--font-hand,system-ui);word-break:keep-all
+}
+.finance-guide::backdrop{background:#392a1d19}
+.finance-guide :is(header,footer,.finance-guide-progress){display:flex;align-items:center;gap:8px}
+.finance-guide [data-place]{background:#e4ecdd;color:#31573f;border-radius:16px;padding:4px 9px}
+.finance-guide [data-guide]{margin-inline-start:auto;font-size:14px;color:#674d36}
+.finance-guide button{min-height:44px;min-width:44px;padding:4px 11px;border:1px solid #a7794e;border-radius:10px;background:#f5e8cd;color:#462f20;font:inherit}
+.finance-guide button:focus-visible{outline:3px solid #356e54;outline-offset:2px}
+.finance-guide button:disabled{background:#eee7da;color:#6a6054;border-color:#d2c6b3}
+.finance-guide button[hidden]{display:none}
+.finance-guide :is(h2,p){margin:0}
+:is(#finance-guide,#finance-factory-guide) h2{font-size:25px;line-height:1.2;padding:0;background:none!important;clip-path:none}
+.finance-guide img{display:block;width:100%;aspect-ratio:2.2;object-fit:cover;border-radius:10px;margin-bottom:8px}
+.finance-guide img[data-icon]{object-fit:contain;background:#eef3e4;padding:6px;box-sizing:border-box}
+.finance-guide [data-button]{margin-top:4px;color:#31573f}
+.finance-guide [data-tip]{margin-top:6px}
+.finance-guide-progress{border-top:1px solid #d7ba95;padding-top:6px;font-size:14px;color:#674d36}
+.finance-guide [data-dots]{display:flex;gap:5px}
+.finance-guide [data-dots] i{width:7px;height:7px;border-radius:50%;background:#cec1ad}
+.finance-guide [data-dots] [data-seen]{background:#49705b}
+.finance-guide [data-feedback]{color:#843b22}
+.finance-guide [data-prev]{margin-inline-end:auto}
+body.world-page.ui-v2 :is(#finance-guide,#finance-factory-guide) :is([data-next],[data-start]):enabled{background:#ffa66b!important;border-color:#a4572d!important}
+body.world-page.ui-v2 :is(#finance-guide,#finance-factory-guide) :is([data-next],[data-start]):hover:enabled{background:#ffb57e!important}
+@media(max-width:600px){
+ :is(#finance-guide,#finance-factory-guide)[open]{inset:auto max(8px,env(safe-area-inset-right)) max(66px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));width:auto;max-height:calc(100dvh - 80px);padding:10px;gap:7px}
+ .finance-guide-scene{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);align-items:center;gap:10px}
+ :is(#finance-guide,#finance-factory-guide) h2{font-size:22px}
+ .finance-guide img{aspect-ratio:1.45;margin:0}
+}
+@media(max-height:500px) and (min-width:601px){
+ :is(#finance-guide,#finance-factory-guide)[open]{bottom:52px;max-height:calc(100dvh - 64px);padding:10px;gap:6px}
+ .finance-guide-scene{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);align-items:center;gap:10px}
+ .finance-guide img{margin:0}
+}
 body.world-page .quest-control{outline:3px solid #61408b;outline-offset:2px}
 body.world-page #world-minimap [data-minimap-open].quest-locked{opacity:1!important}
 .quest-reward[hidden]{display:none}
@@ -1079,6 +1118,7 @@ body.world-page #village-contribution[data-bonus]{width:220px;padding:5px 9px;wh
  }
  body.world-page:not(.pc-frame) :is(#world-travel-toggle,#world-menu-toggle,#farm-next-task){top:var(--hud-row)}
  body.world-page:not(.pc-frame) :is(#world-travel-toggle,#world-overview,.world-travel.open){left:var(--hud-left)}
+ body.world-page:not(.pc-frame) .world-travel.open{z-index:14}
  body.world-page:not(.pc-frame) :is(#world-menu-toggle,#world-avatar-emotes,.world-options.open){right:var(--hud-right)}
  body.world-page:not(.pc-frame) :is(#world-avatar-emotes,#world-overview,.world-travel.open,.world-options.open){top:calc(var(--hud-row) + 52px)}
  body.world-page:not(.pc-frame):has(.world-options.open) #world-avatar-emotes{visibility:hidden}
@@ -1235,6 +1275,12 @@ body.world-page #village-contribution[data-bonus]{width:220px;padding:5px 9px;wh
 .bank-close-confirm dl{display:grid;gap:9px;margin:12px 0}
 .bank-close-confirm dl>div{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .bank-close-confirm>div{display:flex;gap:8px}
+.bank-close-confirm [data-business-sign]:not([hidden]){display:flex;align-items:center;gap:8px;margin:12px 0}
+.bank-close-confirm [data-business-sign] input{margin:0;flex:none}
+.bank-close-confirm[data-business-stage] dl{gap:5px;margin:8px 0}
+body.world-page:has(#farm-world-panel[open] [data-econ^="business:"],.in-world-ring.business-land-actions:not([hidden])) .vet-guide{
+ top:calc(94px + env(safe-area-inset-top));bottom:auto
+}
 .bank-close-confirm button{flex:1}
 body.world-page .bank-close-confirm [type=submit]{background:#90492f;color:#fff8e8}
 body.world-page .quest-step-list{display:grid;gap:3px}
@@ -1360,7 +1406,7 @@ body.world-page :is(#farm-quest-dialog[data-choices],#farm-quest-list)[open]{
  max-height:min(65dvh,calc(100dvh - var(--quest-top) - var(--quest-bottom)));
  overflow-y:auto;overscroll-behavior:contain;box-sizing:border-box
 }
-body.world-page:has(#farm-quest-dialog[data-choices][open],#farm-quest-list[open]) .farm-world-toolbar{visibility:visible}
+body.world-page:has(#farm-quest-dialog[data-choices][open],#farm-quest-list[open],:is(#finance-guide,#finance-factory-guide)[open]) .farm-world-toolbar{visibility:visible}
 
 body.world-page.pc-frame :is(#farm-quest-list,#world-notice-dialog)[open]:not(:modal){
  position:fixed;inset:var(--pc-top) var(--pc-gap) auto auto;margin:0;width:var(--pc-side);max-width:var(--pc-side);
@@ -1374,6 +1420,82 @@ body.world-page.pc-frame #world-notice-dialog[open]:not(:modal){z-index:30}
 .resident-list small.online{color:#286044}.resident-list button>span{grid-area:1/2/3/3;font-variant-numeric:tabular-nums}
 #farm-world-panel .bank-counter-link{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:12px;padding-top:8px;border-top:1px solid #cab89b}
 #farm-world-panel .account-types{margin-bottom:8px}
+
+body.world-page #farm-world-panel:has(.asset-management)>header{
+ background:#334e35;color:#fffaea;border-radius:9px;padding:6px 12px;margin-bottom:10px;
+}
+body.world-page.ui-v2 #farm-world-panel:has(.asset-management)>header h2{
+ color:#fffaea;background:none;clip-path:none;padding:0;margin:0;white-space:nowrap;font-size:22px;outline:none;
+}
+@media(min-width:1000px) and (pointer:fine){
+ body.world-page.pc-frame[data-sheet=money] #farm-world-panel[data-world-sheet]{width:min(455px,35vw);max-width:none}
+}
+.asset-management,.asset-contract-form,.asset-compare{color:#332c20;--asset-border:#cdbf9f;--asset-green:#334e35;--asset-light:#e7ead3;--asset-paper:#fffaf0}
+.asset-management,.asset-contract-form,.asset-compare{container:asset / inline-size}
+#farm-world-panel .asset-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin:0 0 12px}
+body.world-page #farm-world-panel .asset-tabs button{min-width:0;min-height:44px;padding:4px 3px;font-size:14px;line-height:1.2;--frame-button-radius:8px}
+body.world-page.ui-v2 #farm-world-panel .asset-tabs button[aria-pressed=true]{
+ --frame-gloss:none;--frame-button-active:#334e35;--frame-active-rim:#334e35;--frame-active-depth:#29432c;--frame-active-edge:none;
+ color:#fffdf0!important;background:#334e35!important;border-color:#334e35!important;box-shadow:none!important;
+}
+.asset-list{display:grid;gap:7px;margin:9px 0 12px}
+body.world-page #farm-world-panel .asset-list button{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:9px;text-align:left;padding:9px 10px;min-height:54px;border:1px solid var(--asset-border);background:var(--asset-paper)}
+.asset-list button strong,.asset-list button small{display:block;line-height:1.2}
+.asset-list button small{font-size:12px;margin-top:4px;color:#615441;overflow-wrap:anywhere}
+.asset-list button b{font-variant-numeric:tabular-nums;text-align:right}
+.asset-chevron{font-size:22px;color:#42623c}
+.asset-account,.asset-contract{background:var(--asset-paper);border:1px solid var(--asset-border);border-radius:12px;padding:12px;margin:0 0 9px}
+.asset-account-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px;background:var(--asset-light);border-radius:8px;padding:10px 12px}
+#farm-world-panel .asset-account-top h3{margin:0;color:#2d442a;font-size:21px}
+.asset-account-top>div{text-align:right;min-width:0;overflow-wrap:anywhere}
+.asset-account-top small,.asset-account-top strong{display:block}
+.asset-account-top strong{font-size:23px;font-variant-numeric:tabular-nums}
+.asset-information,.asset-next dl{margin:10px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px}
+.asset-information>div{border-bottom:1px solid #e1d7c0;padding:3px 0 7px;min-width:0}
+.asset-information dt,.asset-next dt{font-size:13px;color:#655741}
+.asset-information dd,.asset-next dd{margin:1px 0 0;font-size:15px;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.asset-rate{padding:6px 9px;border-radius:6px;background:var(--asset-light);color:#2d442a;font-size:15px;font-weight:bold}
+.asset-next{background:#f6e8cc;padding:9px 10px;border-radius:8px;margin:9px 0}
+.asset-next h4{margin:0;display:flex;justify-content:space-between;gap:8px}
+.asset-next h4 small{font-size:13px;color:#655741}
+.asset-next dl{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:5px;gap:6px}
+.asset-next dd{font-size:15px;color:#50351f}
+.asset-schedule{margin:11px 0}
+.asset-schedule summary{cursor:pointer;font-weight:700;color:#334e35;padding:5px 0}
+.asset-schedule>div{max-height:247px;overflow:auto}
+.asset-management .asset-table,.asset-contract-form .asset-table,.asset-compare .asset-table{width:100%;table-layout:fixed;border-collapse:collapse;font:13px/1.35 var(--font-ui,sans-serif);font-variant-numeric:tabular-nums}
+.asset-table th,.asset-table td{padding:5px 4px;border-bottom:1px solid #e1d7c0;text-align:right}
+#farm-world-panel .asset-table :is(td,th){white-space:normal;overflow-wrap:anywhere}
+.asset-table th{background:#e7ead3;color:#334e35}
+.asset-table :is(th,td):nth-child(-n+2){text-align:left}
+.asset-compare{margin:8px 0;padding:8px;border:1px solid var(--asset-border);border-radius:9px}
+.asset-compare>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+#farm-world-panel .asset-compare label{display:grid;align-content:start;gap:4px;padding:7px;margin:0;border:1px solid var(--asset-border);border-radius:7px;background:var(--asset-paper);overflow-wrap:anywhere}
+#farm-world-panel .asset-compare label:has(:checked){border-color:#526d46;background:var(--asset-light)}
+#farm-world-panel .asset-compare input{margin:0;width:17px;height:17px;min-height:0;accent-color:var(--asset-green)}
+.asset-compare small{font-size:12px;line-height:1.3}
+.asset-compare small b{display:block;font-size:14px;font-variant-numeric:tabular-nums}
+.asset-contract h3{color:var(--asset-green)}
+.asset-sign-actions{display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:8px}
+body.world-page.ui-v2 .farm-world-panel .asset-sign-actions button[type=submit]{
+ --frame-gloss:none;--frame-button-active:#334e35;--frame-active-rim:#334e35;--frame-active-depth:#29432c;--frame-active-edge:none;
+ --ink:#fffdf0;
+ background:#334e35!important;border-color:#334e35!important;color:#fffdf0!important;
+}
+@container asset (max-width:355px){
+ .asset-account,.asset-contract{padding:8px}
+ .asset-account-top{padding:8px;gap:6px}
+ .asset-account-top strong{font-size:20px}
+ .asset-information dd,.asset-compare strong{font-size:14px}
+ .asset-management .asset-table thead,.asset-contract-form .asset-table thead,.asset-compare .asset-table thead{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden}
+ .asset-table,.asset-table tbody{display:block}
+ /* 표를 block으로 바꾸면 caption이 좁은 칸에 갇혀 제목이 한 글자씩 세로로 쪼개집니다. */
+ .asset-table caption{display:block;text-align:left}
+ .asset-table tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:5px 0;border-top:1px solid #e1d7c0}
+ #farm-world-panel .asset-table tbody td,.asset-table tbody td{border:0;white-space:normal;text-align:left;padding:1px 2px;overflow-wrap:anywhere}
+ .asset-table td::before{content:attr(data-label);display:block;font-size:11px;color:#655741}
+ .asset-list button b{font-size:16px}
+}
 
 body.world-page button.world-interact-prompt{position:fixed;z-index:13;transform:translate(-50%,-50%);width:46px;height:46px;min-width:46px;min-height:46px;padding:0;border:2px solid #855931;border-radius:50%;display:grid;place-items:center;background:#fff2cc;color:#583b22;box-shadow:0 3px 8px #4a30174a;touch-action:manipulation}
 body.world-page button.world-interact-prompt[hidden],.world-interact-prompt kbd[hidden]{display:none!important}
@@ -2472,7 +2594,9 @@ body.world-page #mobile-horse-status>button{display:grid;place-items:center;widt
 #mobile-horse-status header .horse-follow-button{flex:none;width:44px;height:44px;min-height:44px;padding:0}
 #mobile-horse-status .horse-follow-button span{display:none}
 body.world-page #mobile-horse-status .horse-follow-button img{width:18px;height:18px}
-#mobile-horse-status .horse-care-list{display:grid;gap:3px}
+#mobile-horse-status .horse-care-list{display:grid;grid-template-columns:minmax(0,1fr);gap:3px}
+/* 긴 경주 신청 문구가 한 줄로 버티면 창보다 넓어져 오른쪽이 잘립니다. */
+#mobile-horse-status :is(.horse-race-entry button,.horse-status-growth){white-space:normal}
 body.world-page #mobile-horse-status [data-horse-care]{
  display:grid;grid-template-columns:18px auto minmax(0,1fr);grid-template-rows:auto 4px;gap:3px 4px;align-items:center;
  text-align:left;min-height:44px;padding:3px 4px;background:#fffaf0;color:var(--ink);border:1px solid #e7be91;border-radius:8px;
